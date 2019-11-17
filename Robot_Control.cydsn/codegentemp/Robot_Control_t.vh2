@@ -1,5 +1,5 @@
 -- Project:   C:\Users\Sandeep Nadella\OneDrive\Documents\PSoC Creator\SD_Workspace\Robot_Control.cydsn\Robot_Control.cyprj
--- Generated: 11/16/2019 22:48:51
+-- Generated: 11/17/2019 12:01:50
 -- PSoC Creator  4.2
 
 ENTITY Robot_Control IS
@@ -44,7 +44,7 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
     SIGNAL Net_1 : bit;
-    ATTRIBUTE placement_force OF Net_1 : SIGNAL IS "U(3,0,A)2";
+    ATTRIBUTE placement_force OF Net_1 : SIGNAL IS "U(2,2,A)2";
     SIGNAL Net_1009 : bit;
     ATTRIBUTE placement_force OF Net_1009 : SIGNAL IS "U(3,3,A)2";
     SIGNAL Net_1010 : bit;
@@ -70,7 +70,7 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     ATTRIBUTE global_signal OF Net_1041 : SIGNAL IS true;
     SIGNAL Net_1041_local : bit;
     SIGNAL Net_2 : bit;
-    ATTRIBUTE placement_force OF Net_2 : SIGNAL IS "U(3,0,A)3";
+    ATTRIBUTE placement_force OF Net_2 : SIGNAL IS "U(2,2,A)3";
     SIGNAL Net_211 : bit;
     ATTRIBUTE udbclken_assigned OF Net_211 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_211 : SIGNAL IS true;
@@ -100,9 +100,9 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     ATTRIBUTE global_signal OF Net_970 : SIGNAL IS true;
     SIGNAL Net_970_local : bit;
     SIGNAL Net_994 : bit;
-    ATTRIBUTE placement_force OF Net_994 : SIGNAL IS "U(2,2,A)2";
+    ATTRIBUTE placement_force OF Net_994 : SIGNAL IS "U(3,0,A)2";
     SIGNAL Net_995 : bit;
-    ATTRIBUTE placement_force OF Net_995 : SIGNAL IS "U(2,2,A)3";
+    ATTRIBUTE placement_force OF Net_995 : SIGNAL IS "U(3,0,A)3";
     SIGNAL Net_997 : bit;
     ATTRIBUTE udbclken_assigned OF Net_997 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_997 : SIGNAL IS true;
@@ -234,18 +234,18 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     SIGNAL \LeftEyebrow:PWMUDB:control_6\ : bit;
     SIGNAL \LeftEyebrow:PWMUDB:control_7\ : bit;
     SIGNAL \LeftEyebrow:PWMUDB:prevCompare1\ : bit;
-    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:prevCompare1\ : SIGNAL IS "U(2,2,B)0";
+    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:prevCompare1\ : SIGNAL IS "U(3,0,B)0";
     SIGNAL \LeftEyebrow:PWMUDB:prevCompare2\ : bit;
-    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:prevCompare2\ : SIGNAL IS "U(2,2,B)2";
+    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:prevCompare2\ : SIGNAL IS "U(3,0,B)2";
     SIGNAL \LeftEyebrow:PWMUDB:runmode_enable\ : bit;
-    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:runmode_enable\ : SIGNAL IS "U(2,2,A)0";
+    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:runmode_enable\ : SIGNAL IS "U(3,0,A)0";
     SIGNAL \EyeBallHorizontal:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
     SIGNAL \LeftEyebrow:PWMUDB:status_0\ : bit;
-    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:status_0\ : SIGNAL IS "U(2,2,B)1";
+    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:status_0\ : SIGNAL IS "U(3,0,B)1";
     SIGNAL \LeftEyebrow:PWMUDB:status_1\ : bit;
-    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:status_1\ : SIGNAL IS "U(2,2,B)3";
+    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:status_1\ : SIGNAL IS "U(3,0,B)3";
     SIGNAL \LeftEyebrow:PWMUDB:status_2\ : bit;
-    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:status_2\ : SIGNAL IS "U(2,2,A)1";
+    ATTRIBUTE placement_force OF \LeftEyebrow:PWMUDB:status_2\ : SIGNAL IS "U(3,0,A)1";
     SIGNAL \LeftEyebrow:PWMUDB:status_3\ : bit;
     SIGNAL \LeftEyebrow:PWMUDB:tc_i\ : bit;
     SIGNAL \Lip:PWMUDB:cmp1_less\ : bit;
@@ -308,18 +308,18 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     SIGNAL \RightEyebrow:PWMUDB:control_6\ : bit;
     SIGNAL \RightEyebrow:PWMUDB:control_7\ : bit;
     SIGNAL \RightEyebrow:PWMUDB:prevCompare1\ : bit;
-    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:prevCompare1\ : SIGNAL IS "U(3,0,B)0";
+    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:prevCompare1\ : SIGNAL IS "U(2,2,B)0";
     SIGNAL \RightEyebrow:PWMUDB:prevCompare2\ : bit;
-    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:prevCompare2\ : SIGNAL IS "U(3,0,B)2";
+    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:prevCompare2\ : SIGNAL IS "U(2,2,B)2";
     SIGNAL \RightEyebrow:PWMUDB:runmode_enable\ : bit;
-    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:runmode_enable\ : SIGNAL IS "U(3,0,A)0";
+    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:runmode_enable\ : SIGNAL IS "U(2,2,A)0";
     SIGNAL \EyelidGroup:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
     SIGNAL \RightEyebrow:PWMUDB:status_0\ : bit;
-    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:status_0\ : SIGNAL IS "U(3,0,B)1";
+    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:status_0\ : SIGNAL IS "U(2,2,B)1";
     SIGNAL \RightEyebrow:PWMUDB:status_1\ : bit;
-    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:status_1\ : SIGNAL IS "U(3,0,B)3";
+    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:status_1\ : SIGNAL IS "U(2,2,B)3";
     SIGNAL \RightEyebrow:PWMUDB:status_2\ : bit;
-    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:status_2\ : SIGNAL IS "U(3,0,A)1";
+    ATTRIBUTE placement_force OF \RightEyebrow:PWMUDB:status_2\ : SIGNAL IS "U(2,2,A)1";
     SIGNAL \RightEyebrow:PWMUDB:status_3\ : bit;
     SIGNAL \RightEyebrow:PWMUDB:tc_i\ : bit;
     SIGNAL __ONE__ : bit;
@@ -461,7 +461,7 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     ATTRIBUTE lib_model OF S14(0) : LABEL IS "iocell16";
     ATTRIBUTE Location OF S14(0) : LABEL IS "P1[7]";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:status_2\ : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:status_2\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:status_2\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \EyelidGroup:PWMUDB:status_2\ : LABEL IS "macrocell2";
     ATTRIBUTE Location OF \EyelidGroup:PWMUDB:status_2\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \EyeBallVertical:PWMUDB:status_2\ : LABEL IS "macrocell3";
@@ -469,7 +469,7 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     ATTRIBUTE lib_model OF \BaseJaw:PWMUDB:status_2\ : LABEL IS "macrocell4";
     ATTRIBUTE Location OF \BaseJaw:PWMUDB:status_2\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:status_2\ : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:status_2\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:status_2\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \EyeBallHorizontal:PWMUDB:status_2\ : LABEL IS "macrocell6";
     ATTRIBUTE Location OF \EyeBallHorizontal:PWMUDB:status_2\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF \Neck:PWMUDB:status_2\ : LABEL IS "macrocell7";
@@ -477,13 +477,13 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     ATTRIBUTE lib_model OF \Lip:PWMUDB:status_2\ : LABEL IS "macrocell8";
     ATTRIBUTE Location OF \Lip:PWMUDB:status_2\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell1";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:genblk1:ctrlreg\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:genblk1:ctrlreg\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:genblk8:stsreg\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:genblk8:stsreg\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \EyelidGroup:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell2";
     ATTRIBUTE Location OF \EyelidGroup:PWMUDB:genblk1:ctrlreg\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \EyelidGroup:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell2";
@@ -509,13 +509,13 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     ATTRIBUTE lib_model OF \BaseJaw:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell8";
     ATTRIBUTE Location OF \BaseJaw:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell5";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:genblk1:ctrlreg\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:genblk1:ctrlreg\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell5";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:genblk8:stsreg\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:genblk8:stsreg\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell9";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell10";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \EyeBallHorizontal:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell6";
     ATTRIBUTE Location OF \EyeBallHorizontal:PWMUDB:genblk1:ctrlreg\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF \EyeBallHorizontal:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell6";
@@ -541,19 +541,19 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     ATTRIBUTE lib_model OF \Lip:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell16";
     ATTRIBUTE Location OF \Lip:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:runmode_enable\ : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:runmode_enable\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:runmode_enable\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:prevCompare1\ : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:prevCompare1\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:prevCompare1\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:prevCompare2\ : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:prevCompare2\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:prevCompare2\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:status_0\ : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:status_0\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:status_0\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \RightEyebrow:PWMUDB:status_1\ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:status_1\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \RightEyebrow:PWMUDB:status_1\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF Net_1 : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF Net_1 : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF Net_1 : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF Net_2 : LABEL IS "macrocell15";
-    ATTRIBUTE Location OF Net_2 : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF Net_2 : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \EyelidGroup:PWMUDB:runmode_enable\ : LABEL IS "macrocell16";
     ATTRIBUTE Location OF \EyelidGroup:PWMUDB:runmode_enable\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \EyelidGroup:PWMUDB:prevCompare1\ : LABEL IS "macrocell17";
@@ -597,19 +597,19 @@ ARCHITECTURE __DEFAULT__ OF Robot_Control IS
     ATTRIBUTE lib_model OF Net_969 : LABEL IS "macrocell36";
     ATTRIBUTE Location OF Net_969 : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:runmode_enable\ : LABEL IS "macrocell37";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:runmode_enable\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:runmode_enable\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:prevCompare1\ : LABEL IS "macrocell38";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:prevCompare1\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:prevCompare1\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:prevCompare2\ : LABEL IS "macrocell39";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:prevCompare2\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:prevCompare2\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:status_0\ : LABEL IS "macrocell40";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:status_0\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:status_0\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LeftEyebrow:PWMUDB:status_1\ : LABEL IS "macrocell41";
-    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:status_1\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LeftEyebrow:PWMUDB:status_1\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_994 : LABEL IS "macrocell42";
-    ATTRIBUTE Location OF Net_994 : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF Net_994 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Net_995 : LABEL IS "macrocell43";
-    ATTRIBUTE Location OF Net_995 : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF Net_995 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \EyeBallHorizontal:PWMUDB:runmode_enable\ : LABEL IS "macrocell44";
     ATTRIBUTE Location OF \EyeBallHorizontal:PWMUDB:runmode_enable\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF \EyeBallHorizontal:PWMUDB:prevCompare1\ : LABEL IS "macrocell45";
@@ -959,10 +959,10 @@ BEGIN
             dclk_4 => Net_970_local,
             dclk_glb_5 => Net_1011,
             dclk_5 => Net_1011_local,
-            dclk_glb_6 => Net_997,
-            dclk_6 => Net_997_local,
-            dclk_glb_7 => Net_211,
-            dclk_7 => Net_211_local);
+            dclk_glb_6 => Net_211,
+            dclk_6 => Net_211_local,
+            dclk_glb_7 => Net_997,
+            dclk_7 => Net_997_local);
 
     S1:logicalport
         GENERIC MAP(

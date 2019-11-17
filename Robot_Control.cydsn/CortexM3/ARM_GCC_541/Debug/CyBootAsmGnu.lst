@@ -12110,18 +12110,18 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  774              	.set BaseJaw_PWMUDB_sP16_pwmdp_u1__PER_DP_AUX_CTL_REG, CYREG_B1_UDB11_MSK_ACTL
  775              	
  776              	/* Clock_1 */
- 777              	.set Clock_1__CFG0, CYREG_CLKDIST_DCFG7_CFG0
- 778              	.set Clock_1__CFG1, CYREG_CLKDIST_DCFG7_CFG1
- 779              	.set Clock_1__CFG2, CYREG_CLKDIST_DCFG7_CFG2
+ 777              	.set Clock_1__CFG0, CYREG_CLKDIST_DCFG6_CFG0
+ 778              	.set Clock_1__CFG1, CYREG_CLKDIST_DCFG6_CFG1
+ 779              	.set Clock_1__CFG2, CYREG_CLKDIST_DCFG6_CFG2
  780              	.set Clock_1__CFG2_SRC_SEL_MASK, 0x07
- 781              	.set Clock_1__INDEX, 0x07
+ 781              	.set Clock_1__INDEX, 0x06
  782              	.set Clock_1__PM_ACT_CFG, CYREG_PM_ACT_CFG2
- 783              	.set Clock_1__PM_ACT_MSK, 0x80
+ 783              	.set Clock_1__PM_ACT_MSK, 0x40
  784              	.set Clock_1__PM_STBY_CFG, CYREG_PM_STBY_CFG2
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 203
 
 
- 785              	.set Clock_1__PM_STBY_MSK, 0x80
+ 785              	.set Clock_1__PM_STBY_MSK, 0x40
  786              	
  787              	/* Clock_2 */
  788              	.set Clock_2__CFG0, CYREG_CLKDIST_DCFG3_CFG0
@@ -12193,15 +12193,15 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  851              	.set Clock_7__PM_STBY_MSK, 0x20
  852              	
  853              	/* Clock_8 */
- 854              	.set Clock_8__CFG0, CYREG_CLKDIST_DCFG6_CFG0
- 855              	.set Clock_8__CFG1, CYREG_CLKDIST_DCFG6_CFG1
- 856              	.set Clock_8__CFG2, CYREG_CLKDIST_DCFG6_CFG2
+ 854              	.set Clock_8__CFG0, CYREG_CLKDIST_DCFG7_CFG0
+ 855              	.set Clock_8__CFG1, CYREG_CLKDIST_DCFG7_CFG1
+ 856              	.set Clock_8__CFG2, CYREG_CLKDIST_DCFG7_CFG2
  857              	.set Clock_8__CFG2_SRC_SEL_MASK, 0x07
- 858              	.set Clock_8__INDEX, 0x06
+ 858              	.set Clock_8__INDEX, 0x07
  859              	.set Clock_8__PM_ACT_CFG, CYREG_PM_ACT_CFG2
- 860              	.set Clock_8__PM_ACT_MSK, 0x40
+ 860              	.set Clock_8__PM_ACT_MSK, 0x80
  861              	.set Clock_8__PM_STBY_CFG, CYREG_PM_STBY_CFG2
- 862              	.set Clock_8__PM_STBY_MSK, 0x40
+ 862              	.set Clock_8__PM_STBY_MSK, 0x80
  863              	
  864              	/* EyelidGroup */
  865              	.set EyelidGroup_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB09_10_ACTL
@@ -12283,165 +12283,165 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  938              	.set EyelidGroup_PWMUDB_sP16_pwmdp_u1__PER_DP_AUX_CTL_REG, CYREG_B0_UDB09_MSK_ACTL
  939              	
  940              	/* LeftEyebrow */
- 941              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB07_08_ACTL
- 942              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_CONTROL_REG, CYREG_B0_UDB07_08_CTL
- 943              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_COUNT_REG, CYREG_B0_UDB07_08_CTL
- 944              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_COUNT_CONTROL_REG, CYREG_B0_UDB07_08_CTL
- 945              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_COUNT_COUNT_REG, CYREG_B0_UDB07_08_CTL
- 946              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_MASK_MASK_REG, CYREG_B0_UDB07_08_MSK
- 947              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_MASK_PERIOD_REG, CYREG_B0_UDB07_08_MSK
- 948              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_PERIOD_MASK_REG, CYREG_B0_UDB07_08_MSK
- 949              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_PERIOD_PERIOD_REG, CYREG_B0_UDB07_08_MSK
+ 941              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B1_UDB05_06_ACTL
+ 942              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_CONTROL_REG, CYREG_B1_UDB05_06_CTL
+ 943              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_COUNT_REG, CYREG_B1_UDB05_06_CTL
+ 944              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_COUNT_CONTROL_REG, CYREG_B1_UDB05_06_CTL
+ 945              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_COUNT_COUNT_REG, CYREG_B1_UDB05_06_CTL
+ 946              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_MASK_MASK_REG, CYREG_B1_UDB05_06_MSK
+ 947              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_MASK_PERIOD_REG, CYREG_B1_UDB05_06_MSK
+ 948              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_PERIOD_MASK_REG, CYREG_B1_UDB05_06_MSK
+ 949              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_PERIOD_PERIOD_REG, CYREG_B1_UDB05_06_MSK
  950              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__7__MASK, 0x80
  951              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__7__POS, 7
- 952              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB07_ACTL
- 953              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_REG, CYREG_B0_UDB07_CTL
- 954              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_ST_REG, CYREG_B0_UDB07_ST_CTL
- 955              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__COUNT_REG, CYREG_B0_UDB07_CTL
+ 952              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_AUX_CTL_REG, CYREG_B1_UDB05_ACTL
+ 953              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_REG, CYREG_B1_UDB05_CTL
+ 954              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_ST_REG, CYREG_B1_UDB05_ST_CTL
+ 955              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__COUNT_REG, CYREG_B1_UDB05_CTL
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 206
 
 
- 956              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__COUNT_ST_REG, CYREG_B0_UDB07_ST_CTL
+ 956              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__COUNT_ST_REG, CYREG_B1_UDB05_ST_CTL
  957              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__MASK, 0x80
- 958              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
- 959              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
- 960              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__PERIOD_REG, CYREG_B0_UDB07_MSK
+ 958              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__MASK_CTL_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 959              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__PER_CTL_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 960              	.set LeftEyebrow_PWMUDB_genblk1_ctrlreg__PERIOD_REG, CYREG_B1_UDB05_MSK
  961              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__0__MASK, 0x01
  962              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__0__POS, 0
  963              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__1__MASK, 0x02
  964              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__1__POS, 1
- 965              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB07_08_ACTL
- 966              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__16BIT_STATUS_REG, CYREG_B0_UDB07_08_ST
+ 965              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__16BIT_STATUS_AUX_CTL_REG, CYREG_B1_UDB05_06_ACTL
+ 966              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__16BIT_STATUS_REG, CYREG_B1_UDB05_06_ST
  967              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__2__MASK, 0x04
  968              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__2__POS, 2
  969              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__3__MASK, 0x08
  970              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__3__POS, 3
  971              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__MASK, 0x0F
- 972              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__MASK_REG, CYREG_B0_UDB07_MSK
- 973              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
- 974              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
- 975              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__STATUS_AUX_CTL_REG, CYREG_B0_UDB07_ACTL
- 976              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__STATUS_CNT_REG, CYREG_B0_UDB07_ST_CTL
- 977              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__STATUS_CONTROL_REG, CYREG_B0_UDB07_ST_CTL
- 978              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__STATUS_REG, CYREG_B0_UDB07_ST
- 979              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_A0_REG, CYREG_B0_UDB06_07_A0
- 980              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_A1_REG, CYREG_B0_UDB06_07_A1
- 981              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_D0_REG, CYREG_B0_UDB06_07_D0
- 982              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_D1_REG, CYREG_B0_UDB06_07_D1
- 983              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB06_07_ACTL
- 984              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_F0_REG, CYREG_B0_UDB06_07_F0
- 985              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_F1_REG, CYREG_B0_UDB06_07_F1
- 986              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__A0_A1_REG, CYREG_B0_UDB06_A0_A1
- 987              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__A0_REG, CYREG_B0_UDB06_A0
- 988              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__A1_REG, CYREG_B0_UDB06_A1
- 989              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__D0_D1_REG, CYREG_B0_UDB06_D0_D1
- 990              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__D0_REG, CYREG_B0_UDB06_D0
- 991              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__D1_REG, CYREG_B0_UDB06_D1
- 992              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__DP_AUX_CTL_REG, CYREG_B0_UDB06_ACTL
- 993              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__F0_F1_REG, CYREG_B0_UDB06_F0_F1
- 994              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__F0_REG, CYREG_B0_UDB06_F0
- 995              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__F1_REG, CYREG_B0_UDB06_F1
- 996              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_A0_REG, CYREG_B0_UDB07_08_A0
- 997              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_A1_REG, CYREG_B0_UDB07_08_A1
- 998              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_D0_REG, CYREG_B0_UDB07_08_D0
- 999              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_D1_REG, CYREG_B0_UDB07_08_D1
- 1000              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB07_08_ACTL
- 1001              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_F0_REG, CYREG_B0_UDB07_08_F0
- 1002              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_F1_REG, CYREG_B0_UDB07_08_F1
- 1003              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__A0_A1_REG, CYREG_B0_UDB07_A0_A1
- 1004              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__A0_REG, CYREG_B0_UDB07_A0
- 1005              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__A1_REG, CYREG_B0_UDB07_A1
- 1006              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__D0_D1_REG, CYREG_B0_UDB07_D0_D1
- 1007              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__D0_REG, CYREG_B0_UDB07_D0
- 1008              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__D1_REG, CYREG_B0_UDB07_D1
- 1009              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__DP_AUX_CTL_REG, CYREG_B0_UDB07_ACTL
- 1010              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__F0_F1_REG, CYREG_B0_UDB07_F0_F1
- 1011              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__F0_REG, CYREG_B0_UDB07_F0
- 1012              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__F1_REG, CYREG_B0_UDB07_F1
+ 972              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__MASK_REG, CYREG_B1_UDB05_MSK
+ 973              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__MASK_ST_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 974              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__PER_ST_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 975              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__STATUS_AUX_CTL_REG, CYREG_B1_UDB05_ACTL
+ 976              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__STATUS_CNT_REG, CYREG_B1_UDB05_ST_CTL
+ 977              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__STATUS_CONTROL_REG, CYREG_B1_UDB05_ST_CTL
+ 978              	.set LeftEyebrow_PWMUDB_genblk8_stsreg__STATUS_REG, CYREG_B1_UDB05_ST
+ 979              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_A0_REG, CYREG_B1_UDB04_05_A0
+ 980              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_A1_REG, CYREG_B1_UDB04_05_A1
+ 981              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_D0_REG, CYREG_B1_UDB04_05_D0
+ 982              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_D1_REG, CYREG_B1_UDB04_05_D1
+ 983              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_DP_AUX_CTL_REG, CYREG_B1_UDB04_05_ACTL
+ 984              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_F0_REG, CYREG_B1_UDB04_05_F0
+ 985              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_F1_REG, CYREG_B1_UDB04_05_F1
+ 986              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__A0_A1_REG, CYREG_B1_UDB04_A0_A1
+ 987              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__A0_REG, CYREG_B1_UDB04_A0
+ 988              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__A1_REG, CYREG_B1_UDB04_A1
+ 989              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__D0_D1_REG, CYREG_B1_UDB04_D0_D1
+ 990              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__D0_REG, CYREG_B1_UDB04_D0
+ 991              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__D1_REG, CYREG_B1_UDB04_D1
+ 992              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__DP_AUX_CTL_REG, CYREG_B1_UDB04_ACTL
+ 993              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__F0_F1_REG, CYREG_B1_UDB04_F0_F1
+ 994              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__F0_REG, CYREG_B1_UDB04_F0
+ 995              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u0__F1_REG, CYREG_B1_UDB04_F1
+ 996              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_A0_REG, CYREG_B1_UDB05_06_A0
+ 997              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_A1_REG, CYREG_B1_UDB05_06_A1
+ 998              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_D0_REG, CYREG_B1_UDB05_06_D0
+ 999              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_D1_REG, CYREG_B1_UDB05_06_D1
+ 1000              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_DP_AUX_CTL_REG, CYREG_B1_UDB05_06_ACTL
+ 1001              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_F0_REG, CYREG_B1_UDB05_06_F0
+ 1002              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_F1_REG, CYREG_B1_UDB05_06_F1
+ 1003              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__A0_A1_REG, CYREG_B1_UDB05_A0_A1
+ 1004              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__A0_REG, CYREG_B1_UDB05_A0
+ 1005              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__A1_REG, CYREG_B1_UDB05_A1
+ 1006              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__D0_D1_REG, CYREG_B1_UDB05_D0_D1
+ 1007              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__D0_REG, CYREG_B1_UDB05_D0
+ 1008              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__D1_REG, CYREG_B1_UDB05_D1
+ 1009              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__DP_AUX_CTL_REG, CYREG_B1_UDB05_ACTL
+ 1010              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__F0_F1_REG, CYREG_B1_UDB05_F0_F1
+ 1011              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__F0_REG, CYREG_B1_UDB05_F0
+ 1012              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__F1_REG, CYREG_B1_UDB05_F1
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 207
 
 
- 1013              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__MSK_DP_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
- 1014              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__PER_DP_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
+ 1013              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__MSK_DP_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 1014              	.set LeftEyebrow_PWMUDB_sP16_pwmdp_u1__PER_DP_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
  1015              	
  1016              	/* RightEyebrow */
- 1017              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B1_UDB05_06_ACTL
- 1018              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_CONTROL_REG, CYREG_B1_UDB05_06_CTL
- 1019              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_COUNT_REG, CYREG_B1_UDB05_06_CTL
- 1020              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_COUNT_CONTROL_REG, CYREG_B1_UDB05_06_CTL
- 1021              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_COUNT_COUNT_REG, CYREG_B1_UDB05_06_CTL
- 1022              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_MASK_MASK_REG, CYREG_B1_UDB05_06_MSK
- 1023              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_MASK_PERIOD_REG, CYREG_B1_UDB05_06_MSK
- 1024              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_PERIOD_MASK_REG, CYREG_B1_UDB05_06_MSK
- 1025              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_PERIOD_PERIOD_REG, CYREG_B1_UDB05_06_MSK
+ 1017              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB07_08_ACTL
+ 1018              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_CONTROL_REG, CYREG_B0_UDB07_08_CTL
+ 1019              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_COUNT_REG, CYREG_B0_UDB07_08_CTL
+ 1020              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_COUNT_CONTROL_REG, CYREG_B0_UDB07_08_CTL
+ 1021              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_COUNT_COUNT_REG, CYREG_B0_UDB07_08_CTL
+ 1022              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_MASK_MASK_REG, CYREG_B0_UDB07_08_MSK
+ 1023              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_MASK_PERIOD_REG, CYREG_B0_UDB07_08_MSK
+ 1024              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_PERIOD_MASK_REG, CYREG_B0_UDB07_08_MSK
+ 1025              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__16BIT_PERIOD_PERIOD_REG, CYREG_B0_UDB07_08_MSK
  1026              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__7__MASK, 0x80
  1027              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__7__POS, 7
- 1028              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_AUX_CTL_REG, CYREG_B1_UDB05_ACTL
- 1029              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_REG, CYREG_B1_UDB05_CTL
- 1030              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_ST_REG, CYREG_B1_UDB05_ST_CTL
- 1031              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__COUNT_REG, CYREG_B1_UDB05_CTL
- 1032              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__COUNT_ST_REG, CYREG_B1_UDB05_ST_CTL
+ 1028              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB07_ACTL
+ 1029              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_REG, CYREG_B0_UDB07_CTL
+ 1030              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__CONTROL_ST_REG, CYREG_B0_UDB07_ST_CTL
+ 1031              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__COUNT_REG, CYREG_B0_UDB07_CTL
+ 1032              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__COUNT_ST_REG, CYREG_B0_UDB07_ST_CTL
  1033              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__MASK, 0x80
- 1034              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__MASK_CTL_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
- 1035              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__PER_CTL_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
- 1036              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__PERIOD_REG, CYREG_B1_UDB05_MSK
+ 1034              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
+ 1035              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
+ 1036              	.set RightEyebrow_PWMUDB_genblk1_ctrlreg__PERIOD_REG, CYREG_B0_UDB07_MSK
  1037              	.set RightEyebrow_PWMUDB_genblk8_stsreg__0__MASK, 0x01
  1038              	.set RightEyebrow_PWMUDB_genblk8_stsreg__0__POS, 0
  1039              	.set RightEyebrow_PWMUDB_genblk8_stsreg__1__MASK, 0x02
  1040              	.set RightEyebrow_PWMUDB_genblk8_stsreg__1__POS, 1
- 1041              	.set RightEyebrow_PWMUDB_genblk8_stsreg__16BIT_STATUS_AUX_CTL_REG, CYREG_B1_UDB05_06_ACTL
- 1042              	.set RightEyebrow_PWMUDB_genblk8_stsreg__16BIT_STATUS_REG, CYREG_B1_UDB05_06_ST
+ 1041              	.set RightEyebrow_PWMUDB_genblk8_stsreg__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB07_08_ACTL
+ 1042              	.set RightEyebrow_PWMUDB_genblk8_stsreg__16BIT_STATUS_REG, CYREG_B0_UDB07_08_ST
  1043              	.set RightEyebrow_PWMUDB_genblk8_stsreg__2__MASK, 0x04
  1044              	.set RightEyebrow_PWMUDB_genblk8_stsreg__2__POS, 2
  1045              	.set RightEyebrow_PWMUDB_genblk8_stsreg__3__MASK, 0x08
  1046              	.set RightEyebrow_PWMUDB_genblk8_stsreg__3__POS, 3
  1047              	.set RightEyebrow_PWMUDB_genblk8_stsreg__MASK, 0x0F
- 1048              	.set RightEyebrow_PWMUDB_genblk8_stsreg__MASK_REG, CYREG_B1_UDB05_MSK
- 1049              	.set RightEyebrow_PWMUDB_genblk8_stsreg__MASK_ST_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
- 1050              	.set RightEyebrow_PWMUDB_genblk8_stsreg__PER_ST_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
- 1051              	.set RightEyebrow_PWMUDB_genblk8_stsreg__STATUS_AUX_CTL_REG, CYREG_B1_UDB05_ACTL
- 1052              	.set RightEyebrow_PWMUDB_genblk8_stsreg__STATUS_CNT_REG, CYREG_B1_UDB05_ST_CTL
- 1053              	.set RightEyebrow_PWMUDB_genblk8_stsreg__STATUS_CONTROL_REG, CYREG_B1_UDB05_ST_CTL
- 1054              	.set RightEyebrow_PWMUDB_genblk8_stsreg__STATUS_REG, CYREG_B1_UDB05_ST
- 1055              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_A0_REG, CYREG_B1_UDB04_05_A0
- 1056              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_A1_REG, CYREG_B1_UDB04_05_A1
- 1057              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_D0_REG, CYREG_B1_UDB04_05_D0
- 1058              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_D1_REG, CYREG_B1_UDB04_05_D1
- 1059              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_DP_AUX_CTL_REG, CYREG_B1_UDB04_05_ACTL
- 1060              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_F0_REG, CYREG_B1_UDB04_05_F0
- 1061              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_F1_REG, CYREG_B1_UDB04_05_F1
- 1062              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__A0_A1_REG, CYREG_B1_UDB04_A0_A1
- 1063              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__A0_REG, CYREG_B1_UDB04_A0
- 1064              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__A1_REG, CYREG_B1_UDB04_A1
- 1065              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__D0_D1_REG, CYREG_B1_UDB04_D0_D1
- 1066              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__D0_REG, CYREG_B1_UDB04_D0
- 1067              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__D1_REG, CYREG_B1_UDB04_D1
- 1068              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__DP_AUX_CTL_REG, CYREG_B1_UDB04_ACTL
- 1069              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__F0_F1_REG, CYREG_B1_UDB04_F0_F1
+ 1048              	.set RightEyebrow_PWMUDB_genblk8_stsreg__MASK_REG, CYREG_B0_UDB07_MSK
+ 1049              	.set RightEyebrow_PWMUDB_genblk8_stsreg__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
+ 1050              	.set RightEyebrow_PWMUDB_genblk8_stsreg__PER_ST_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
+ 1051              	.set RightEyebrow_PWMUDB_genblk8_stsreg__STATUS_AUX_CTL_REG, CYREG_B0_UDB07_ACTL
+ 1052              	.set RightEyebrow_PWMUDB_genblk8_stsreg__STATUS_CNT_REG, CYREG_B0_UDB07_ST_CTL
+ 1053              	.set RightEyebrow_PWMUDB_genblk8_stsreg__STATUS_CONTROL_REG, CYREG_B0_UDB07_ST_CTL
+ 1054              	.set RightEyebrow_PWMUDB_genblk8_stsreg__STATUS_REG, CYREG_B0_UDB07_ST
+ 1055              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_A0_REG, CYREG_B0_UDB06_07_A0
+ 1056              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_A1_REG, CYREG_B0_UDB06_07_A1
+ 1057              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_D0_REG, CYREG_B0_UDB06_07_D0
+ 1058              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_D1_REG, CYREG_B0_UDB06_07_D1
+ 1059              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB06_07_ACTL
+ 1060              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_F0_REG, CYREG_B0_UDB06_07_F0
+ 1061              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__16BIT_F1_REG, CYREG_B0_UDB06_07_F1
+ 1062              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__A0_A1_REG, CYREG_B0_UDB06_A0_A1
+ 1063              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__A0_REG, CYREG_B0_UDB06_A0
+ 1064              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__A1_REG, CYREG_B0_UDB06_A1
+ 1065              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__D0_D1_REG, CYREG_B0_UDB06_D0_D1
+ 1066              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__D0_REG, CYREG_B0_UDB06_D0
+ 1067              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__D1_REG, CYREG_B0_UDB06_D1
+ 1068              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__DP_AUX_CTL_REG, CYREG_B0_UDB06_ACTL
+ 1069              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__F0_F1_REG, CYREG_B0_UDB06_F0_F1
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 208
 
 
- 1070              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__F0_REG, CYREG_B1_UDB04_F0
- 1071              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__F1_REG, CYREG_B1_UDB04_F1
- 1072              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_A0_REG, CYREG_B1_UDB05_06_A0
- 1073              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_A1_REG, CYREG_B1_UDB05_06_A1
- 1074              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_D0_REG, CYREG_B1_UDB05_06_D0
- 1075              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_D1_REG, CYREG_B1_UDB05_06_D1
- 1076              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_DP_AUX_CTL_REG, CYREG_B1_UDB05_06_ACTL
- 1077              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_F0_REG, CYREG_B1_UDB05_06_F0
- 1078              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_F1_REG, CYREG_B1_UDB05_06_F1
- 1079              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__A0_A1_REG, CYREG_B1_UDB05_A0_A1
- 1080              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__A0_REG, CYREG_B1_UDB05_A0
- 1081              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__A1_REG, CYREG_B1_UDB05_A1
- 1082              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__D0_D1_REG, CYREG_B1_UDB05_D0_D1
- 1083              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__D0_REG, CYREG_B1_UDB05_D0
- 1084              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__D1_REG, CYREG_B1_UDB05_D1
- 1085              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__DP_AUX_CTL_REG, CYREG_B1_UDB05_ACTL
- 1086              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__F0_F1_REG, CYREG_B1_UDB05_F0_F1
- 1087              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__F0_REG, CYREG_B1_UDB05_F0
- 1088              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__F1_REG, CYREG_B1_UDB05_F1
- 1089              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__MSK_DP_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
- 1090              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__PER_DP_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 1070              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__F0_REG, CYREG_B0_UDB06_F0
+ 1071              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u0__F1_REG, CYREG_B0_UDB06_F1
+ 1072              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_A0_REG, CYREG_B0_UDB07_08_A0
+ 1073              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_A1_REG, CYREG_B0_UDB07_08_A1
+ 1074              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_D0_REG, CYREG_B0_UDB07_08_D0
+ 1075              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_D1_REG, CYREG_B0_UDB07_08_D1
+ 1076              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB07_08_ACTL
+ 1077              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_F0_REG, CYREG_B0_UDB07_08_F0
+ 1078              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__16BIT_F1_REG, CYREG_B0_UDB07_08_F1
+ 1079              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__A0_A1_REG, CYREG_B0_UDB07_A0_A1
+ 1080              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__A0_REG, CYREG_B0_UDB07_A0
+ 1081              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__A1_REG, CYREG_B0_UDB07_A1
+ 1082              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__D0_D1_REG, CYREG_B0_UDB07_D0_D1
+ 1083              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__D0_REG, CYREG_B0_UDB07_D0
+ 1084              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__D1_REG, CYREG_B0_UDB07_D1
+ 1085              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__DP_AUX_CTL_REG, CYREG_B0_UDB07_ACTL
+ 1086              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__F0_F1_REG, CYREG_B0_UDB07_F0_F1
+ 1087              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__F0_REG, CYREG_B0_UDB07_F0
+ 1088              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__F1_REG, CYREG_B0_UDB07_F1
+ 1089              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__MSK_DP_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
+ 1090              	.set RightEyebrow_PWMUDB_sP16_pwmdp_u1__PER_DP_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
  1091              	
  1092              	/* EyeBallVertical */
  1093              	.set EyeBallVertical_PWMUDB_genblk1_ctrlreg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B1_UDB07_08_ACTL

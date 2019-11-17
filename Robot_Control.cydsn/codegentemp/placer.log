@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Nov 16 2019 22:48:48
+#File Generated:     Nov 17 2019 12:01:47
 
 #Purpose:            
 
@@ -87,7 +87,7 @@ Clock: Clock_4              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_5              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_6              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_7              | Frequency:  59.7 MHz | Target:   3.0 MHz
-Clock: Clock_8              | Frequency:  59.7 MHz | Target:   3.0 MHz
+Clock: Clock_8              | Frequency:  59.7 MHz | Target:   1.0 MHz
 Clock: CyBUS_CLK            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
@@ -112,7 +112,7 @@ Clock: Clock_4              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_5              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_6              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_7              | Frequency:  59.7 MHz | Target:   3.0 MHz
-Clock: Clock_8              | Frequency:  59.7 MHz | Target:   3.0 MHz
+Clock: Clock_8              | Frequency:  59.7 MHz | Target:   1.0 MHz
 Clock: CyBUS_CLK            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
@@ -160,7 +160,7 @@ Clock: Clock_4              | Frequency:  59.7 MHz | Target:   3.3 MHz
 Clock: Clock_5              | Frequency:  59.7 MHz | Target:   3.3 MHz
 Clock: Clock_6              | Frequency:  59.7 MHz | Target:   3.3 MHz
 Clock: Clock_7              | Frequency:  59.7 MHz | Target:   3.3 MHz
-Clock: Clock_8              | Frequency:  59.7 MHz | Target:   3.3 MHz
+Clock: Clock_8              | Frequency:  59.7 MHz | Target:   1.1 MHz
 Clock: CyBUS_CLK            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:   3.0 MHz
@@ -176,5 +176,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.1 sec.
+I2076: Total run-time: 1.2 sec.
 

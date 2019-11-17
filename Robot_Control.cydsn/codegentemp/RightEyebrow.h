@@ -226,7 +226,7 @@ void RightEyebrow_RestoreConfig(void) ;
 /***************************************
 *         Initialization Values
 **************************************/
-#define RightEyebrow_INIT_PERIOD_VALUE          (20000u)
+#define RightEyebrow_INIT_PERIOD_VALUE          (19000u)
 #define RightEyebrow_INIT_COMPARE_VALUE1        (0u)
 #define RightEyebrow_INIT_COMPARE_VALUE2        (0u)
 #define RightEyebrow_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \

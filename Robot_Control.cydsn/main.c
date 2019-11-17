@@ -12,32 +12,100 @@
 #include "project.h"
 
 
-void raiseEyebrow() {
+void initializeComponenets() {
+    //RightEyebrow_Start();
+    //LeftEyebrow_Start();
+    EyeBallVertical_Start();
+    EyelidGroup_Start();
+    BaseJaw_Start();
+    LeftEyebrow_Start();
+    EyeBallHorizontal_Start();
+    Neck_Start();
+    Lip_Start();
+}
+
+void resetAllServoPositions() {
+    RightEyebrow_WriteCompare1(200);
+    LeftEyebrow_WriteCompare1(200);
+    EyeBallVertical_WriteCompare1(200);
+    EyelidGroup_WriteCompare1(200);
+    BaseJaw_WriteCompare1(200);
+    LeftEyebrow_WriteCompare1(200);
+    EyeBallHorizontal_WriteCompare1(200);
+    Neck_WriteCompare1(200);
+    Lip_WriteCompare1(200);
     
-    RightEyebrow_WriteCompare1(500);
+    RightEyebrow_WriteCompare2(200);
+    LeftEyebrow_WriteCompare2(200);
+    EyeBallVertical_WriteCompare2(200);
+    EyelidGroup_WriteCompare2(200);
+    BaseJaw_WriteCompare2(200);
+    LeftEyebrow_WriteCompare2(200);
+    EyeBallHorizontal_WriteCompare2(200);
+    Neck_WriteCompare2(200);
+    Lip_WriteCompare2(200);
+}
+
+void resetLeftEyebrow() {
+    LeftEyebrow_WriteCompare1(1000);
+    LeftEyebrow_WriteCompare2(1000);
+}
+
+void sadLeftEyebrow() {
+    LeftEyebrow_WriteCompare1(1600);
+    LeftEyebrow_WriteCompare2(1600);
+}
+
+void raisedLeftEyebrow() {
+    LeftEyebrow_WriteCompare1(200);
+    LeftEyebrow_WriteCompare2(200);
+}
+
+void clearLeftEyebrow() {
+    LeftEyebrow_WriteCompare1(0);
+    LeftEyebrow_WriteCompare2(0);
+}
+
+void resetRightEyebrow() {
+    RightEyebrow_WriteCompare1(1000);
+    RightEyebrow_WriteCompare2(1000);
+}
+
+void raisedRightEyebrow() {
+    RightEyebrow_WriteCompare1(1600);
     RightEyebrow_WriteCompare2(1600);
-    CyDelay(900);
-    RightEyebrow_WriteCompare1(500);
-    RightEyebrow_WriteCompare2(1600);
-    CyDelay(900);
-    
+}
+
+void sadRightEyebrow() {
+    RightEyebrow_WriteCompare1(200);
+    RightEyebrow_WriteCompare2(200);
+}
+
+void clearRightEyebrow() {
+    RightEyebrow_WriteCompare1(0);
+    RightEyebrow_WriteCompare2(0);
 }
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
 
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-    RightEyebrow_Start();
-    int c =0;
-    for(;;)
-    {
-        raiseEyebrow();
-        c++;
-        if(c==5){
-            break;
-        }
+    // Initialize the Components
+    initializeComponenets();
+    resetAllServoPositions();
+    CyDelay(5000);
+    
+    // Actions
+    while(1) {
+        sadLeftEyebrow();
+        sadRightEyebrow();
+        CyDelay(3000);
+        raisedLeftEyebrow();
+        raisedRightEyebrow();
+        CyDelay(3000);
     }
+    
+    
 }
 
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 1
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 1
 
 
    1              		.syntax unified
@@ -19,13 +19,13 @@ ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.raiseEyebrow,"ax",%progbits
+  19              		.section	.text.initializeComponenets,"ax",%progbits
   20              		.align	2
-  21              		.global	raiseEyebrow
+  21              		.global	initializeComponenets
   22              		.thumb
   23              		.thumb_func
-  24              		.type	raiseEyebrow, %function
-  25              	raiseEyebrow:
+  24              		.type	initializeComponenets, %function
+  25              	initializeComponenets:
   26              	.LFB63:
   27              		.file 1 "main.c"
    1:main.c        **** /* ========================================
@@ -42,7 +42,7 @@ ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 1
   12:main.c        **** #include "project.h"
   13:main.c        **** 
   14:main.c        **** 
-  15:main.c        **** void raiseEyebrow() {
+  15:main.c        **** void initializeComponenets() {
   28              		.loc 1 15 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
@@ -51,736 +51,1943 @@ ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 1
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 3, -8
   35              		.cfi_offset 14, -4
-  16:main.c        ****     
-  17:main.c        ****     RightEyebrow_WriteCompare1(500);
-  36              		.loc 1 17 0
-  37 0002 4FF4FA70 		mov	r0, #500
-  38 0006 FFF7FEFF 		bl	RightEyebrow_WriteCompare1
-  39              	.LVL0:
-  18:main.c        ****     RightEyebrow_WriteCompare2(1600);
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 2
+  16:main.c        ****     RightEyebrow_Start();
+  36              		.loc 1 16 0
+  37 0002 FFF7FEFF 		bl	RightEyebrow_Start
+  38              	.LVL0:
+  17:main.c        ****     LeftEyebrow_Start();
+  39              		.loc 1 17 0
+  40 0006 FFF7FEFF 		bl	LeftEyebrow_Start
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 2
 
 
-  40              		.loc 1 18 0
-  41 000a 4FF4C860 		mov	r0, #1600
-  42 000e FFF7FEFF 		bl	RightEyebrow_WriteCompare2
-  43              	.LVL1:
-  19:main.c        ****     CyDelay(900);
-  44              		.loc 1 19 0
-  45 0012 4FF46170 		mov	r0, #900
-  46 0016 FFF7FEFF 		bl	CyDelay
-  47              	.LVL2:
-  20:main.c        ****     RightEyebrow_WriteCompare1(500);
+  41              	.LVL1:
+  18:main.c        ****     EyeBallVertical_Start();
+  42              		.loc 1 18 0
+  43 000a FFF7FEFF 		bl	EyeBallVertical_Start
+  44              	.LVL2:
+  19:main.c        ****     EyelidGroup_Start();
+  45              		.loc 1 19 0
+  46 000e FFF7FEFF 		bl	EyelidGroup_Start
+  47              	.LVL3:
+  20:main.c        ****     BaseJaw_Start();
   48              		.loc 1 20 0
-  49 001a 4FF4FA70 		mov	r0, #500
-  50 001e FFF7FEFF 		bl	RightEyebrow_WriteCompare1
-  51              	.LVL3:
-  21:main.c        ****     RightEyebrow_WriteCompare2(1600);
-  52              		.loc 1 21 0
-  53 0022 4FF4C860 		mov	r0, #1600
-  54 0026 FFF7FEFF 		bl	RightEyebrow_WriteCompare2
-  55              	.LVL4:
-  22:main.c        ****     CyDelay(900);
-  56              		.loc 1 22 0
-  57 002a 4FF46170 		mov	r0, #900
-  58 002e FFF7FEFF 		bl	CyDelay
-  59              	.LVL5:
-  60 0032 08BD     		pop	{r3, pc}
-  61              		.cfi_endproc
-  62              	.LFE63:
-  63              		.size	raiseEyebrow, .-raiseEyebrow
-  64              		.section	.text.main,"ax",%progbits
-  65              		.align	2
-  66              		.global	main
-  67              		.thumb
-  68              		.thumb_func
-  69              		.type	main, %function
-  70              	main:
-  71              	.LFB64:
-  23:main.c        ****     
-  24:main.c        **** }
-  25:main.c        **** 
-  26:main.c        **** int main(void)
-  27:main.c        **** {
-  72              		.loc 1 27 0
-  73              		.cfi_startproc
-  74              		@ args = 0, pretend = 0, frame = 0
-  75              		@ frame_needed = 0, uses_anonymous_args = 0
-  76 0000 10B5     		push	{r4, lr}
-  77              		.cfi_def_cfa_offset 8
-  78              		.cfi_offset 4, -8
-  79              		.cfi_offset 14, -4
-  28:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  80              		.loc 1 28 0
-  81              		.syntax unified
-  82              	@ 28 "main.c" 1
-  83 0002 62B6     		CPSIE   i
-  84              	@ 0 "" 2
-  29:main.c        **** 
-  30:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 3
+  49 0012 FFF7FEFF 		bl	BaseJaw_Start
+  50              	.LVL4:
+  21:main.c        ****     LeftEyebrow_Start();
+  51              		.loc 1 21 0
+  52 0016 FFF7FEFF 		bl	LeftEyebrow_Start
+  53              	.LVL5:
+  22:main.c        ****     EyeBallHorizontal_Start();
+  54              		.loc 1 22 0
+  55 001a FFF7FEFF 		bl	EyeBallHorizontal_Start
+  56              	.LVL6:
+  23:main.c        ****     Neck_Start();
+  57              		.loc 1 23 0
+  58 001e FFF7FEFF 		bl	Neck_Start
+  59              	.LVL7:
+  24:main.c        ****     Lip_Start();
+  60              		.loc 1 24 0
+  61 0022 FFF7FEFF 		bl	Lip_Start
+  62              	.LVL8:
+  63 0026 08BD     		pop	{r3, pc}
+  64              		.cfi_endproc
+  65              	.LFE63:
+  66              		.size	initializeComponenets, .-initializeComponenets
+  67              		.section	.text.resetAllServoPositions,"ax",%progbits
+  68              		.align	2
+  69              		.global	resetAllServoPositions
+  70              		.thumb
+  71              		.thumb_func
+  72              		.type	resetAllServoPositions, %function
+  73              	resetAllServoPositions:
+  74              	.LFB64:
+  25:main.c        **** }
+  26:main.c        **** 
+  27:main.c        **** void resetAllServoPositions() {
+  75              		.loc 1 27 0
+  76              		.cfi_startproc
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79 0000 08B5     		push	{r3, lr}
+  80              		.cfi_def_cfa_offset 8
+  81              		.cfi_offset 3, -8
+  82              		.cfi_offset 14, -4
+  28:main.c        ****     RightEyebrow_WriteCompare1(200);
+  83              		.loc 1 28 0
+  84 0002 C820     		movs	r0, #200
+  85 0004 FFF7FEFF 		bl	RightEyebrow_WriteCompare1
+  86              	.LVL9:
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 3
 
 
-  31:main.c        ****     RightEyebrow_Start();
-  85              		.loc 1 31 0
-  86              		.thumb
-  87              		.syntax unified
-  88 0004 FFF7FEFF 		bl	RightEyebrow_Start
-  89              	.LVL6:
-  32:main.c        ****     int c =0;
-  90              		.loc 1 32 0
-  91 0008 0024     		movs	r4, #0
-  92              	.LVL7:
-  93              	.L4:
-  33:main.c        ****     for(;;)
-  34:main.c        ****     {
-  35:main.c        ****         raiseEyebrow();
-  94              		.loc 1 35 0
-  95 000a FFF7FEFF 		bl	raiseEyebrow
-  96              	.LVL8:
-  36:main.c        ****         c++;
-  97              		.loc 1 36 0
-  98 000e 0134     		adds	r4, r4, #1
-  99              	.LVL9:
-  37:main.c        ****         if(c==5){
- 100              		.loc 1 37 0
- 101 0010 052C     		cmp	r4, #5
- 102 0012 FAD1     		bne	.L4
-  38:main.c        ****             break;
-  39:main.c        ****         }
-  40:main.c        ****     }
-  41:main.c        **** }
- 103              		.loc 1 41 0
- 104 0014 0020     		movs	r0, #0
- 105 0016 10BD     		pop	{r4, pc}
- 106              		.cfi_endproc
- 107              	.LFE64:
- 108              		.size	main, .-main
- 109              		.text
- 110              	.Letext0:
- 111              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 112              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 113              		.file 4 "Generated_Source\\PSoC5/RightEyebrow.h"
- 114              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
- 115              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
- 116              		.section	.debug_info,"",%progbits
- 117              	.Ldebug_info0:
- 118 0000 A7010000 		.4byte	0x1a7
- 119 0004 0400     		.2byte	0x4
- 120 0006 00000000 		.4byte	.Ldebug_abbrev0
- 121 000a 04       		.byte	0x4
- 122 000b 01       		.uleb128 0x1
- 123 000c 47000000 		.4byte	.LASF20
- 124 0010 0C       		.byte	0xc
- 125 0011 3B000000 		.4byte	.LASF21
- 126 0015 57010000 		.4byte	.LASF22
- 127 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 128 001d 00000000 		.4byte	0
- 129 0021 00000000 		.4byte	.Ldebug_line0
- 130 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 4
+  29:main.c        ****     LeftEyebrow_WriteCompare1(200);
+  87              		.loc 1 29 0
+  88 0008 C820     		movs	r0, #200
+  89 000a FFF7FEFF 		bl	LeftEyebrow_WriteCompare1
+  90              	.LVL10:
+  30:main.c        ****     EyeBallVertical_WriteCompare1(200);
+  91              		.loc 1 30 0
+  92 000e C820     		movs	r0, #200
+  93 0010 FFF7FEFF 		bl	EyeBallVertical_WriteCompare1
+  94              	.LVL11:
+  31:main.c        ****     EyelidGroup_WriteCompare1(200);
+  95              		.loc 1 31 0
+  96 0014 C820     		movs	r0, #200
+  97 0016 FFF7FEFF 		bl	EyelidGroup_WriteCompare1
+  98              	.LVL12:
+  32:main.c        ****     BaseJaw_WriteCompare1(200);
+  99              		.loc 1 32 0
+ 100 001a C820     		movs	r0, #200
+ 101 001c FFF7FEFF 		bl	BaseJaw_WriteCompare1
+ 102              	.LVL13:
+  33:main.c        ****     LeftEyebrow_WriteCompare1(200);
+ 103              		.loc 1 33 0
+ 104 0020 C820     		movs	r0, #200
+ 105 0022 FFF7FEFF 		bl	LeftEyebrow_WriteCompare1
+ 106              	.LVL14:
+  34:main.c        ****     EyeBallHorizontal_WriteCompare1(200);
+ 107              		.loc 1 34 0
+ 108 0026 C820     		movs	r0, #200
+ 109 0028 FFF7FEFF 		bl	EyeBallHorizontal_WriteCompare1
+ 110              	.LVL15:
+  35:main.c        ****     Neck_WriteCompare1(200);
+ 111              		.loc 1 35 0
+ 112 002c C820     		movs	r0, #200
+ 113 002e FFF7FEFF 		bl	Neck_WriteCompare1
+ 114              	.LVL16:
+  36:main.c        ****     Lip_WriteCompare1(200);
+ 115              		.loc 1 36 0
+ 116 0032 C820     		movs	r0, #200
+ 117 0034 FFF7FEFF 		bl	Lip_WriteCompare1
+ 118              	.LVL17:
+  37:main.c        ****     
+  38:main.c        ****     RightEyebrow_WriteCompare2(200);
+ 119              		.loc 1 38 0
+ 120 0038 C820     		movs	r0, #200
+ 121 003a FFF7FEFF 		bl	RightEyebrow_WriteCompare2
+ 122              	.LVL18:
+  39:main.c        ****     LeftEyebrow_WriteCompare2(200);
+ 123              		.loc 1 39 0
+ 124 003e C820     		movs	r0, #200
+ 125 0040 FFF7FEFF 		bl	LeftEyebrow_WriteCompare2
+ 126              	.LVL19:
+  40:main.c        ****     EyeBallVertical_WriteCompare2(200);
+ 127              		.loc 1 40 0
+ 128 0044 C820     		movs	r0, #200
+ 129 0046 FFF7FEFF 		bl	EyeBallVertical_WriteCompare2
+ 130              	.LVL20:
+  41:main.c        ****     EyelidGroup_WriteCompare2(200);
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 4
 
 
- 131 0026 01       		.byte	0x1
- 132 0027 06       		.byte	0x6
- 133 0028 B1010000 		.4byte	.LASF0
- 134 002c 02       		.uleb128 0x2
- 135 002d 01       		.byte	0x1
- 136 002e 08       		.byte	0x8
- 137 002f 06010000 		.4byte	.LASF1
- 138 0033 02       		.uleb128 0x2
- 139 0034 02       		.byte	0x2
- 140 0035 05       		.byte	0x5
- 141 0036 F4010000 		.4byte	.LASF2
- 142 003a 02       		.uleb128 0x2
- 143 003b 02       		.byte	0x2
- 144 003c 07       		.byte	0x7
- 145 003d 0E000000 		.4byte	.LASF3
- 146 0041 03       		.uleb128 0x3
- 147 0042 C9010000 		.4byte	.LASF9
- 148 0046 02       		.byte	0x2
- 149 0047 3F       		.byte	0x3f
- 150 0048 4C000000 		.4byte	0x4c
- 151 004c 02       		.uleb128 0x2
- 152 004d 04       		.byte	0x4
- 153 004e 05       		.byte	0x5
- 154 004f 4E010000 		.4byte	.LASF4
- 155 0053 02       		.uleb128 0x2
- 156 0054 04       		.byte	0x4
- 157 0055 07       		.byte	0x7
- 158 0056 DD000000 		.4byte	.LASF5
- 159 005a 02       		.uleb128 0x2
- 160 005b 08       		.byte	0x8
- 161 005c 05       		.byte	0x5
- 162 005d 00000000 		.4byte	.LASF6
- 163 0061 02       		.uleb128 0x2
- 164 0062 08       		.byte	0x8
- 165 0063 07       		.byte	0x7
- 166 0064 EF000000 		.4byte	.LASF7
- 167 0068 04       		.uleb128 0x4
- 168 0069 04       		.byte	0x4
- 169 006a 05       		.byte	0x5
- 170 006b 696E7400 		.ascii	"int\000"
- 171 006f 02       		.uleb128 0x2
- 172 0070 04       		.byte	0x4
- 173 0071 07       		.byte	0x7
- 174 0072 2E000000 		.4byte	.LASF8
- 175 0076 03       		.uleb128 0x3
- 176 0077 0B020000 		.4byte	.LASF10
- 177 007b 03       		.byte	0x3
- 178 007c 2C       		.byte	0x2c
- 179 007d 41000000 		.4byte	0x41
- 180 0081 02       		.uleb128 0x2
- 181 0082 04       		.byte	0x4
- 182 0083 04       		.byte	0x4
- 183 0084 EE010000 		.4byte	.LASF11
- 184 0088 02       		.uleb128 0x2
- 185 0089 08       		.byte	0x8
- 186 008a 04       		.byte	0x4
- 187 008b 47010000 		.4byte	.LASF12
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 5
+ 131              		.loc 1 41 0
+ 132 004a C820     		movs	r0, #200
+ 133 004c FFF7FEFF 		bl	EyelidGroup_WriteCompare2
+ 134              	.LVL21:
+  42:main.c        ****     BaseJaw_WriteCompare2(200);
+ 135              		.loc 1 42 0
+ 136 0050 C820     		movs	r0, #200
+ 137 0052 FFF7FEFF 		bl	BaseJaw_WriteCompare2
+ 138              	.LVL22:
+  43:main.c        ****     LeftEyebrow_WriteCompare2(200);
+ 139              		.loc 1 43 0
+ 140 0056 C820     		movs	r0, #200
+ 141 0058 FFF7FEFF 		bl	LeftEyebrow_WriteCompare2
+ 142              	.LVL23:
+  44:main.c        ****     EyeBallHorizontal_WriteCompare2(200);
+ 143              		.loc 1 44 0
+ 144 005c C820     		movs	r0, #200
+ 145 005e FFF7FEFF 		bl	EyeBallHorizontal_WriteCompare2
+ 146              	.LVL24:
+  45:main.c        ****     Neck_WriteCompare2(200);
+ 147              		.loc 1 45 0
+ 148 0062 C820     		movs	r0, #200
+ 149 0064 FFF7FEFF 		bl	Neck_WriteCompare2
+ 150              	.LVL25:
+  46:main.c        ****     Lip_WriteCompare2(200);
+ 151              		.loc 1 46 0
+ 152 0068 C820     		movs	r0, #200
+ 153 006a FFF7FEFF 		bl	Lip_WriteCompare2
+ 154              	.LVL26:
+ 155 006e 08BD     		pop	{r3, pc}
+ 156              		.cfi_endproc
+ 157              	.LFE64:
+ 158              		.size	resetAllServoPositions, .-resetAllServoPositions
+ 159              		.section	.text.resetLeftEyebrow,"ax",%progbits
+ 160              		.align	2
+ 161              		.global	resetLeftEyebrow
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.type	resetLeftEyebrow, %function
+ 165              	resetLeftEyebrow:
+ 166              	.LFB65:
+  47:main.c        **** }
+  48:main.c        **** 
+  49:main.c        **** void resetLeftEyebrow() {
+ 167              		.loc 1 49 0
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171 0000 08B5     		push	{r3, lr}
+ 172              		.cfi_def_cfa_offset 8
+ 173              		.cfi_offset 3, -8
+ 174              		.cfi_offset 14, -4
+  50:main.c        ****     LeftEyebrow_WriteCompare1(1000);
+ 175              		.loc 1 50 0
+ 176 0002 4FF47A70 		mov	r0, #1000
+ 177 0006 FFF7FEFF 		bl	LeftEyebrow_WriteCompare1
+ 178              	.LVL27:
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 5
 
 
- 188 008f 02       		.uleb128 0x2
- 189 0090 01       		.byte	0x1
- 190 0091 08       		.byte	0x8
- 191 0092 14010000 		.4byte	.LASF13
- 192 0096 02       		.uleb128 0x2
- 193 0097 08       		.byte	0x8
- 194 0098 04       		.byte	0x4
- 195 0099 BD010000 		.4byte	.LASF14
- 196 009d 02       		.uleb128 0x2
- 197 009e 04       		.byte	0x4
- 198 009f 07       		.byte	0x7
- 199 00a0 13020000 		.4byte	.LASF15
- 200 00a4 05       		.uleb128 0x5
- 201 00a5 FE010000 		.4byte	.LASF23
- 202 00a9 01       		.byte	0x1
- 203 00aa 0F       		.byte	0xf
- 204 00ab 00000000 		.4byte	.LFB63
- 205 00af 34000000 		.4byte	.LFE63-.LFB63
- 206 00b3 01       		.uleb128 0x1
- 207 00b4 9C       		.byte	0x9c
- 208 00b5 34010000 		.4byte	0x134
- 209 00b9 06       		.uleb128 0x6
- 210 00ba 0A000000 		.4byte	.LVL0
- 211 00be 7E010000 		.4byte	0x17e
- 212 00c2 CE000000 		.4byte	0xce
- 213 00c6 07       		.uleb128 0x7
- 214 00c7 01       		.uleb128 0x1
- 215 00c8 50       		.byte	0x50
- 216 00c9 03       		.uleb128 0x3
- 217 00ca 0A       		.byte	0xa
- 218 00cb F401     		.2byte	0x1f4
- 219 00cd 00       		.byte	0
- 220 00ce 06       		.uleb128 0x6
- 221 00cf 12000000 		.4byte	.LVL1
- 222 00d3 89010000 		.4byte	0x189
- 223 00d7 E3000000 		.4byte	0xe3
- 224 00db 07       		.uleb128 0x7
- 225 00dc 01       		.uleb128 0x1
- 226 00dd 50       		.byte	0x50
- 227 00de 03       		.uleb128 0x3
- 228 00df 0A       		.byte	0xa
- 229 00e0 4006     		.2byte	0x640
- 230 00e2 00       		.byte	0
- 231 00e3 06       		.uleb128 0x6
- 232 00e4 1A000000 		.4byte	.LVL2
- 233 00e8 94010000 		.4byte	0x194
- 234 00ec F8000000 		.4byte	0xf8
- 235 00f0 07       		.uleb128 0x7
- 236 00f1 01       		.uleb128 0x1
- 237 00f2 50       		.byte	0x50
- 238 00f3 03       		.uleb128 0x3
- 239 00f4 0A       		.byte	0xa
- 240 00f5 8403     		.2byte	0x384
- 241 00f7 00       		.byte	0
- 242 00f8 06       		.uleb128 0x6
- 243 00f9 22000000 		.4byte	.LVL3
- 244 00fd 7E010000 		.4byte	0x17e
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 6
+  51:main.c        ****     LeftEyebrow_WriteCompare2(1000);
+ 179              		.loc 1 51 0
+ 180 000a 4FF47A70 		mov	r0, #1000
+ 181 000e FFF7FEFF 		bl	LeftEyebrow_WriteCompare2
+ 182              	.LVL28:
+ 183 0012 08BD     		pop	{r3, pc}
+ 184              		.cfi_endproc
+ 185              	.LFE65:
+ 186              		.size	resetLeftEyebrow, .-resetLeftEyebrow
+ 187              		.section	.text.sadLeftEyebrow,"ax",%progbits
+ 188              		.align	2
+ 189              		.global	sadLeftEyebrow
+ 190              		.thumb
+ 191              		.thumb_func
+ 192              		.type	sadLeftEyebrow, %function
+ 193              	sadLeftEyebrow:
+ 194              	.LFB66:
+  52:main.c        **** }
+  53:main.c        **** 
+  54:main.c        **** void sadLeftEyebrow() {
+ 195              		.loc 1 54 0
+ 196              		.cfi_startproc
+ 197              		@ args = 0, pretend = 0, frame = 0
+ 198              		@ frame_needed = 0, uses_anonymous_args = 0
+ 199 0000 08B5     		push	{r3, lr}
+ 200              		.cfi_def_cfa_offset 8
+ 201              		.cfi_offset 3, -8
+ 202              		.cfi_offset 14, -4
+  55:main.c        ****     LeftEyebrow_WriteCompare1(1600);
+ 203              		.loc 1 55 0
+ 204 0002 4FF4C860 		mov	r0, #1600
+ 205 0006 FFF7FEFF 		bl	LeftEyebrow_WriteCompare1
+ 206              	.LVL29:
+  56:main.c        ****     LeftEyebrow_WriteCompare2(1600);
+ 207              		.loc 1 56 0
+ 208 000a 4FF4C860 		mov	r0, #1600
+ 209 000e FFF7FEFF 		bl	LeftEyebrow_WriteCompare2
+ 210              	.LVL30:
+ 211 0012 08BD     		pop	{r3, pc}
+ 212              		.cfi_endproc
+ 213              	.LFE66:
+ 214              		.size	sadLeftEyebrow, .-sadLeftEyebrow
+ 215              		.section	.text.raisedLeftEyebrow,"ax",%progbits
+ 216              		.align	2
+ 217              		.global	raisedLeftEyebrow
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.type	raisedLeftEyebrow, %function
+ 221              	raisedLeftEyebrow:
+ 222              	.LFB67:
+  57:main.c        **** }
+  58:main.c        **** 
+  59:main.c        **** void raisedLeftEyebrow() {
+ 223              		.loc 1 59 0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 0
+ 226              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 6
 
 
- 245 0101 0D010000 		.4byte	0x10d
- 246 0105 07       		.uleb128 0x7
- 247 0106 01       		.uleb128 0x1
- 248 0107 50       		.byte	0x50
- 249 0108 03       		.uleb128 0x3
- 250 0109 0A       		.byte	0xa
- 251 010a F401     		.2byte	0x1f4
- 252 010c 00       		.byte	0
- 253 010d 06       		.uleb128 0x6
- 254 010e 2A000000 		.4byte	.LVL4
- 255 0112 89010000 		.4byte	0x189
- 256 0116 22010000 		.4byte	0x122
- 257 011a 07       		.uleb128 0x7
- 258 011b 01       		.uleb128 0x1
- 259 011c 50       		.byte	0x50
- 260 011d 03       		.uleb128 0x3
- 261 011e 0A       		.byte	0xa
- 262 011f 4006     		.2byte	0x640
- 263 0121 00       		.byte	0
- 264 0122 08       		.uleb128 0x8
- 265 0123 32000000 		.4byte	.LVL5
- 266 0127 94010000 		.4byte	0x194
- 267 012b 07       		.uleb128 0x7
- 268 012c 01       		.uleb128 0x1
- 269 012d 50       		.byte	0x50
- 270 012e 03       		.uleb128 0x3
- 271 012f 0A       		.byte	0xa
- 272 0130 8403     		.2byte	0x384
- 273 0132 00       		.byte	0
- 274 0133 00       		.byte	0
- 275 0134 09       		.uleb128 0x9
- 276 0135 42000000 		.4byte	.LASF24
- 277 0139 01       		.byte	0x1
- 278 013a 1A       		.byte	0x1a
- 279 013b 68000000 		.4byte	0x68
- 280 013f 00000000 		.4byte	.LFB64
- 281 0143 18000000 		.4byte	.LFE64-.LFB64
- 282 0147 01       		.uleb128 0x1
- 283 0148 9C       		.byte	0x9c
- 284 0149 6D010000 		.4byte	0x16d
- 285 014d 0A       		.uleb128 0xa
- 286 014e 6300     		.ascii	"c\000"
- 287 0150 01       		.byte	0x1
- 288 0151 20       		.byte	0x20
- 289 0152 68000000 		.4byte	0x68
- 290 0156 00000000 		.4byte	.LLST0
- 291 015a 0B       		.uleb128 0xb
- 292 015b 08000000 		.4byte	.LVL6
- 293 015f 9F010000 		.4byte	0x19f
- 294 0163 0B       		.uleb128 0xb
- 295 0164 0E000000 		.4byte	.LVL8
- 296 0168 A4000000 		.4byte	0xa4
- 297 016c 00       		.byte	0
- 298 016d 0C       		.uleb128 0xc
- 299 016e 21000000 		.4byte	.LASF25
- 300 0172 06       		.byte	0x6
- 301 0173 1207     		.2byte	0x712
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 7
+ 227 0000 08B5     		push	{r3, lr}
+ 228              		.cfi_def_cfa_offset 8
+ 229              		.cfi_offset 3, -8
+ 230              		.cfi_offset 14, -4
+  60:main.c        ****     LeftEyebrow_WriteCompare1(200);
+ 231              		.loc 1 60 0
+ 232 0002 C820     		movs	r0, #200
+ 233 0004 FFF7FEFF 		bl	LeftEyebrow_WriteCompare1
+ 234              	.LVL31:
+  61:main.c        ****     LeftEyebrow_WriteCompare2(200);
+ 235              		.loc 1 61 0
+ 236 0008 C820     		movs	r0, #200
+ 237 000a FFF7FEFF 		bl	LeftEyebrow_WriteCompare2
+ 238              	.LVL32:
+ 239 000e 08BD     		pop	{r3, pc}
+ 240              		.cfi_endproc
+ 241              	.LFE67:
+ 242              		.size	raisedLeftEyebrow, .-raisedLeftEyebrow
+ 243              		.section	.text.clearLeftEyebrow,"ax",%progbits
+ 244              		.align	2
+ 245              		.global	clearLeftEyebrow
+ 246              		.thumb
+ 247              		.thumb_func
+ 248              		.type	clearLeftEyebrow, %function
+ 249              	clearLeftEyebrow:
+ 250              	.LFB68:
+  62:main.c        **** }
+  63:main.c        **** 
+  64:main.c        **** void clearLeftEyebrow() {
+ 251              		.loc 1 64 0
+ 252              		.cfi_startproc
+ 253              		@ args = 0, pretend = 0, frame = 0
+ 254              		@ frame_needed = 0, uses_anonymous_args = 0
+ 255 0000 08B5     		push	{r3, lr}
+ 256              		.cfi_def_cfa_offset 8
+ 257              		.cfi_offset 3, -8
+ 258              		.cfi_offset 14, -4
+  65:main.c        ****     LeftEyebrow_WriteCompare1(0);
+ 259              		.loc 1 65 0
+ 260 0002 0020     		movs	r0, #0
+ 261 0004 FFF7FEFF 		bl	LeftEyebrow_WriteCompare1
+ 262              	.LVL33:
+  66:main.c        ****     LeftEyebrow_WriteCompare2(0);
+ 263              		.loc 1 66 0
+ 264 0008 0020     		movs	r0, #0
+ 265 000a FFF7FEFF 		bl	LeftEyebrow_WriteCompare2
+ 266              	.LVL34:
+ 267 000e 08BD     		pop	{r3, pc}
+ 268              		.cfi_endproc
+ 269              	.LFE68:
+ 270              		.size	clearLeftEyebrow, .-clearLeftEyebrow
+ 271              		.section	.text.resetRightEyebrow,"ax",%progbits
+ 272              		.align	2
+ 273              		.global	resetRightEyebrow
+ 274              		.thumb
+ 275              		.thumb_func
+ 276              		.type	resetRightEyebrow, %function
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 7
 
 
- 302 0175 79010000 		.4byte	0x179
- 303 0179 0D       		.uleb128 0xd
- 304 017a 76000000 		.4byte	0x76
- 305 017e 0E       		.uleb128 0xe
- 306 017f 19010000 		.4byte	.LASF16
- 307 0183 19010000 		.4byte	.LASF16
- 308 0187 04       		.byte	0x4
- 309 0188 C7       		.byte	0xc7
- 310 0189 0E       		.uleb128 0xe
- 311 018a D3010000 		.4byte	.LASF17
- 312 018e D3010000 		.4byte	.LASF17
- 313 0192 04       		.byte	0x4
- 314 0193 CA       		.byte	0xca
- 315 0194 0E       		.uleb128 0xe
- 316 0195 D5000000 		.4byte	.LASF18
- 317 0199 D5000000 		.4byte	.LASF18
- 318 019d 05       		.byte	0x5
- 319 019e 76       		.byte	0x76
- 320 019f 0E       		.uleb128 0xe
- 321 01a0 34010000 		.4byte	.LASF19
- 322 01a4 34010000 		.4byte	.LASF19
- 323 01a8 04       		.byte	0x4
- 324 01a9 92       		.byte	0x92
- 325 01aa 00       		.byte	0
- 326              		.section	.debug_abbrev,"",%progbits
- 327              	.Ldebug_abbrev0:
- 328 0000 01       		.uleb128 0x1
- 329 0001 11       		.uleb128 0x11
- 330 0002 01       		.byte	0x1
- 331 0003 25       		.uleb128 0x25
- 332 0004 0E       		.uleb128 0xe
- 333 0005 13       		.uleb128 0x13
- 334 0006 0B       		.uleb128 0xb
- 335 0007 03       		.uleb128 0x3
- 336 0008 0E       		.uleb128 0xe
- 337 0009 1B       		.uleb128 0x1b
- 338 000a 0E       		.uleb128 0xe
- 339 000b 55       		.uleb128 0x55
- 340 000c 17       		.uleb128 0x17
- 341 000d 11       		.uleb128 0x11
- 342 000e 01       		.uleb128 0x1
- 343 000f 10       		.uleb128 0x10
- 344 0010 17       		.uleb128 0x17
- 345 0011 00       		.byte	0
- 346 0012 00       		.byte	0
- 347 0013 02       		.uleb128 0x2
- 348 0014 24       		.uleb128 0x24
- 349 0015 00       		.byte	0
- 350 0016 0B       		.uleb128 0xb
- 351 0017 0B       		.uleb128 0xb
- 352 0018 3E       		.uleb128 0x3e
- 353 0019 0B       		.uleb128 0xb
- 354 001a 03       		.uleb128 0x3
- 355 001b 0E       		.uleb128 0xe
- 356 001c 00       		.byte	0
- 357 001d 00       		.byte	0
- 358 001e 03       		.uleb128 0x3
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 8
+ 277              	resetRightEyebrow:
+ 278              	.LFB69:
+  67:main.c        **** }
+  68:main.c        **** 
+  69:main.c        **** void resetRightEyebrow() {
+ 279              		.loc 1 69 0
+ 280              		.cfi_startproc
+ 281              		@ args = 0, pretend = 0, frame = 0
+ 282              		@ frame_needed = 0, uses_anonymous_args = 0
+ 283 0000 08B5     		push	{r3, lr}
+ 284              		.cfi_def_cfa_offset 8
+ 285              		.cfi_offset 3, -8
+ 286              		.cfi_offset 14, -4
+  70:main.c        ****     RightEyebrow_WriteCompare1(1000);
+ 287              		.loc 1 70 0
+ 288 0002 4FF47A70 		mov	r0, #1000
+ 289 0006 FFF7FEFF 		bl	RightEyebrow_WriteCompare1
+ 290              	.LVL35:
+  71:main.c        ****     RightEyebrow_WriteCompare2(1000);
+ 291              		.loc 1 71 0
+ 292 000a 4FF47A70 		mov	r0, #1000
+ 293 000e FFF7FEFF 		bl	RightEyebrow_WriteCompare2
+ 294              	.LVL36:
+ 295 0012 08BD     		pop	{r3, pc}
+ 296              		.cfi_endproc
+ 297              	.LFE69:
+ 298              		.size	resetRightEyebrow, .-resetRightEyebrow
+ 299              		.section	.text.raisedRightEyebrow,"ax",%progbits
+ 300              		.align	2
+ 301              		.global	raisedRightEyebrow
+ 302              		.thumb
+ 303              		.thumb_func
+ 304              		.type	raisedRightEyebrow, %function
+ 305              	raisedRightEyebrow:
+ 306              	.LFB70:
+  72:main.c        **** }
+  73:main.c        **** 
+  74:main.c        **** void raisedRightEyebrow() {
+ 307              		.loc 1 74 0
+ 308              		.cfi_startproc
+ 309              		@ args = 0, pretend = 0, frame = 0
+ 310              		@ frame_needed = 0, uses_anonymous_args = 0
+ 311 0000 08B5     		push	{r3, lr}
+ 312              		.cfi_def_cfa_offset 8
+ 313              		.cfi_offset 3, -8
+ 314              		.cfi_offset 14, -4
+  75:main.c        ****     RightEyebrow_WriteCompare1(1600);
+ 315              		.loc 1 75 0
+ 316 0002 4FF4C860 		mov	r0, #1600
+ 317 0006 FFF7FEFF 		bl	RightEyebrow_WriteCompare1
+ 318              	.LVL37:
+  76:main.c        ****     RightEyebrow_WriteCompare2(1600);
+ 319              		.loc 1 76 0
+ 320 000a 4FF4C860 		mov	r0, #1600
+ 321 000e FFF7FEFF 		bl	RightEyebrow_WriteCompare2
+ 322              	.LVL38:
+ 323 0012 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 8
 
 
- 359 001f 16       		.uleb128 0x16
- 360 0020 00       		.byte	0
- 361 0021 03       		.uleb128 0x3
- 362 0022 0E       		.uleb128 0xe
- 363 0023 3A       		.uleb128 0x3a
- 364 0024 0B       		.uleb128 0xb
- 365 0025 3B       		.uleb128 0x3b
- 366 0026 0B       		.uleb128 0xb
- 367 0027 49       		.uleb128 0x49
- 368 0028 13       		.uleb128 0x13
- 369 0029 00       		.byte	0
- 370 002a 00       		.byte	0
- 371 002b 04       		.uleb128 0x4
- 372 002c 24       		.uleb128 0x24
- 373 002d 00       		.byte	0
- 374 002e 0B       		.uleb128 0xb
- 375 002f 0B       		.uleb128 0xb
- 376 0030 3E       		.uleb128 0x3e
- 377 0031 0B       		.uleb128 0xb
- 378 0032 03       		.uleb128 0x3
- 379 0033 08       		.uleb128 0x8
- 380 0034 00       		.byte	0
- 381 0035 00       		.byte	0
- 382 0036 05       		.uleb128 0x5
- 383 0037 2E       		.uleb128 0x2e
- 384 0038 01       		.byte	0x1
- 385 0039 3F       		.uleb128 0x3f
- 386 003a 19       		.uleb128 0x19
- 387 003b 03       		.uleb128 0x3
- 388 003c 0E       		.uleb128 0xe
- 389 003d 3A       		.uleb128 0x3a
- 390 003e 0B       		.uleb128 0xb
- 391 003f 3B       		.uleb128 0x3b
- 392 0040 0B       		.uleb128 0xb
- 393 0041 11       		.uleb128 0x11
- 394 0042 01       		.uleb128 0x1
- 395 0043 12       		.uleb128 0x12
- 396 0044 06       		.uleb128 0x6
- 397 0045 40       		.uleb128 0x40
- 398 0046 18       		.uleb128 0x18
- 399 0047 9742     		.uleb128 0x2117
- 400 0049 19       		.uleb128 0x19
- 401 004a 01       		.uleb128 0x1
- 402 004b 13       		.uleb128 0x13
- 403 004c 00       		.byte	0
- 404 004d 00       		.byte	0
- 405 004e 06       		.uleb128 0x6
- 406 004f 898201   		.uleb128 0x4109
- 407 0052 01       		.byte	0x1
- 408 0053 11       		.uleb128 0x11
- 409 0054 01       		.uleb128 0x1
- 410 0055 31       		.uleb128 0x31
- 411 0056 13       		.uleb128 0x13
- 412 0057 01       		.uleb128 0x1
- 413 0058 13       		.uleb128 0x13
- 414 0059 00       		.byte	0
- 415 005a 00       		.byte	0
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 9
+ 324              		.cfi_endproc
+ 325              	.LFE70:
+ 326              		.size	raisedRightEyebrow, .-raisedRightEyebrow
+ 327              		.section	.text.sadRightEyebrow,"ax",%progbits
+ 328              		.align	2
+ 329              		.global	sadRightEyebrow
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.type	sadRightEyebrow, %function
+ 333              	sadRightEyebrow:
+ 334              	.LFB71:
+  77:main.c        **** }
+  78:main.c        **** 
+  79:main.c        **** void sadRightEyebrow() {
+ 335              		.loc 1 79 0
+ 336              		.cfi_startproc
+ 337              		@ args = 0, pretend = 0, frame = 0
+ 338              		@ frame_needed = 0, uses_anonymous_args = 0
+ 339 0000 08B5     		push	{r3, lr}
+ 340              		.cfi_def_cfa_offset 8
+ 341              		.cfi_offset 3, -8
+ 342              		.cfi_offset 14, -4
+  80:main.c        ****     RightEyebrow_WriteCompare1(200);
+ 343              		.loc 1 80 0
+ 344 0002 C820     		movs	r0, #200
+ 345 0004 FFF7FEFF 		bl	RightEyebrow_WriteCompare1
+ 346              	.LVL39:
+  81:main.c        ****     RightEyebrow_WriteCompare2(200);
+ 347              		.loc 1 81 0
+ 348 0008 C820     		movs	r0, #200
+ 349 000a FFF7FEFF 		bl	RightEyebrow_WriteCompare2
+ 350              	.LVL40:
+ 351 000e 08BD     		pop	{r3, pc}
+ 352              		.cfi_endproc
+ 353              	.LFE71:
+ 354              		.size	sadRightEyebrow, .-sadRightEyebrow
+ 355              		.section	.text.clearRightEyebrow,"ax",%progbits
+ 356              		.align	2
+ 357              		.global	clearRightEyebrow
+ 358              		.thumb
+ 359              		.thumb_func
+ 360              		.type	clearRightEyebrow, %function
+ 361              	clearRightEyebrow:
+ 362              	.LFB72:
+  82:main.c        **** }
+  83:main.c        **** 
+  84:main.c        **** void clearRightEyebrow() {
+ 363              		.loc 1 84 0
+ 364              		.cfi_startproc
+ 365              		@ args = 0, pretend = 0, frame = 0
+ 366              		@ frame_needed = 0, uses_anonymous_args = 0
+ 367 0000 08B5     		push	{r3, lr}
+ 368              		.cfi_def_cfa_offset 8
+ 369              		.cfi_offset 3, -8
+ 370              		.cfi_offset 14, -4
+  85:main.c        ****     RightEyebrow_WriteCompare1(0);
+ 371              		.loc 1 85 0
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 9
 
 
- 416 005b 07       		.uleb128 0x7
- 417 005c 8A8201   		.uleb128 0x410a
- 418 005f 00       		.byte	0
- 419 0060 02       		.uleb128 0x2
- 420 0061 18       		.uleb128 0x18
- 421 0062 9142     		.uleb128 0x2111
- 422 0064 18       		.uleb128 0x18
- 423 0065 00       		.byte	0
- 424 0066 00       		.byte	0
- 425 0067 08       		.uleb128 0x8
- 426 0068 898201   		.uleb128 0x4109
- 427 006b 01       		.byte	0x1
- 428 006c 11       		.uleb128 0x11
- 429 006d 01       		.uleb128 0x1
- 430 006e 31       		.uleb128 0x31
- 431 006f 13       		.uleb128 0x13
- 432 0070 00       		.byte	0
- 433 0071 00       		.byte	0
- 434 0072 09       		.uleb128 0x9
- 435 0073 2E       		.uleb128 0x2e
- 436 0074 01       		.byte	0x1
- 437 0075 3F       		.uleb128 0x3f
- 438 0076 19       		.uleb128 0x19
- 439 0077 03       		.uleb128 0x3
- 440 0078 0E       		.uleb128 0xe
- 441 0079 3A       		.uleb128 0x3a
- 442 007a 0B       		.uleb128 0xb
- 443 007b 3B       		.uleb128 0x3b
- 444 007c 0B       		.uleb128 0xb
- 445 007d 27       		.uleb128 0x27
- 446 007e 19       		.uleb128 0x19
- 447 007f 49       		.uleb128 0x49
- 448 0080 13       		.uleb128 0x13
- 449 0081 11       		.uleb128 0x11
- 450 0082 01       		.uleb128 0x1
- 451 0083 12       		.uleb128 0x12
- 452 0084 06       		.uleb128 0x6
- 453 0085 40       		.uleb128 0x40
- 454 0086 18       		.uleb128 0x18
- 455 0087 9742     		.uleb128 0x2117
- 456 0089 19       		.uleb128 0x19
- 457 008a 01       		.uleb128 0x1
- 458 008b 13       		.uleb128 0x13
- 459 008c 00       		.byte	0
- 460 008d 00       		.byte	0
- 461 008e 0A       		.uleb128 0xa
- 462 008f 34       		.uleb128 0x34
- 463 0090 00       		.byte	0
- 464 0091 03       		.uleb128 0x3
- 465 0092 08       		.uleb128 0x8
- 466 0093 3A       		.uleb128 0x3a
- 467 0094 0B       		.uleb128 0xb
- 468 0095 3B       		.uleb128 0x3b
- 469 0096 0B       		.uleb128 0xb
- 470 0097 49       		.uleb128 0x49
- 471 0098 13       		.uleb128 0x13
- 472 0099 02       		.uleb128 0x2
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 10
+ 372 0002 0020     		movs	r0, #0
+ 373 0004 FFF7FEFF 		bl	RightEyebrow_WriteCompare1
+ 374              	.LVL41:
+  86:main.c        ****     RightEyebrow_WriteCompare2(0);
+ 375              		.loc 1 86 0
+ 376 0008 0020     		movs	r0, #0
+ 377 000a FFF7FEFF 		bl	RightEyebrow_WriteCompare2
+ 378              	.LVL42:
+ 379 000e 08BD     		pop	{r3, pc}
+ 380              		.cfi_endproc
+ 381              	.LFE72:
+ 382              		.size	clearRightEyebrow, .-clearRightEyebrow
+ 383              		.section	.text.main,"ax",%progbits
+ 384              		.align	2
+ 385              		.global	main
+ 386              		.thumb
+ 387              		.thumb_func
+ 388              		.type	main, %function
+ 389              	main:
+ 390              	.LFB73:
+  87:main.c        **** }
+  88:main.c        **** 
+  89:main.c        **** int main(void)
+  90:main.c        **** {
+ 391              		.loc 1 90 0
+ 392              		.cfi_startproc
+ 393              		@ Volatile: function does not return.
+ 394              		@ args = 0, pretend = 0, frame = 0
+ 395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 396 0000 08B5     		push	{r3, lr}
+ 397              		.cfi_def_cfa_offset 8
+ 398              		.cfi_offset 3, -8
+ 399              		.cfi_offset 14, -4
+  91:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 400              		.loc 1 91 0
+ 401              		.syntax unified
+ 402              	@ 91 "main.c" 1
+ 403 0002 62B6     		CPSIE   i
+ 404              	@ 0 "" 2
+  92:main.c        **** 
+  93:main.c        ****     // Initialize the Components
+  94:main.c        ****     initializeComponenets();
+ 405              		.loc 1 94 0
+ 406              		.thumb
+ 407              		.syntax unified
+ 408 0004 FFF7FEFF 		bl	initializeComponenets
+ 409              	.LVL43:
+  95:main.c        ****     resetAllServoPositions();
+ 410              		.loc 1 95 0
+ 411 0008 FFF7FEFF 		bl	resetAllServoPositions
+ 412              	.LVL44:
+  96:main.c        ****     CyDelay(5000);
+ 413              		.loc 1 96 0
+ 414 000c 41F28830 		movw	r0, #5000
+ 415 0010 FFF7FEFF 		bl	CyDelay
+ 416              	.LVL45:
+ 417              	.L22:
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 10
 
 
- 473 009a 17       		.uleb128 0x17
- 474 009b 00       		.byte	0
- 475 009c 00       		.byte	0
- 476 009d 0B       		.uleb128 0xb
- 477 009e 898201   		.uleb128 0x4109
- 478 00a1 00       		.byte	0
- 479 00a2 11       		.uleb128 0x11
- 480 00a3 01       		.uleb128 0x1
- 481 00a4 31       		.uleb128 0x31
- 482 00a5 13       		.uleb128 0x13
- 483 00a6 00       		.byte	0
- 484 00a7 00       		.byte	0
- 485 00a8 0C       		.uleb128 0xc
- 486 00a9 34       		.uleb128 0x34
- 487 00aa 00       		.byte	0
- 488 00ab 03       		.uleb128 0x3
- 489 00ac 0E       		.uleb128 0xe
- 490 00ad 3A       		.uleb128 0x3a
- 491 00ae 0B       		.uleb128 0xb
- 492 00af 3B       		.uleb128 0x3b
- 493 00b0 05       		.uleb128 0x5
- 494 00b1 49       		.uleb128 0x49
- 495 00b2 13       		.uleb128 0x13
- 496 00b3 3F       		.uleb128 0x3f
- 497 00b4 19       		.uleb128 0x19
- 498 00b5 3C       		.uleb128 0x3c
- 499 00b6 19       		.uleb128 0x19
- 500 00b7 00       		.byte	0
- 501 00b8 00       		.byte	0
- 502 00b9 0D       		.uleb128 0xd
- 503 00ba 35       		.uleb128 0x35
- 504 00bb 00       		.byte	0
- 505 00bc 49       		.uleb128 0x49
- 506 00bd 13       		.uleb128 0x13
- 507 00be 00       		.byte	0
- 508 00bf 00       		.byte	0
- 509 00c0 0E       		.uleb128 0xe
- 510 00c1 2E       		.uleb128 0x2e
- 511 00c2 00       		.byte	0
- 512 00c3 3F       		.uleb128 0x3f
- 513 00c4 19       		.uleb128 0x19
- 514 00c5 3C       		.uleb128 0x3c
- 515 00c6 19       		.uleb128 0x19
- 516 00c7 6E       		.uleb128 0x6e
- 517 00c8 0E       		.uleb128 0xe
- 518 00c9 03       		.uleb128 0x3
- 519 00ca 0E       		.uleb128 0xe
- 520 00cb 3A       		.uleb128 0x3a
- 521 00cc 0B       		.uleb128 0xb
- 522 00cd 3B       		.uleb128 0x3b
- 523 00ce 0B       		.uleb128 0xb
- 524 00cf 00       		.byte	0
- 525 00d0 00       		.byte	0
- 526 00d1 00       		.byte	0
- 527              		.section	.debug_loc,"",%progbits
- 528              	.Ldebug_loc0:
- 529              	.LLST0:
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 11
+  97:main.c        ****     
+  98:main.c        ****     // Actions
+  99:main.c        ****     while(1) {
+ 100:main.c        ****         sadLeftEyebrow();
+ 418              		.loc 1 100 0 discriminator 1
+ 419 0014 FFF7FEFF 		bl	sadLeftEyebrow
+ 420              	.LVL46:
+ 101:main.c        ****         sadRightEyebrow();
+ 421              		.loc 1 101 0 discriminator 1
+ 422 0018 FFF7FEFF 		bl	sadRightEyebrow
+ 423              	.LVL47:
+ 102:main.c        ****         //clearLeftEyebrow();
+ 103:main.c        ****         //clearRightEyebrow();
+ 104:main.c        ****         CyDelay(3000);
+ 424              		.loc 1 104 0 discriminator 1
+ 425 001c 40F6B830 		movw	r0, #3000
+ 426 0020 FFF7FEFF 		bl	CyDelay
+ 427              	.LVL48:
+ 105:main.c        ****         raisedLeftEyebrow();
+ 428              		.loc 1 105 0 discriminator 1
+ 429 0024 FFF7FEFF 		bl	raisedLeftEyebrow
+ 430              	.LVL49:
+ 106:main.c        ****         raisedRightEyebrow();
+ 431              		.loc 1 106 0 discriminator 1
+ 432 0028 FFF7FEFF 		bl	raisedRightEyebrow
+ 433              	.LVL50:
+ 107:main.c        ****         //clearLeftEyebrow();
+ 108:main.c        ****         //clearRightEyebrow();
+ 109:main.c        ****         CyDelay(3000);
+ 434              		.loc 1 109 0 discriminator 1
+ 435 002c 40F6B830 		movw	r0, #3000
+ 436 0030 FFF7FEFF 		bl	CyDelay
+ 437              	.LVL51:
+ 438 0034 EEE7     		b	.L22
+ 439              		.cfi_endproc
+ 440              	.LFE73:
+ 441              		.size	main, .-main
+ 442 0036 00BF     		.text
+ 443              	.Letext0:
+ 444              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 445              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 446              		.file 4 "Generated_Source\\PSoC5/RightEyebrow.h"
+ 447              		.file 5 "Generated_Source\\PSoC5/LeftEyebrow.h"
+ 448              		.file 6 "Generated_Source\\PSoC5/EyeBallVertical.h"
+ 449              		.file 7 "Generated_Source\\PSoC5/EyelidGroup.h"
+ 450              		.file 8 "Generated_Source\\PSoC5/BaseJaw.h"
+ 451              		.file 9 "Generated_Source\\PSoC5/EyeBallHorizontal.h"
+ 452              		.file 10 "Generated_Source\\PSoC5/Neck.h"
+ 453              		.file 11 "Generated_Source\\PSoC5/Lip.h"
+ 454              		.file 12 "Generated_Source\\PSoC5/CyLib.h"
+ 455              		.file 13 "Generated_Source\\PSoC5/core_cm3.h"
+ 456              		.section	.debug_info,"",%progbits
+ 457              	.Ldebug_info0:
+ 458 0000 05060000 		.4byte	0x605
+ 459 0004 0400     		.2byte	0x4
+ 460 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 461 000a 04       		.byte	0x4
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 11
 
 
- 530 0000 08000000 		.4byte	.LVL6
- 531 0004 0A000000 		.4byte	.LVL7
- 532 0008 0200     		.2byte	0x2
- 533 000a 30       		.byte	0x30
- 534 000b 9F       		.byte	0x9f
- 535 000c 0A000000 		.4byte	.LVL7
- 536 0010 18000000 		.4byte	.LFE64
- 537 0014 0100     		.2byte	0x1
- 538 0016 54       		.byte	0x54
- 539 0017 00000000 		.4byte	0
- 540 001b 00000000 		.4byte	0
- 541              		.section	.debug_aranges,"",%progbits
- 542 0000 24000000 		.4byte	0x24
- 543 0004 0200     		.2byte	0x2
- 544 0006 00000000 		.4byte	.Ldebug_info0
- 545 000a 04       		.byte	0x4
- 546 000b 00       		.byte	0
- 547 000c 0000     		.2byte	0
- 548 000e 0000     		.2byte	0
- 549 0010 00000000 		.4byte	.LFB63
- 550 0014 34000000 		.4byte	.LFE63-.LFB63
- 551 0018 00000000 		.4byte	.LFB64
- 552 001c 18000000 		.4byte	.LFE64-.LFB64
- 553 0020 00000000 		.4byte	0
- 554 0024 00000000 		.4byte	0
- 555              		.section	.debug_ranges,"",%progbits
- 556              	.Ldebug_ranges0:
- 557 0000 00000000 		.4byte	.LFB63
- 558 0004 34000000 		.4byte	.LFE63
- 559 0008 00000000 		.4byte	.LFB64
- 560 000c 18000000 		.4byte	.LFE64
- 561 0010 00000000 		.4byte	0
- 562 0014 00000000 		.4byte	0
- 563              		.section	.debug_line,"",%progbits
- 564              	.Ldebug_line0:
- 565 0000 8D010000 		.section	.debug_str,"MS",%progbits,1
- 565      02005C01 
- 565      00000201 
- 565      FB0E0D00 
- 565      01010101 
- 566              	.LASF6:
- 567 0000 6C6F6E67 		.ascii	"long long int\000"
- 567      206C6F6E 
- 567      6720696E 
- 567      7400
- 568              	.LASF3:
- 569 000e 73686F72 		.ascii	"short unsigned int\000"
- 569      7420756E 
- 569      7369676E 
- 569      65642069 
- 569      6E7400
- 570              	.LASF25:
- 571 0021 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 571      52784275 
- 571      66666572 
- 571      00
- 572              	.LASF8:
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 12
+ 462 000b 01       		.uleb128 0x1
+ 463 000c FC000000 		.4byte	.LASF51
+ 464 0010 0C       		.byte	0xc
+ 465 0011 22040000 		.4byte	.LASF52
+ 466 0015 EE010000 		.4byte	.LASF53
+ 467 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 468 001d 00000000 		.4byte	0
+ 469 0021 00000000 		.4byte	.Ldebug_line0
+ 470 0025 02       		.uleb128 0x2
+ 471 0026 01       		.byte	0x1
+ 472 0027 06       		.byte	0x6
+ 473 0028 81040000 		.4byte	.LASF0
+ 474 002c 02       		.uleb128 0x2
+ 475 002d 01       		.byte	0x1
+ 476 002e 08       		.byte	0x8
+ 477 002f EE000000 		.4byte	.LASF1
+ 478 0033 02       		.uleb128 0x2
+ 479 0034 02       		.byte	0x2
+ 480 0035 05       		.byte	0x5
+ 481 0036 41040000 		.4byte	.LASF2
+ 482 003a 02       		.uleb128 0x2
+ 483 003b 02       		.byte	0x2
+ 484 003c 07       		.byte	0x7
+ 485 003d 9A010000 		.4byte	.LASF3
+ 486 0041 03       		.uleb128 0x3
+ 487 0042 2E000000 		.4byte	.LASF9
+ 488 0046 02       		.byte	0x2
+ 489 0047 3F       		.byte	0x3f
+ 490 0048 4C000000 		.4byte	0x4c
+ 491 004c 02       		.uleb128 0x2
+ 492 004d 04       		.byte	0x4
+ 493 004e 05       		.byte	0x5
+ 494 004f 55040000 		.4byte	.LASF4
+ 495 0053 02       		.uleb128 0x2
+ 496 0054 04       		.byte	0x4
+ 497 0055 07       		.byte	0x7
+ 498 0056 5A020000 		.4byte	.LASF5
+ 499 005a 02       		.uleb128 0x2
+ 500 005b 08       		.byte	0x8
+ 501 005c 05       		.byte	0x5
+ 502 005d 02040000 		.4byte	.LASF6
+ 503 0061 02       		.uleb128 0x2
+ 504 0062 08       		.byte	0x8
+ 505 0063 07       		.byte	0x7
+ 506 0064 35030000 		.4byte	.LASF7
+ 507 0068 04       		.uleb128 0x4
+ 508 0069 04       		.byte	0x4
+ 509 006a 05       		.byte	0x5
+ 510 006b 696E7400 		.ascii	"int\000"
+ 511 006f 02       		.uleb128 0x2
+ 512 0070 04       		.byte	0x4
+ 513 0071 07       		.byte	0x7
+ 514 0072 28030000 		.4byte	.LASF8
+ 515 0076 03       		.uleb128 0x3
+ 516 0077 E0030000 		.4byte	.LASF10
+ 517 007b 03       		.byte	0x3
+ 518 007c 2C       		.byte	0x2c
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 12
 
 
- 573 002e 756E7369 		.ascii	"unsigned int\000"
- 573      676E6564 
- 573      20696E74 
- 573      00
- 574              	.LASF21:
- 575 003b 6D61696E 		.ascii	"main.c\000"
- 575      2E6300
- 576              	.LASF24:
- 577 0042 6D61696E 		.ascii	"main\000"
- 577      00
- 578              	.LASF20:
- 579 0047 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 579      43313120 
- 579      352E342E 
- 579      31203230 
- 579      31363036 
- 580 007a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 580      20726576 
- 580      6973696F 
- 580      6E203233 
- 580      37373135 
- 581 00ad 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 581      66756E63 
- 581      74696F6E 
- 581      2D736563 
- 581      74696F6E 
- 582              	.LASF18:
- 583 00d5 43794465 		.ascii	"CyDelay\000"
- 583      6C617900 
- 584              	.LASF5:
- 585 00dd 6C6F6E67 		.ascii	"long unsigned int\000"
- 585      20756E73 
- 585      69676E65 
- 585      6420696E 
- 585      7400
- 586              	.LASF7:
- 587 00ef 6C6F6E67 		.ascii	"long long unsigned int\000"
- 587      206C6F6E 
- 587      6720756E 
- 587      7369676E 
- 587      65642069 
- 588              	.LASF1:
- 589 0106 756E7369 		.ascii	"unsigned char\000"
- 589      676E6564 
- 589      20636861 
- 589      7200
- 590              	.LASF13:
- 591 0114 63686172 		.ascii	"char\000"
- 591      00
- 592              	.LASF16:
- 593 0119 52696768 		.ascii	"RightEyebrow_WriteCompare1\000"
- 593      74457965 
- 593      62726F77 
- 593      5F577269 
- 593      7465436F 
- 594              	.LASF19:
- 595 0134 52696768 		.ascii	"RightEyebrow_Start\000"
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 13
+ 519 007d 41000000 		.4byte	0x41
+ 520 0081 02       		.uleb128 0x2
+ 521 0082 04       		.byte	0x4
+ 522 0083 04       		.byte	0x4
+ 523 0084 C8000000 		.4byte	.LASF11
+ 524 0088 02       		.uleb128 0x2
+ 525 0089 08       		.byte	0x8
+ 526 008a 04       		.byte	0x4
+ 527 008b 64000000 		.4byte	.LASF12
+ 528 008f 02       		.uleb128 0x2
+ 529 0090 01       		.byte	0x1
+ 530 0091 08       		.byte	0x8
+ 531 0092 29040000 		.4byte	.LASF13
+ 532 0096 02       		.uleb128 0x2
+ 533 0097 08       		.byte	0x8
+ 534 0098 04       		.byte	0x4
+ 535 0099 75040000 		.4byte	.LASF14
+ 536 009d 02       		.uleb128 0x2
+ 537 009e 04       		.byte	0x4
+ 538 009f 07       		.byte	0x7
+ 539 00a0 F9030000 		.4byte	.LASF15
+ 540 00a4 05       		.uleb128 0x5
+ 541 00a5 12030000 		.4byte	.LASF16
+ 542 00a9 01       		.byte	0x1
+ 543 00aa 0F       		.byte	0xf
+ 544 00ab 00000000 		.4byte	.LFB63
+ 545 00af 28000000 		.4byte	.LFE63-.LFB63
+ 546 00b3 01       		.uleb128 0x1
+ 547 00b4 9C       		.byte	0x9c
+ 548 00b5 0B010000 		.4byte	0x10b
+ 549 00b9 06       		.uleb128 0x6
+ 550 00ba 06000000 		.4byte	.LVL0
+ 551 00be F5040000 		.4byte	0x4f5
+ 552 00c2 06       		.uleb128 0x6
+ 553 00c3 0A000000 		.4byte	.LVL1
+ 554 00c7 00050000 		.4byte	0x500
+ 555 00cb 06       		.uleb128 0x6
+ 556 00cc 0E000000 		.4byte	.LVL2
+ 557 00d0 0B050000 		.4byte	0x50b
+ 558 00d4 06       		.uleb128 0x6
+ 559 00d5 12000000 		.4byte	.LVL3
+ 560 00d9 16050000 		.4byte	0x516
+ 561 00dd 06       		.uleb128 0x6
+ 562 00de 16000000 		.4byte	.LVL4
+ 563 00e2 21050000 		.4byte	0x521
+ 564 00e6 06       		.uleb128 0x6
+ 565 00e7 1A000000 		.4byte	.LVL5
+ 566 00eb 00050000 		.4byte	0x500
+ 567 00ef 06       		.uleb128 0x6
+ 568 00f0 1E000000 		.4byte	.LVL6
+ 569 00f4 2C050000 		.4byte	0x52c
+ 570 00f8 06       		.uleb128 0x6
+ 571 00f9 22000000 		.4byte	.LVL7
+ 572 00fd 37050000 		.4byte	0x537
+ 573 0101 06       		.uleb128 0x6
+ 574 0102 26000000 		.4byte	.LVL8
+ 575 0106 42050000 		.4byte	0x542
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 13
 
 
- 595      74457965 
- 595      62726F77 
- 595      5F537461 
- 595      727400
- 596              	.LASF12:
- 597 0147 646F7562 		.ascii	"double\000"
- 597      6C6500
- 598              	.LASF4:
- 599 014e 6C6F6E67 		.ascii	"long int\000"
- 599      20696E74 
- 599      00
- 600              	.LASF22:
- 601 0157 433A5C55 		.ascii	"C:\\Users\\Sandeep Nadella\\OneDrive\\Documents\\PS"
- 601      73657273 
- 601      5C53616E 
- 601      64656570 
- 601      204E6164 
- 602 0185 6F432043 		.ascii	"oC Creator\\SD_Workspace\\Robot_Control.cydsn\000"
- 602      72656174 
- 602      6F725C53 
- 602      445F576F 
- 602      726B7370 
- 603              	.LASF0:
- 604 01b1 7369676E 		.ascii	"signed char\000"
- 604      65642063 
- 604      68617200 
- 605              	.LASF14:
- 606 01bd 6C6F6E67 		.ascii	"long double\000"
- 606      20646F75 
- 606      626C6500 
- 607              	.LASF9:
- 608 01c9 5F5F696E 		.ascii	"__int32_t\000"
- 608      7433325F 
- 608      7400
- 609              	.LASF17:
- 610 01d3 52696768 		.ascii	"RightEyebrow_WriteCompare2\000"
- 610      74457965 
- 610      62726F77 
- 610      5F577269 
- 610      7465436F 
- 611              	.LASF11:
- 612 01ee 666C6F61 		.ascii	"float\000"
- 612      7400
- 613              	.LASF2:
- 614 01f4 73686F72 		.ascii	"short int\000"
- 614      7420696E 
- 614      7400
- 615              	.LASF23:
- 616 01fe 72616973 		.ascii	"raiseEyebrow\000"
- 616      65457965 
- 616      62726F77 
- 616      00
- 617              	.LASF10:
- 618 020b 696E7433 		.ascii	"int32_t\000"
- 618      325F7400 
- 619              	.LASF15:
- 620 0213 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 14
+ 576 010a 00       		.byte	0
+ 577 010b 05       		.uleb128 0x5
+ 578 010c 5E040000 		.4byte	.LASF17
+ 579 0110 01       		.byte	0x1
+ 580 0111 1B       		.byte	0x1b
+ 581 0112 00000000 		.4byte	.LFB64
+ 582 0116 70000000 		.4byte	.LFE64-.LFB64
+ 583 011a 01       		.uleb128 0x1
+ 584 011b 9C       		.byte	0x9c
+ 585 011c 85020000 		.4byte	0x285
+ 586 0120 07       		.uleb128 0x7
+ 587 0121 08000000 		.4byte	.LVL9
+ 588 0125 4D050000 		.4byte	0x54d
+ 589 0129 34010000 		.4byte	0x134
+ 590 012d 08       		.uleb128 0x8
+ 591 012e 01       		.uleb128 0x1
+ 592 012f 50       		.byte	0x50
+ 593 0130 02       		.uleb128 0x2
+ 594 0131 08       		.byte	0x8
+ 595 0132 C8       		.byte	0xc8
+ 596 0133 00       		.byte	0
+ 597 0134 07       		.uleb128 0x7
+ 598 0135 0E000000 		.4byte	.LVL10
+ 599 0139 58050000 		.4byte	0x558
+ 600 013d 48010000 		.4byte	0x148
+ 601 0141 08       		.uleb128 0x8
+ 602 0142 01       		.uleb128 0x1
+ 603 0143 50       		.byte	0x50
+ 604 0144 02       		.uleb128 0x2
+ 605 0145 08       		.byte	0x8
+ 606 0146 C8       		.byte	0xc8
+ 607 0147 00       		.byte	0
+ 608 0148 07       		.uleb128 0x7
+ 609 0149 14000000 		.4byte	.LVL11
+ 610 014d 63050000 		.4byte	0x563
+ 611 0151 5C010000 		.4byte	0x15c
+ 612 0155 08       		.uleb128 0x8
+ 613 0156 01       		.uleb128 0x1
+ 614 0157 50       		.byte	0x50
+ 615 0158 02       		.uleb128 0x2
+ 616 0159 08       		.byte	0x8
+ 617 015a C8       		.byte	0xc8
+ 618 015b 00       		.byte	0
+ 619 015c 07       		.uleb128 0x7
+ 620 015d 1A000000 		.4byte	.LVL12
+ 621 0161 6E050000 		.4byte	0x56e
+ 622 0165 70010000 		.4byte	0x170
+ 623 0169 08       		.uleb128 0x8
+ 624 016a 01       		.uleb128 0x1
+ 625 016b 50       		.byte	0x50
+ 626 016c 02       		.uleb128 0x2
+ 627 016d 08       		.byte	0x8
+ 628 016e C8       		.byte	0xc8
+ 629 016f 00       		.byte	0
+ 630 0170 07       		.uleb128 0x7
+ 631 0171 20000000 		.4byte	.LVL13
+ 632 0175 79050000 		.4byte	0x579
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 14
 
 
- 620      74797065 
- 620      00
- 621              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 633 0179 84010000 		.4byte	0x184
+ 634 017d 08       		.uleb128 0x8
+ 635 017e 01       		.uleb128 0x1
+ 636 017f 50       		.byte	0x50
+ 637 0180 02       		.uleb128 0x2
+ 638 0181 08       		.byte	0x8
+ 639 0182 C8       		.byte	0xc8
+ 640 0183 00       		.byte	0
+ 641 0184 07       		.uleb128 0x7
+ 642 0185 26000000 		.4byte	.LVL14
+ 643 0189 58050000 		.4byte	0x558
+ 644 018d 98010000 		.4byte	0x198
+ 645 0191 08       		.uleb128 0x8
+ 646 0192 01       		.uleb128 0x1
+ 647 0193 50       		.byte	0x50
+ 648 0194 02       		.uleb128 0x2
+ 649 0195 08       		.byte	0x8
+ 650 0196 C8       		.byte	0xc8
+ 651 0197 00       		.byte	0
+ 652 0198 07       		.uleb128 0x7
+ 653 0199 2C000000 		.4byte	.LVL15
+ 654 019d 84050000 		.4byte	0x584
+ 655 01a1 AC010000 		.4byte	0x1ac
+ 656 01a5 08       		.uleb128 0x8
+ 657 01a6 01       		.uleb128 0x1
+ 658 01a7 50       		.byte	0x50
+ 659 01a8 02       		.uleb128 0x2
+ 660 01a9 08       		.byte	0x8
+ 661 01aa C8       		.byte	0xc8
+ 662 01ab 00       		.byte	0
+ 663 01ac 07       		.uleb128 0x7
+ 664 01ad 32000000 		.4byte	.LVL16
+ 665 01b1 8F050000 		.4byte	0x58f
+ 666 01b5 C0010000 		.4byte	0x1c0
+ 667 01b9 08       		.uleb128 0x8
+ 668 01ba 01       		.uleb128 0x1
+ 669 01bb 50       		.byte	0x50
+ 670 01bc 02       		.uleb128 0x2
+ 671 01bd 08       		.byte	0x8
+ 672 01be C8       		.byte	0xc8
+ 673 01bf 00       		.byte	0
+ 674 01c0 07       		.uleb128 0x7
+ 675 01c1 38000000 		.4byte	.LVL17
+ 676 01c5 9A050000 		.4byte	0x59a
+ 677 01c9 D4010000 		.4byte	0x1d4
+ 678 01cd 08       		.uleb128 0x8
+ 679 01ce 01       		.uleb128 0x1
+ 680 01cf 50       		.byte	0x50
+ 681 01d0 02       		.uleb128 0x2
+ 682 01d1 08       		.byte	0x8
+ 683 01d2 C8       		.byte	0xc8
+ 684 01d3 00       		.byte	0
+ 685 01d4 07       		.uleb128 0x7
+ 686 01d5 3E000000 		.4byte	.LVL18
+ 687 01d9 A5050000 		.4byte	0x5a5
+ 688 01dd E8010000 		.4byte	0x1e8
+ 689 01e1 08       		.uleb128 0x8
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 15
+
+
+ 690 01e2 01       		.uleb128 0x1
+ 691 01e3 50       		.byte	0x50
+ 692 01e4 02       		.uleb128 0x2
+ 693 01e5 08       		.byte	0x8
+ 694 01e6 C8       		.byte	0xc8
+ 695 01e7 00       		.byte	0
+ 696 01e8 07       		.uleb128 0x7
+ 697 01e9 44000000 		.4byte	.LVL19
+ 698 01ed B0050000 		.4byte	0x5b0
+ 699 01f1 FC010000 		.4byte	0x1fc
+ 700 01f5 08       		.uleb128 0x8
+ 701 01f6 01       		.uleb128 0x1
+ 702 01f7 50       		.byte	0x50
+ 703 01f8 02       		.uleb128 0x2
+ 704 01f9 08       		.byte	0x8
+ 705 01fa C8       		.byte	0xc8
+ 706 01fb 00       		.byte	0
+ 707 01fc 07       		.uleb128 0x7
+ 708 01fd 4A000000 		.4byte	.LVL20
+ 709 0201 BB050000 		.4byte	0x5bb
+ 710 0205 10020000 		.4byte	0x210
+ 711 0209 08       		.uleb128 0x8
+ 712 020a 01       		.uleb128 0x1
+ 713 020b 50       		.byte	0x50
+ 714 020c 02       		.uleb128 0x2
+ 715 020d 08       		.byte	0x8
+ 716 020e C8       		.byte	0xc8
+ 717 020f 00       		.byte	0
+ 718 0210 07       		.uleb128 0x7
+ 719 0211 50000000 		.4byte	.LVL21
+ 720 0215 C6050000 		.4byte	0x5c6
+ 721 0219 24020000 		.4byte	0x224
+ 722 021d 08       		.uleb128 0x8
+ 723 021e 01       		.uleb128 0x1
+ 724 021f 50       		.byte	0x50
+ 725 0220 02       		.uleb128 0x2
+ 726 0221 08       		.byte	0x8
+ 727 0222 C8       		.byte	0xc8
+ 728 0223 00       		.byte	0
+ 729 0224 07       		.uleb128 0x7
+ 730 0225 56000000 		.4byte	.LVL22
+ 731 0229 D1050000 		.4byte	0x5d1
+ 732 022d 38020000 		.4byte	0x238
+ 733 0231 08       		.uleb128 0x8
+ 734 0232 01       		.uleb128 0x1
+ 735 0233 50       		.byte	0x50
+ 736 0234 02       		.uleb128 0x2
+ 737 0235 08       		.byte	0x8
+ 738 0236 C8       		.byte	0xc8
+ 739 0237 00       		.byte	0
+ 740 0238 07       		.uleb128 0x7
+ 741 0239 5C000000 		.4byte	.LVL23
+ 742 023d B0050000 		.4byte	0x5b0
+ 743 0241 4C020000 		.4byte	0x24c
+ 744 0245 08       		.uleb128 0x8
+ 745 0246 01       		.uleb128 0x1
+ 746 0247 50       		.byte	0x50
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 16
+
+
+ 747 0248 02       		.uleb128 0x2
+ 748 0249 08       		.byte	0x8
+ 749 024a C8       		.byte	0xc8
+ 750 024b 00       		.byte	0
+ 751 024c 07       		.uleb128 0x7
+ 752 024d 62000000 		.4byte	.LVL24
+ 753 0251 DC050000 		.4byte	0x5dc
+ 754 0255 60020000 		.4byte	0x260
+ 755 0259 08       		.uleb128 0x8
+ 756 025a 01       		.uleb128 0x1
+ 757 025b 50       		.byte	0x50
+ 758 025c 02       		.uleb128 0x2
+ 759 025d 08       		.byte	0x8
+ 760 025e C8       		.byte	0xc8
+ 761 025f 00       		.byte	0
+ 762 0260 07       		.uleb128 0x7
+ 763 0261 68000000 		.4byte	.LVL25
+ 764 0265 E7050000 		.4byte	0x5e7
+ 765 0269 74020000 		.4byte	0x274
+ 766 026d 08       		.uleb128 0x8
+ 767 026e 01       		.uleb128 0x1
+ 768 026f 50       		.byte	0x50
+ 769 0270 02       		.uleb128 0x2
+ 770 0271 08       		.byte	0x8
+ 771 0272 C8       		.byte	0xc8
+ 772 0273 00       		.byte	0
+ 773 0274 09       		.uleb128 0x9
+ 774 0275 6E000000 		.4byte	.LVL26
+ 775 0279 F2050000 		.4byte	0x5f2
+ 776 027d 08       		.uleb128 0x8
+ 777 027e 01       		.uleb128 0x1
+ 778 027f 50       		.byte	0x50
+ 779 0280 02       		.uleb128 0x2
+ 780 0281 08       		.byte	0x8
+ 781 0282 C8       		.byte	0xc8
+ 782 0283 00       		.byte	0
+ 783 0284 00       		.byte	0
+ 784 0285 05       		.uleb128 0x5
+ 785 0286 E8030000 		.4byte	.LASF18
+ 786 028a 01       		.byte	0x1
+ 787 028b 31       		.byte	0x31
+ 788 028c 00000000 		.4byte	.LFB65
+ 789 0290 14000000 		.4byte	.LFE65-.LFB65
+ 790 0294 01       		.uleb128 0x1
+ 791 0295 9C       		.byte	0x9c
+ 792 0296 C1020000 		.4byte	0x2c1
+ 793 029a 07       		.uleb128 0x7
+ 794 029b 0A000000 		.4byte	.LVL27
+ 795 029f 58050000 		.4byte	0x558
+ 796 02a3 AF020000 		.4byte	0x2af
+ 797 02a7 08       		.uleb128 0x8
+ 798 02a8 01       		.uleb128 0x1
+ 799 02a9 50       		.byte	0x50
+ 800 02aa 03       		.uleb128 0x3
+ 801 02ab 0A       		.byte	0xa
+ 802 02ac E803     		.2byte	0x3e8
+ 803 02ae 00       		.byte	0
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 17
+
+
+ 804 02af 09       		.uleb128 0x9
+ 805 02b0 12000000 		.4byte	.LVL28
+ 806 02b4 B0050000 		.4byte	0x5b0
+ 807 02b8 08       		.uleb128 0x8
+ 808 02b9 01       		.uleb128 0x1
+ 809 02ba 50       		.byte	0x50
+ 810 02bb 03       		.uleb128 0x3
+ 811 02bc 0A       		.byte	0xa
+ 812 02bd E803     		.2byte	0x3e8
+ 813 02bf 00       		.byte	0
+ 814 02c0 00       		.byte	0
+ 815 02c1 05       		.uleb128 0x5
+ 816 02c2 4C030000 		.4byte	.LASF19
+ 817 02c6 01       		.byte	0x1
+ 818 02c7 36       		.byte	0x36
+ 819 02c8 00000000 		.4byte	.LFB66
+ 820 02cc 14000000 		.4byte	.LFE66-.LFB66
+ 821 02d0 01       		.uleb128 0x1
+ 822 02d1 9C       		.byte	0x9c
+ 823 02d2 FD020000 		.4byte	0x2fd
+ 824 02d6 07       		.uleb128 0x7
+ 825 02d7 0A000000 		.4byte	.LVL29
+ 826 02db 58050000 		.4byte	0x558
+ 827 02df EB020000 		.4byte	0x2eb
+ 828 02e3 08       		.uleb128 0x8
+ 829 02e4 01       		.uleb128 0x1
+ 830 02e5 50       		.byte	0x50
+ 831 02e6 03       		.uleb128 0x3
+ 832 02e7 0A       		.byte	0xa
+ 833 02e8 4006     		.2byte	0x640
+ 834 02ea 00       		.byte	0
+ 835 02eb 09       		.uleb128 0x9
+ 836 02ec 12000000 		.4byte	.LVL30
+ 837 02f0 B0050000 		.4byte	0x5b0
+ 838 02f4 08       		.uleb128 0x8
+ 839 02f5 01       		.uleb128 0x1
+ 840 02f6 50       		.byte	0x50
+ 841 02f7 03       		.uleb128 0x3
+ 842 02f8 0A       		.byte	0xa
+ 843 02f9 4006     		.2byte	0x640
+ 844 02fb 00       		.byte	0
+ 845 02fc 00       		.byte	0
+ 846 02fd 05       		.uleb128 0x5
+ 847 02fe CE000000 		.4byte	.LASF20
+ 848 0302 01       		.byte	0x1
+ 849 0303 3B       		.byte	0x3b
+ 850 0304 00000000 		.4byte	.LFB67
+ 851 0308 10000000 		.4byte	.LFE67-.LFB67
+ 852 030c 01       		.uleb128 0x1
+ 853 030d 9C       		.byte	0x9c
+ 854 030e 37030000 		.4byte	0x337
+ 855 0312 07       		.uleb128 0x7
+ 856 0313 08000000 		.4byte	.LVL31
+ 857 0317 58050000 		.4byte	0x558
+ 858 031b 26030000 		.4byte	0x326
+ 859 031f 08       		.uleb128 0x8
+ 860 0320 01       		.uleb128 0x1
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 18
+
+
+ 861 0321 50       		.byte	0x50
+ 862 0322 02       		.uleb128 0x2
+ 863 0323 08       		.byte	0x8
+ 864 0324 C8       		.byte	0xc8
+ 865 0325 00       		.byte	0
+ 866 0326 09       		.uleb128 0x9
+ 867 0327 0E000000 		.4byte	.LVL32
+ 868 032b B0050000 		.4byte	0x5b0
+ 869 032f 08       		.uleb128 0x8
+ 870 0330 01       		.uleb128 0x1
+ 871 0331 50       		.byte	0x50
+ 872 0332 02       		.uleb128 0x2
+ 873 0333 08       		.byte	0x8
+ 874 0334 C8       		.byte	0xc8
+ 875 0335 00       		.byte	0
+ 876 0336 00       		.byte	0
+ 877 0337 05       		.uleb128 0x5
+ 878 0338 1D000000 		.4byte	.LASF21
+ 879 033c 01       		.byte	0x1
+ 880 033d 40       		.byte	0x40
+ 881 033e 00000000 		.4byte	.LFB68
+ 882 0342 10000000 		.4byte	.LFE68-.LFB68
+ 883 0346 01       		.uleb128 0x1
+ 884 0347 9C       		.byte	0x9c
+ 885 0348 6F030000 		.4byte	0x36f
+ 886 034c 07       		.uleb128 0x7
+ 887 034d 08000000 		.4byte	.LVL33
+ 888 0351 58050000 		.4byte	0x558
+ 889 0355 5F030000 		.4byte	0x35f
+ 890 0359 08       		.uleb128 0x8
+ 891 035a 01       		.uleb128 0x1
+ 892 035b 50       		.byte	0x50
+ 893 035c 01       		.uleb128 0x1
+ 894 035d 30       		.byte	0x30
+ 895 035e 00       		.byte	0
+ 896 035f 09       		.uleb128 0x9
+ 897 0360 0E000000 		.4byte	.LVL34
+ 898 0364 B0050000 		.4byte	0x5b0
+ 899 0368 08       		.uleb128 0x8
+ 900 0369 01       		.uleb128 0x1
+ 901 036a 50       		.byte	0x50
+ 902 036b 01       		.uleb128 0x1
+ 903 036c 30       		.byte	0x30
+ 904 036d 00       		.byte	0
+ 905 036e 00       		.byte	0
+ 906 036f 05       		.uleb128 0x5
+ 907 0370 0B000000 		.4byte	.LASF22
+ 908 0374 01       		.byte	0x1
+ 909 0375 45       		.byte	0x45
+ 910 0376 00000000 		.4byte	.LFB69
+ 911 037a 14000000 		.4byte	.LFE69-.LFB69
+ 912 037e 01       		.uleb128 0x1
+ 913 037f 9C       		.byte	0x9c
+ 914 0380 AB030000 		.4byte	0x3ab
+ 915 0384 07       		.uleb128 0x7
+ 916 0385 0A000000 		.4byte	.LVL35
+ 917 0389 4D050000 		.4byte	0x54d
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 19
+
+
+ 918 038d 99030000 		.4byte	0x399
+ 919 0391 08       		.uleb128 0x8
+ 920 0392 01       		.uleb128 0x1
+ 921 0393 50       		.byte	0x50
+ 922 0394 03       		.uleb128 0x3
+ 923 0395 0A       		.byte	0xa
+ 924 0396 E803     		.2byte	0x3e8
+ 925 0398 00       		.byte	0
+ 926 0399 09       		.uleb128 0x9
+ 927 039a 12000000 		.4byte	.LVL36
+ 928 039e A5050000 		.4byte	0x5a5
+ 929 03a2 08       		.uleb128 0x8
+ 930 03a3 01       		.uleb128 0x1
+ 931 03a4 50       		.byte	0x50
+ 932 03a5 03       		.uleb128 0x3
+ 933 03a6 0A       		.byte	0xa
+ 934 03a7 E803     		.2byte	0x3e8
+ 935 03a9 00       		.byte	0
+ 936 03aa 00       		.byte	0
+ 937 03ab 05       		.uleb128 0x5
+ 938 03ac CD030000 		.4byte	.LASF23
+ 939 03b0 01       		.byte	0x1
+ 940 03b1 4A       		.byte	0x4a
+ 941 03b2 00000000 		.4byte	.LFB70
+ 942 03b6 14000000 		.4byte	.LFE70-.LFB70
+ 943 03ba 01       		.uleb128 0x1
+ 944 03bb 9C       		.byte	0x9c
+ 945 03bc E7030000 		.4byte	0x3e7
+ 946 03c0 07       		.uleb128 0x7
+ 947 03c1 0A000000 		.4byte	.LVL37
+ 948 03c5 4D050000 		.4byte	0x54d
+ 949 03c9 D5030000 		.4byte	0x3d5
+ 950 03cd 08       		.uleb128 0x8
+ 951 03ce 01       		.uleb128 0x1
+ 952 03cf 50       		.byte	0x50
+ 953 03d0 03       		.uleb128 0x3
+ 954 03d1 0A       		.byte	0xa
+ 955 03d2 4006     		.2byte	0x640
+ 956 03d4 00       		.byte	0
+ 957 03d5 09       		.uleb128 0x9
+ 958 03d6 12000000 		.4byte	.LVL38
+ 959 03da A5050000 		.4byte	0x5a5
+ 960 03de 08       		.uleb128 0x8
+ 961 03df 01       		.uleb128 0x1
+ 962 03e0 50       		.byte	0x50
+ 963 03e1 03       		.uleb128 0x3
+ 964 03e2 0A       		.byte	0xa
+ 965 03e3 4006     		.2byte	0x640
+ 966 03e5 00       		.byte	0
+ 967 03e6 00       		.byte	0
+ 968 03e7 05       		.uleb128 0x5
+ 969 03e8 8A010000 		.4byte	.LASF24
+ 970 03ec 01       		.byte	0x1
+ 971 03ed 4F       		.byte	0x4f
+ 972 03ee 00000000 		.4byte	.LFB71
+ 973 03f2 10000000 		.4byte	.LFE71-.LFB71
+ 974 03f6 01       		.uleb128 0x1
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 20
+
+
+ 975 03f7 9C       		.byte	0x9c
+ 976 03f8 21040000 		.4byte	0x421
+ 977 03fc 07       		.uleb128 0x7
+ 978 03fd 08000000 		.4byte	.LVL39
+ 979 0401 4D050000 		.4byte	0x54d
+ 980 0405 10040000 		.4byte	0x410
+ 981 0409 08       		.uleb128 0x8
+ 982 040a 01       		.uleb128 0x1
+ 983 040b 50       		.byte	0x50
+ 984 040c 02       		.uleb128 0x2
+ 985 040d 08       		.byte	0x8
+ 986 040e C8       		.byte	0xc8
+ 987 040f 00       		.byte	0
+ 988 0410 09       		.uleb128 0x9
+ 989 0411 0E000000 		.4byte	.LVL40
+ 990 0415 A5050000 		.4byte	0x5a5
+ 991 0419 08       		.uleb128 0x8
+ 992 041a 01       		.uleb128 0x1
+ 993 041b 50       		.byte	0x50
+ 994 041c 02       		.uleb128 0x2
+ 995 041d 08       		.byte	0x8
+ 996 041e C8       		.byte	0xc8
+ 997 041f 00       		.byte	0
+ 998 0420 00       		.byte	0
+ 999 0421 05       		.uleb128 0x5
+ 1000 0422 A3000000 		.4byte	.LASF25
+ 1001 0426 01       		.byte	0x1
+ 1002 0427 54       		.byte	0x54
+ 1003 0428 00000000 		.4byte	.LFB72
+ 1004 042c 10000000 		.4byte	.LFE72-.LFB72
+ 1005 0430 01       		.uleb128 0x1
+ 1006 0431 9C       		.byte	0x9c
+ 1007 0432 59040000 		.4byte	0x459
+ 1008 0436 07       		.uleb128 0x7
+ 1009 0437 08000000 		.4byte	.LVL41
+ 1010 043b 4D050000 		.4byte	0x54d
+ 1011 043f 49040000 		.4byte	0x449
+ 1012 0443 08       		.uleb128 0x8
+ 1013 0444 01       		.uleb128 0x1
+ 1014 0445 50       		.byte	0x50
+ 1015 0446 01       		.uleb128 0x1
+ 1016 0447 30       		.byte	0x30
+ 1017 0448 00       		.byte	0
+ 1018 0449 09       		.uleb128 0x9
+ 1019 044a 0E000000 		.4byte	.LVL42
+ 1020 044e A5050000 		.4byte	0x5a5
+ 1021 0452 08       		.uleb128 0x8
+ 1022 0453 01       		.uleb128 0x1
+ 1023 0454 50       		.byte	0x50
+ 1024 0455 01       		.uleb128 0x1
+ 1025 0456 30       		.byte	0x30
+ 1026 0457 00       		.byte	0
+ 1027 0458 00       		.byte	0
+ 1028 0459 0A       		.uleb128 0xa
+ 1029 045a B6030000 		.4byte	.LASF54
+ 1030 045e 01       		.byte	0x1
+ 1031 045f 59       		.byte	0x59
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 21
+
+
+ 1032 0460 68000000 		.4byte	0x68
+ 1033 0464 00000000 		.4byte	.LFB73
+ 1034 0468 36000000 		.4byte	.LFE73-.LFB73
+ 1035 046c 01       		.uleb128 0x1
+ 1036 046d 9C       		.byte	0x9c
+ 1037 046e E4040000 		.4byte	0x4e4
+ 1038 0472 06       		.uleb128 0x6
+ 1039 0473 08000000 		.4byte	.LVL43
+ 1040 0477 A4000000 		.4byte	0xa4
+ 1041 047b 06       		.uleb128 0x6
+ 1042 047c 0C000000 		.4byte	.LVL44
+ 1043 0480 0B010000 		.4byte	0x10b
+ 1044 0484 07       		.uleb128 0x7
+ 1045 0485 14000000 		.4byte	.LVL45
+ 1046 0489 FD050000 		.4byte	0x5fd
+ 1047 048d 99040000 		.4byte	0x499
+ 1048 0491 08       		.uleb128 0x8
+ 1049 0492 01       		.uleb128 0x1
+ 1050 0493 50       		.byte	0x50
+ 1051 0494 03       		.uleb128 0x3
+ 1052 0495 0A       		.byte	0xa
+ 1053 0496 8813     		.2byte	0x1388
+ 1054 0498 00       		.byte	0
+ 1055 0499 06       		.uleb128 0x6
+ 1056 049a 18000000 		.4byte	.LVL46
+ 1057 049e C1020000 		.4byte	0x2c1
+ 1058 04a2 06       		.uleb128 0x6
+ 1059 04a3 1C000000 		.4byte	.LVL47
+ 1060 04a7 E7030000 		.4byte	0x3e7
+ 1061 04ab 07       		.uleb128 0x7
+ 1062 04ac 24000000 		.4byte	.LVL48
+ 1063 04b0 FD050000 		.4byte	0x5fd
+ 1064 04b4 C0040000 		.4byte	0x4c0
+ 1065 04b8 08       		.uleb128 0x8
+ 1066 04b9 01       		.uleb128 0x1
+ 1067 04ba 50       		.byte	0x50
+ 1068 04bb 03       		.uleb128 0x3
+ 1069 04bc 0A       		.byte	0xa
+ 1070 04bd B80B     		.2byte	0xbb8
+ 1071 04bf 00       		.byte	0
+ 1072 04c0 06       		.uleb128 0x6
+ 1073 04c1 28000000 		.4byte	.LVL49
+ 1074 04c5 FD020000 		.4byte	0x2fd
+ 1075 04c9 06       		.uleb128 0x6
+ 1076 04ca 2C000000 		.4byte	.LVL50
+ 1077 04ce AB030000 		.4byte	0x3ab
+ 1078 04d2 09       		.uleb128 0x9
+ 1079 04d3 34000000 		.4byte	.LVL51
+ 1080 04d7 FD050000 		.4byte	0x5fd
+ 1081 04db 08       		.uleb128 0x8
+ 1082 04dc 01       		.uleb128 0x1
+ 1083 04dd 50       		.byte	0x50
+ 1084 04de 03       		.uleb128 0x3
+ 1085 04df 0A       		.byte	0xa
+ 1086 04e0 B80B     		.2byte	0xbb8
+ 1087 04e2 00       		.byte	0
+ 1088 04e3 00       		.byte	0
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 22
+
+
+ 1089 04e4 0B       		.uleb128 0xb
+ 1090 04e5 E1010000 		.4byte	.LASF55
+ 1091 04e9 0D       		.byte	0xd
+ 1092 04ea 1207     		.2byte	0x712
+ 1093 04ec F0040000 		.4byte	0x4f0
+ 1094 04f0 0C       		.uleb128 0xc
+ 1095 04f1 76000000 		.4byte	0x76
+ 1096 04f5 0D       		.uleb128 0xd
+ 1097 04f6 B5000000 		.4byte	.LASF26
+ 1098 04fa B5000000 		.4byte	.LASF26
+ 1099 04fe 04       		.byte	0x4
+ 1100 04ff 92       		.byte	0x92
+ 1101 0500 0D       		.uleb128 0xd
+ 1102 0501 A4030000 		.4byte	.LASF27
+ 1103 0505 A4030000 		.4byte	.LASF27
+ 1104 0509 05       		.byte	0x5
+ 1105 050a 92       		.byte	0x92
+ 1106 050b 0D       		.uleb128 0xd
+ 1107 050c C0020000 		.4byte	.LASF28
+ 1108 0510 C0020000 		.4byte	.LASF28
+ 1109 0514 06       		.byte	0x6
+ 1110 0515 92       		.byte	0x92
+ 1111 0516 0D       		.uleb128 0xd
+ 1112 0517 10040000 		.4byte	.LASF29
+ 1113 051b 10040000 		.4byte	.LASF29
+ 1114 051f 07       		.byte	0x7
+ 1115 0520 92       		.byte	0x92
+ 1116 0521 0D       		.uleb128 0xd
+ 1117 0522 E0000000 		.4byte	.LASF30
+ 1118 0526 E0000000 		.4byte	.LASF30
+ 1119 052a 08       		.byte	0x8
+ 1120 052b 92       		.byte	0x92
+ 1121 052c 0D       		.uleb128 0xd
+ 1122 052d 6B000000 		.4byte	.LASF31
+ 1123 0531 6B000000 		.4byte	.LASF31
+ 1124 0535 09       		.byte	0x9
+ 1125 0536 92       		.byte	0x92
+ 1126 0537 0D       		.uleb128 0xd
+ 1127 0538 00000000 		.4byte	.LASF32
+ 1128 053c 00000000 		.4byte	.LASF32
+ 1129 0540 0A       		.byte	0xa
+ 1130 0541 92       		.byte	0x92
+ 1131 0542 0D       		.uleb128 0xd
+ 1132 0543 4B040000 		.4byte	.LASF33
+ 1133 0547 4B040000 		.4byte	.LASF33
+ 1134 054b 0B       		.byte	0xb
+ 1135 054c 92       		.byte	0x92
+ 1136 054d 0D       		.uleb128 0xd
+ 1137 054e 5B030000 		.4byte	.LASF34
+ 1138 0552 5B030000 		.4byte	.LASF34
+ 1139 0556 04       		.byte	0x4
+ 1140 0557 C7       		.byte	0xc7
+ 1141 0558 0D       		.uleb128 0xd
+ 1142 0559 AD010000 		.4byte	.LASF35
+ 1143 055d AD010000 		.4byte	.LASF35
+ 1144 0561 05       		.byte	0x5
+ 1145 0562 C7       		.byte	0xc7
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 23
+
+
+ 1146 0563 0D       		.uleb128 0xd
+ 1147 0564 D6020000 		.4byte	.LASF36
+ 1148 0568 D6020000 		.4byte	.LASF36
+ 1149 056c 06       		.byte	0x6
+ 1150 056d C7       		.byte	0xc7
+ 1151 056e 0D       		.uleb128 0xd
+ 1152 056f 8C020000 		.4byte	.LASF37
+ 1153 0573 8C020000 		.4byte	.LASF37
+ 1154 0577 07       		.byte	0x7
+ 1155 0578 C7       		.byte	0xc7
+ 1156 0579 0D       		.uleb128 0xd
+ 1157 057a 38000000 		.4byte	.LASF38
+ 1158 057e 38000000 		.4byte	.LASF38
+ 1159 0582 08       		.byte	0x8
+ 1160 0583 C7       		.byte	0xc7
+ 1161 0584 0D       		.uleb128 0xd
+ 1162 0585 6C020000 		.4byte	.LASF39
+ 1163 0589 6C020000 		.4byte	.LASF39
+ 1164 058d 09       		.byte	0x9
+ 1165 058e C7       		.byte	0xc7
+ 1166 058f 0D       		.uleb128 0xd
+ 1167 0590 2E040000 		.4byte	.LASF40
+ 1168 0594 2E040000 		.4byte	.LASF40
+ 1169 0598 0A       		.byte	0xa
+ 1170 0599 C7       		.byte	0xc7
+ 1171 059a 0D       		.uleb128 0xd
+ 1172 059b BB030000 		.4byte	.LASF41
+ 1173 059f BB030000 		.4byte	.LASF41
+ 1174 05a3 0B       		.byte	0xb
+ 1175 05a4 C7       		.byte	0xc7
+ 1176 05a5 0D       		.uleb128 0xd
+ 1177 05a6 76030000 		.4byte	.LASF42
+ 1178 05aa 76030000 		.4byte	.LASF42
+ 1179 05ae 04       		.byte	0x4
+ 1180 05af CA       		.byte	0xca
+ 1181 05b0 0D       		.uleb128 0xd
+ 1182 05b1 C7010000 		.4byte	.LASF43
+ 1183 05b5 C7010000 		.4byte	.LASF43
+ 1184 05b9 05       		.byte	0x5
+ 1185 05ba CA       		.byte	0xca
+ 1186 05bb 0D       		.uleb128 0xd
+ 1187 05bc F4020000 		.4byte	.LASF44
+ 1188 05c0 F4020000 		.4byte	.LASF44
+ 1189 05c4 06       		.byte	0x6
+ 1190 05c5 CA       		.byte	0xca
+ 1191 05c6 0D       		.uleb128 0xd
+ 1192 05c7 A6020000 		.4byte	.LASF45
+ 1193 05cb A6020000 		.4byte	.LASF45
+ 1194 05cf 07       		.byte	0x7
+ 1195 05d0 CA       		.byte	0xca
+ 1196 05d1 0D       		.uleb128 0xd
+ 1197 05d2 4E000000 		.4byte	.LASF46
+ 1198 05d6 4E000000 		.4byte	.LASF46
+ 1199 05da 08       		.byte	0x8
+ 1200 05db CA       		.byte	0xca
+ 1201 05dc 0D       		.uleb128 0xd
+ 1202 05dd 83000000 		.4byte	.LASF47
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 24
+
+
+ 1203 05e1 83000000 		.4byte	.LASF47
+ 1204 05e5 09       		.byte	0x9
+ 1205 05e6 CA       		.byte	0xca
+ 1206 05e7 0D       		.uleb128 0xd
+ 1207 05e8 91030000 		.4byte	.LASF48
+ 1208 05ec 91030000 		.4byte	.LASF48
+ 1209 05f0 0A       		.byte	0xa
+ 1210 05f1 CA       		.byte	0xca
+ 1211 05f2 0D       		.uleb128 0xd
+ 1212 05f3 48020000 		.4byte	.LASF49
+ 1213 05f7 48020000 		.4byte	.LASF49
+ 1214 05fb 0B       		.byte	0xb
+ 1215 05fc CA       		.byte	0xca
+ 1216 05fd 0D       		.uleb128 0xd
+ 1217 05fe 8D040000 		.4byte	.LASF50
+ 1218 0602 8D040000 		.4byte	.LASF50
+ 1219 0606 0C       		.byte	0xc
+ 1220 0607 76       		.byte	0x76
+ 1221 0608 00       		.byte	0
+ 1222              		.section	.debug_abbrev,"",%progbits
+ 1223              	.Ldebug_abbrev0:
+ 1224 0000 01       		.uleb128 0x1
+ 1225 0001 11       		.uleb128 0x11
+ 1226 0002 01       		.byte	0x1
+ 1227 0003 25       		.uleb128 0x25
+ 1228 0004 0E       		.uleb128 0xe
+ 1229 0005 13       		.uleb128 0x13
+ 1230 0006 0B       		.uleb128 0xb
+ 1231 0007 03       		.uleb128 0x3
+ 1232 0008 0E       		.uleb128 0xe
+ 1233 0009 1B       		.uleb128 0x1b
+ 1234 000a 0E       		.uleb128 0xe
+ 1235 000b 55       		.uleb128 0x55
+ 1236 000c 17       		.uleb128 0x17
+ 1237 000d 11       		.uleb128 0x11
+ 1238 000e 01       		.uleb128 0x1
+ 1239 000f 10       		.uleb128 0x10
+ 1240 0010 17       		.uleb128 0x17
+ 1241 0011 00       		.byte	0
+ 1242 0012 00       		.byte	0
+ 1243 0013 02       		.uleb128 0x2
+ 1244 0014 24       		.uleb128 0x24
+ 1245 0015 00       		.byte	0
+ 1246 0016 0B       		.uleb128 0xb
+ 1247 0017 0B       		.uleb128 0xb
+ 1248 0018 3E       		.uleb128 0x3e
+ 1249 0019 0B       		.uleb128 0xb
+ 1250 001a 03       		.uleb128 0x3
+ 1251 001b 0E       		.uleb128 0xe
+ 1252 001c 00       		.byte	0
+ 1253 001d 00       		.byte	0
+ 1254 001e 03       		.uleb128 0x3
+ 1255 001f 16       		.uleb128 0x16
+ 1256 0020 00       		.byte	0
+ 1257 0021 03       		.uleb128 0x3
+ 1258 0022 0E       		.uleb128 0xe
+ 1259 0023 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 25
+
+
+ 1260 0024 0B       		.uleb128 0xb
+ 1261 0025 3B       		.uleb128 0x3b
+ 1262 0026 0B       		.uleb128 0xb
+ 1263 0027 49       		.uleb128 0x49
+ 1264 0028 13       		.uleb128 0x13
+ 1265 0029 00       		.byte	0
+ 1266 002a 00       		.byte	0
+ 1267 002b 04       		.uleb128 0x4
+ 1268 002c 24       		.uleb128 0x24
+ 1269 002d 00       		.byte	0
+ 1270 002e 0B       		.uleb128 0xb
+ 1271 002f 0B       		.uleb128 0xb
+ 1272 0030 3E       		.uleb128 0x3e
+ 1273 0031 0B       		.uleb128 0xb
+ 1274 0032 03       		.uleb128 0x3
+ 1275 0033 08       		.uleb128 0x8
+ 1276 0034 00       		.byte	0
+ 1277 0035 00       		.byte	0
+ 1278 0036 05       		.uleb128 0x5
+ 1279 0037 2E       		.uleb128 0x2e
+ 1280 0038 01       		.byte	0x1
+ 1281 0039 3F       		.uleb128 0x3f
+ 1282 003a 19       		.uleb128 0x19
+ 1283 003b 03       		.uleb128 0x3
+ 1284 003c 0E       		.uleb128 0xe
+ 1285 003d 3A       		.uleb128 0x3a
+ 1286 003e 0B       		.uleb128 0xb
+ 1287 003f 3B       		.uleb128 0x3b
+ 1288 0040 0B       		.uleb128 0xb
+ 1289 0041 11       		.uleb128 0x11
+ 1290 0042 01       		.uleb128 0x1
+ 1291 0043 12       		.uleb128 0x12
+ 1292 0044 06       		.uleb128 0x6
+ 1293 0045 40       		.uleb128 0x40
+ 1294 0046 18       		.uleb128 0x18
+ 1295 0047 9742     		.uleb128 0x2117
+ 1296 0049 19       		.uleb128 0x19
+ 1297 004a 01       		.uleb128 0x1
+ 1298 004b 13       		.uleb128 0x13
+ 1299 004c 00       		.byte	0
+ 1300 004d 00       		.byte	0
+ 1301 004e 06       		.uleb128 0x6
+ 1302 004f 898201   		.uleb128 0x4109
+ 1303 0052 00       		.byte	0
+ 1304 0053 11       		.uleb128 0x11
+ 1305 0054 01       		.uleb128 0x1
+ 1306 0055 31       		.uleb128 0x31
+ 1307 0056 13       		.uleb128 0x13
+ 1308 0057 00       		.byte	0
+ 1309 0058 00       		.byte	0
+ 1310 0059 07       		.uleb128 0x7
+ 1311 005a 898201   		.uleb128 0x4109
+ 1312 005d 01       		.byte	0x1
+ 1313 005e 11       		.uleb128 0x11
+ 1314 005f 01       		.uleb128 0x1
+ 1315 0060 31       		.uleb128 0x31
+ 1316 0061 13       		.uleb128 0x13
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 26
+
+
+ 1317 0062 01       		.uleb128 0x1
+ 1318 0063 13       		.uleb128 0x13
+ 1319 0064 00       		.byte	0
+ 1320 0065 00       		.byte	0
+ 1321 0066 08       		.uleb128 0x8
+ 1322 0067 8A8201   		.uleb128 0x410a
+ 1323 006a 00       		.byte	0
+ 1324 006b 02       		.uleb128 0x2
+ 1325 006c 18       		.uleb128 0x18
+ 1326 006d 9142     		.uleb128 0x2111
+ 1327 006f 18       		.uleb128 0x18
+ 1328 0070 00       		.byte	0
+ 1329 0071 00       		.byte	0
+ 1330 0072 09       		.uleb128 0x9
+ 1331 0073 898201   		.uleb128 0x4109
+ 1332 0076 01       		.byte	0x1
+ 1333 0077 11       		.uleb128 0x11
+ 1334 0078 01       		.uleb128 0x1
+ 1335 0079 31       		.uleb128 0x31
+ 1336 007a 13       		.uleb128 0x13
+ 1337 007b 00       		.byte	0
+ 1338 007c 00       		.byte	0
+ 1339 007d 0A       		.uleb128 0xa
+ 1340 007e 2E       		.uleb128 0x2e
+ 1341 007f 01       		.byte	0x1
+ 1342 0080 3F       		.uleb128 0x3f
+ 1343 0081 19       		.uleb128 0x19
+ 1344 0082 03       		.uleb128 0x3
+ 1345 0083 0E       		.uleb128 0xe
+ 1346 0084 3A       		.uleb128 0x3a
+ 1347 0085 0B       		.uleb128 0xb
+ 1348 0086 3B       		.uleb128 0x3b
+ 1349 0087 0B       		.uleb128 0xb
+ 1350 0088 27       		.uleb128 0x27
+ 1351 0089 19       		.uleb128 0x19
+ 1352 008a 49       		.uleb128 0x49
+ 1353 008b 13       		.uleb128 0x13
+ 1354 008c 8701     		.uleb128 0x87
+ 1355 008e 19       		.uleb128 0x19
+ 1356 008f 11       		.uleb128 0x11
+ 1357 0090 01       		.uleb128 0x1
+ 1358 0091 12       		.uleb128 0x12
+ 1359 0092 06       		.uleb128 0x6
+ 1360 0093 40       		.uleb128 0x40
+ 1361 0094 18       		.uleb128 0x18
+ 1362 0095 9742     		.uleb128 0x2117
+ 1363 0097 19       		.uleb128 0x19
+ 1364 0098 01       		.uleb128 0x1
+ 1365 0099 13       		.uleb128 0x13
+ 1366 009a 00       		.byte	0
+ 1367 009b 00       		.byte	0
+ 1368 009c 0B       		.uleb128 0xb
+ 1369 009d 34       		.uleb128 0x34
+ 1370 009e 00       		.byte	0
+ 1371 009f 03       		.uleb128 0x3
+ 1372 00a0 0E       		.uleb128 0xe
+ 1373 00a1 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 27
+
+
+ 1374 00a2 0B       		.uleb128 0xb
+ 1375 00a3 3B       		.uleb128 0x3b
+ 1376 00a4 05       		.uleb128 0x5
+ 1377 00a5 49       		.uleb128 0x49
+ 1378 00a6 13       		.uleb128 0x13
+ 1379 00a7 3F       		.uleb128 0x3f
+ 1380 00a8 19       		.uleb128 0x19
+ 1381 00a9 3C       		.uleb128 0x3c
+ 1382 00aa 19       		.uleb128 0x19
+ 1383 00ab 00       		.byte	0
+ 1384 00ac 00       		.byte	0
+ 1385 00ad 0C       		.uleb128 0xc
+ 1386 00ae 35       		.uleb128 0x35
+ 1387 00af 00       		.byte	0
+ 1388 00b0 49       		.uleb128 0x49
+ 1389 00b1 13       		.uleb128 0x13
+ 1390 00b2 00       		.byte	0
+ 1391 00b3 00       		.byte	0
+ 1392 00b4 0D       		.uleb128 0xd
+ 1393 00b5 2E       		.uleb128 0x2e
+ 1394 00b6 00       		.byte	0
+ 1395 00b7 3F       		.uleb128 0x3f
+ 1396 00b8 19       		.uleb128 0x19
+ 1397 00b9 3C       		.uleb128 0x3c
+ 1398 00ba 19       		.uleb128 0x19
+ 1399 00bb 6E       		.uleb128 0x6e
+ 1400 00bc 0E       		.uleb128 0xe
+ 1401 00bd 03       		.uleb128 0x3
+ 1402 00be 0E       		.uleb128 0xe
+ 1403 00bf 3A       		.uleb128 0x3a
+ 1404 00c0 0B       		.uleb128 0xb
+ 1405 00c1 3B       		.uleb128 0x3b
+ 1406 00c2 0B       		.uleb128 0xb
+ 1407 00c3 00       		.byte	0
+ 1408 00c4 00       		.byte	0
+ 1409 00c5 00       		.byte	0
+ 1410              		.section	.debug_aranges,"",%progbits
+ 1411 0000 6C000000 		.4byte	0x6c
+ 1412 0004 0200     		.2byte	0x2
+ 1413 0006 00000000 		.4byte	.Ldebug_info0
+ 1414 000a 04       		.byte	0x4
+ 1415 000b 00       		.byte	0
+ 1416 000c 0000     		.2byte	0
+ 1417 000e 0000     		.2byte	0
+ 1418 0010 00000000 		.4byte	.LFB63
+ 1419 0014 28000000 		.4byte	.LFE63-.LFB63
+ 1420 0018 00000000 		.4byte	.LFB64
+ 1421 001c 70000000 		.4byte	.LFE64-.LFB64
+ 1422 0020 00000000 		.4byte	.LFB65
+ 1423 0024 14000000 		.4byte	.LFE65-.LFB65
+ 1424 0028 00000000 		.4byte	.LFB66
+ 1425 002c 14000000 		.4byte	.LFE66-.LFB66
+ 1426 0030 00000000 		.4byte	.LFB67
+ 1427 0034 10000000 		.4byte	.LFE67-.LFB67
+ 1428 0038 00000000 		.4byte	.LFB68
+ 1429 003c 10000000 		.4byte	.LFE68-.LFB68
+ 1430 0040 00000000 		.4byte	.LFB69
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 28
+
+
+ 1431 0044 14000000 		.4byte	.LFE69-.LFB69
+ 1432 0048 00000000 		.4byte	.LFB70
+ 1433 004c 14000000 		.4byte	.LFE70-.LFB70
+ 1434 0050 00000000 		.4byte	.LFB71
+ 1435 0054 10000000 		.4byte	.LFE71-.LFB71
+ 1436 0058 00000000 		.4byte	.LFB72
+ 1437 005c 10000000 		.4byte	.LFE72-.LFB72
+ 1438 0060 00000000 		.4byte	.LFB73
+ 1439 0064 36000000 		.4byte	.LFE73-.LFB73
+ 1440 0068 00000000 		.4byte	0
+ 1441 006c 00000000 		.4byte	0
+ 1442              		.section	.debug_ranges,"",%progbits
+ 1443              	.Ldebug_ranges0:
+ 1444 0000 00000000 		.4byte	.LFB63
+ 1445 0004 28000000 		.4byte	.LFE63
+ 1446 0008 00000000 		.4byte	.LFB64
+ 1447 000c 70000000 		.4byte	.LFE64
+ 1448 0010 00000000 		.4byte	.LFB65
+ 1449 0014 14000000 		.4byte	.LFE65
+ 1450 0018 00000000 		.4byte	.LFB66
+ 1451 001c 14000000 		.4byte	.LFE66
+ 1452 0020 00000000 		.4byte	.LFB67
+ 1453 0024 10000000 		.4byte	.LFE67
+ 1454 0028 00000000 		.4byte	.LFB68
+ 1455 002c 10000000 		.4byte	.LFE68
+ 1456 0030 00000000 		.4byte	.LFB69
+ 1457 0034 14000000 		.4byte	.LFE69
+ 1458 0038 00000000 		.4byte	.LFB70
+ 1459 003c 14000000 		.4byte	.LFE70
+ 1460 0040 00000000 		.4byte	.LFB71
+ 1461 0044 10000000 		.4byte	.LFE71
+ 1462 0048 00000000 		.4byte	.LFB72
+ 1463 004c 10000000 		.4byte	.LFE72
+ 1464 0050 00000000 		.4byte	.LFB73
+ 1465 0054 36000000 		.4byte	.LFE73
+ 1466 0058 00000000 		.4byte	0
+ 1467 005c 00000000 		.4byte	0
+ 1468              		.section	.debug_line,"",%progbits
+ 1469              	.Ldebug_line0:
+ 1470 0000 C7020000 		.section	.debug_str,"MS",%progbits,1
+ 1470      0200CA01 
+ 1470      00000201 
+ 1470      FB0E0D00 
+ 1470      01010101 
+ 1471              	.LASF32:
+ 1472 0000 4E65636B 		.ascii	"Neck_Start\000"
+ 1472      5F537461 
+ 1472      727400
+ 1473              	.LASF22:
+ 1474 000b 72657365 		.ascii	"resetRightEyebrow\000"
+ 1474      74526967 
+ 1474      68744579 
+ 1474      6562726F 
+ 1474      7700
+ 1475              	.LASF21:
+ 1476 001d 636C6561 		.ascii	"clearLeftEyebrow\000"
+ 1476      724C6566 
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 29
+
+
+ 1476      74457965 
+ 1476      62726F77 
+ 1476      00
+ 1477              	.LASF9:
+ 1478 002e 5F5F696E 		.ascii	"__int32_t\000"
+ 1478      7433325F 
+ 1478      7400
+ 1479              	.LASF38:
+ 1480 0038 42617365 		.ascii	"BaseJaw_WriteCompare1\000"
+ 1480      4A61775F 
+ 1480      57726974 
+ 1480      65436F6D 
+ 1480      70617265 
+ 1481              	.LASF46:
+ 1482 004e 42617365 		.ascii	"BaseJaw_WriteCompare2\000"
+ 1482      4A61775F 
+ 1482      57726974 
+ 1482      65436F6D 
+ 1482      70617265 
+ 1483              	.LASF12:
+ 1484 0064 646F7562 		.ascii	"double\000"
+ 1484      6C6500
+ 1485              	.LASF31:
+ 1486 006b 45796542 		.ascii	"EyeBallHorizontal_Start\000"
+ 1486      616C6C48 
+ 1486      6F72697A 
+ 1486      6F6E7461 
+ 1486      6C5F5374 
+ 1487              	.LASF47:
+ 1488 0083 45796542 		.ascii	"EyeBallHorizontal_WriteCompare2\000"
+ 1488      616C6C48 
+ 1488      6F72697A 
+ 1488      6F6E7461 
+ 1488      6C5F5772 
+ 1489              	.LASF25:
+ 1490 00a3 636C6561 		.ascii	"clearRightEyebrow\000"
+ 1490      72526967 
+ 1490      68744579 
+ 1490      6562726F 
+ 1490      7700
+ 1491              	.LASF26:
+ 1492 00b5 52696768 		.ascii	"RightEyebrow_Start\000"
+ 1492      74457965 
+ 1492      62726F77 
+ 1492      5F537461 
+ 1492      727400
+ 1493              	.LASF11:
+ 1494 00c8 666C6F61 		.ascii	"float\000"
+ 1494      7400
+ 1495              	.LASF20:
+ 1496 00ce 72616973 		.ascii	"raisedLeftEyebrow\000"
+ 1496      65644C65 
+ 1496      66744579 
+ 1496      6562726F 
+ 1496      7700
+ 1497              	.LASF30:
+ 1498 00e0 42617365 		.ascii	"BaseJaw_Start\000"
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 30
+
+
+ 1498      4A61775F 
+ 1498      53746172 
+ 1498      7400
+ 1499              	.LASF1:
+ 1500 00ee 756E7369 		.ascii	"unsigned char\000"
+ 1500      676E6564 
+ 1500      20636861 
+ 1500      7200
+ 1501              	.LASF51:
+ 1502 00fc 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1502      43313120 
+ 1502      352E342E 
+ 1502      31203230 
+ 1502      31363036 
+ 1503 012f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1503      20726576 
+ 1503      6973696F 
+ 1503      6E203233 
+ 1503      37373135 
+ 1504 0162 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1504      66756E63 
+ 1504      74696F6E 
+ 1504      2D736563 
+ 1504      74696F6E 
+ 1505              	.LASF24:
+ 1506 018a 73616452 		.ascii	"sadRightEyebrow\000"
+ 1506      69676874 
+ 1506      45796562 
+ 1506      726F7700 
+ 1507              	.LASF3:
+ 1508 019a 73686F72 		.ascii	"short unsigned int\000"
+ 1508      7420756E 
+ 1508      7369676E 
+ 1508      65642069 
+ 1508      6E7400
+ 1509              	.LASF35:
+ 1510 01ad 4C656674 		.ascii	"LeftEyebrow_WriteCompare1\000"
+ 1510      45796562 
+ 1510      726F775F 
+ 1510      57726974 
+ 1510      65436F6D 
+ 1511              	.LASF43:
+ 1512 01c7 4C656674 		.ascii	"LeftEyebrow_WriteCompare2\000"
+ 1512      45796562 
+ 1512      726F775F 
+ 1512      57726974 
+ 1512      65436F6D 
+ 1513              	.LASF55:
+ 1514 01e1 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1514      52784275 
+ 1514      66666572 
+ 1514      00
+ 1515              	.LASF53:
+ 1516 01ee 433A5C55 		.ascii	"C:\\Users\\Sandeep Nadella\\OneDrive\\Documents\\PS"
+ 1516      73657273 
+ 1516      5C53616E 
+ 1516      64656570 
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 31
+
+
+ 1516      204E6164 
+ 1517 021c 6F432043 		.ascii	"oC Creator\\SD_Workspace\\Robot_Control.cydsn\000"
+ 1517      72656174 
+ 1517      6F725C53 
+ 1517      445F576F 
+ 1517      726B7370 
+ 1518              	.LASF49:
+ 1519 0248 4C69705F 		.ascii	"Lip_WriteCompare2\000"
+ 1519      57726974 
+ 1519      65436F6D 
+ 1519      70617265 
+ 1519      3200
+ 1520              	.LASF5:
+ 1521 025a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1521      20756E73 
+ 1521      69676E65 
+ 1521      6420696E 
+ 1521      7400
+ 1522              	.LASF39:
+ 1523 026c 45796542 		.ascii	"EyeBallHorizontal_WriteCompare1\000"
+ 1523      616C6C48 
+ 1523      6F72697A 
+ 1523      6F6E7461 
+ 1523      6C5F5772 
+ 1524              	.LASF37:
+ 1525 028c 4579656C 		.ascii	"EyelidGroup_WriteCompare1\000"
+ 1525      69644772 
+ 1525      6F75705F 
+ 1525      57726974 
+ 1525      65436F6D 
+ 1526              	.LASF45:
+ 1527 02a6 4579656C 		.ascii	"EyelidGroup_WriteCompare2\000"
+ 1527      69644772 
+ 1527      6F75705F 
+ 1527      57726974 
+ 1527      65436F6D 
+ 1528              	.LASF28:
+ 1529 02c0 45796542 		.ascii	"EyeBallVertical_Start\000"
+ 1529      616C6C56 
+ 1529      65727469 
+ 1529      63616C5F 
+ 1529      53746172 
+ 1530              	.LASF36:
+ 1531 02d6 45796542 		.ascii	"EyeBallVertical_WriteCompare1\000"
+ 1531      616C6C56 
+ 1531      65727469 
+ 1531      63616C5F 
+ 1531      57726974 
+ 1532              	.LASF44:
+ 1533 02f4 45796542 		.ascii	"EyeBallVertical_WriteCompare2\000"
+ 1533      616C6C56 
+ 1533      65727469 
+ 1533      63616C5F 
+ 1533      57726974 
+ 1534              	.LASF16:
+ 1535 0312 696E6974 		.ascii	"initializeComponenets\000"
+ 1535      69616C69 
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 32
+
+
+ 1535      7A65436F 
+ 1535      6D706F6E 
+ 1535      656E6574 
+ 1536              	.LASF8:
+ 1537 0328 756E7369 		.ascii	"unsigned int\000"
+ 1537      676E6564 
+ 1537      20696E74 
+ 1537      00
+ 1538              	.LASF7:
+ 1539 0335 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1539      206C6F6E 
+ 1539      6720756E 
+ 1539      7369676E 
+ 1539      65642069 
+ 1540              	.LASF19:
+ 1541 034c 7361644C 		.ascii	"sadLeftEyebrow\000"
+ 1541      65667445 
+ 1541      79656272 
+ 1541      6F7700
+ 1542              	.LASF34:
+ 1543 035b 52696768 		.ascii	"RightEyebrow_WriteCompare1\000"
+ 1543      74457965 
+ 1543      62726F77 
+ 1543      5F577269 
+ 1543      7465436F 
+ 1544              	.LASF42:
+ 1545 0376 52696768 		.ascii	"RightEyebrow_WriteCompare2\000"
+ 1545      74457965 
+ 1545      62726F77 
+ 1545      5F577269 
+ 1545      7465436F 
+ 1546              	.LASF48:
+ 1547 0391 4E65636B 		.ascii	"Neck_WriteCompare2\000"
+ 1547      5F577269 
+ 1547      7465436F 
+ 1547      6D706172 
+ 1547      653200
+ 1548              	.LASF27:
+ 1549 03a4 4C656674 		.ascii	"LeftEyebrow_Start\000"
+ 1549      45796562 
+ 1549      726F775F 
+ 1549      53746172 
+ 1549      7400
+ 1550              	.LASF54:
+ 1551 03b6 6D61696E 		.ascii	"main\000"
+ 1551      00
+ 1552              	.LASF41:
+ 1553 03bb 4C69705F 		.ascii	"Lip_WriteCompare1\000"
+ 1553      57726974 
+ 1553      65436F6D 
+ 1553      70617265 
+ 1553      3100
+ 1554              	.LASF23:
+ 1555 03cd 72616973 		.ascii	"raisedRightEyebrow\000"
+ 1555      65645269 
+ 1555      67687445 
+ 1555      79656272 
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 33
+
+
+ 1555      6F7700
+ 1556              	.LASF10:
+ 1557 03e0 696E7433 		.ascii	"int32_t\000"
+ 1557      325F7400 
+ 1558              	.LASF18:
+ 1559 03e8 72657365 		.ascii	"resetLeftEyebrow\000"
+ 1559      744C6566 
+ 1559      74457965 
+ 1559      62726F77 
+ 1559      00
+ 1560              	.LASF15:
+ 1561 03f9 73697A65 		.ascii	"sizetype\000"
+ 1561      74797065 
+ 1561      00
+ 1562              	.LASF6:
+ 1563 0402 6C6F6E67 		.ascii	"long long int\000"
+ 1563      206C6F6E 
+ 1563      6720696E 
+ 1563      7400
+ 1564              	.LASF29:
+ 1565 0410 4579656C 		.ascii	"EyelidGroup_Start\000"
+ 1565      69644772 
+ 1565      6F75705F 
+ 1565      53746172 
+ 1565      7400
+ 1566              	.LASF52:
+ 1567 0422 6D61696E 		.ascii	"main.c\000"
+ 1567      2E6300
+ 1568              	.LASF13:
+ 1569 0429 63686172 		.ascii	"char\000"
+ 1569      00
+ 1570              	.LASF40:
+ 1571 042e 4E65636B 		.ascii	"Neck_WriteCompare1\000"
+ 1571      5F577269 
+ 1571      7465436F 
+ 1571      6D706172 
+ 1571      653100
+ 1572              	.LASF2:
+ 1573 0441 73686F72 		.ascii	"short int\000"
+ 1573      7420696E 
+ 1573      7400
+ 1574              	.LASF33:
+ 1575 044b 4C69705F 		.ascii	"Lip_Start\000"
+ 1575      53746172 
+ 1575      7400
+ 1576              	.LASF4:
+ 1577 0455 6C6F6E67 		.ascii	"long int\000"
+ 1577      20696E74 
+ 1577      00
+ 1578              	.LASF17:
+ 1579 045e 72657365 		.ascii	"resetAllServoPositions\000"
+ 1579      74416C6C 
+ 1579      53657276 
+ 1579      6F506F73 
+ 1579      6974696F 
+ 1580              	.LASF14:
+ 1581 0475 6C6F6E67 		.ascii	"long double\000"
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccrdsXx6.s 			page 34
+
+
+ 1581      20646F75 
+ 1581      626C6500 
+ 1582              	.LASF0:
+ 1583 0481 7369676E 		.ascii	"signed char\000"
+ 1583      65642063 
+ 1583      68617200 
+ 1584              	.LASF50:
+ 1585 048d 43794465 		.ascii	"CyDelay\000"
+ 1585      6C617900 
+ 1586              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

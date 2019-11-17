@@ -141,28 +141,6 @@ net \EyelidGroup:PWMUDB:tc_i\
 	switch ":udb@[UDB=(0,2)]:dp_wrapper:input_permute.cs_addr_2==>:udb@[UDB=(0,2)]:dp_wrapper:datapath.cs_addr_2"
 	term   ":udb@[UDB=(0,2)]:dp_wrapper:datapath.cs_addr_2"
 end \EyelidGroup:PWMUDB:tc_i\
-net \LeftEyebrow:PWMUDB:tc_i\
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.z0_comb"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.z0_comb==>:udb@[UDB=(2,2)]:dp_wrapper:output_permute.z0_comb"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:output_permute.outs_5==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v86"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v86"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:86,53"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:73,53_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v73"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v73==>:udb@[UDB=(3,2)]:dp_wrapper:input_permute.ina_4"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:input_permute.cs_addr_2==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.cs_addr_2"
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cs_addr_2"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:6,53_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v6"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v6==>:udb@[UDB=(2,2)]:pld0:input_permute.input_3"
-	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc1_main_1==>:udb@[UDB=(2,2)]:pld0:mc1.main_1"
-	term   ":udb@[UDB=(2,2)]:pld0:mc1.main_1"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:72,53_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v72"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v72==>:udb@[UDB=(2,2)]:dp_wrapper:input_permute.ina_4"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:input_permute.cs_addr_2==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cs_addr_2"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cs_addr_2"
-end \LeftEyebrow:PWMUDB:tc_i\
 net \Neck:PWMUDB:tc_i\
 	term   ":udb@[UDB=(0,1)]:dp_wrapper:datapath.z0_comb"
 	switch ":udb@[UDB=(0,1)]:dp_wrapper:datapath.z0_comb==>:udb@[UDB=(0,1)]:dp_wrapper:output_permute.z0_comb"
@@ -205,16 +183,6 @@ net \EyeBallVertical:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
 	switch ":udb@[UDB=(3,1)]:dp_wrapper:datapath.co_msb==>:udb@[UDB=(2,1)]:dp_wrapper:datapath.ci"
 	term   ":udb@[UDB=(2,1)]:dp_wrapper:datapath.ci"
 end \EyeBallVertical:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
-net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.z0"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.z0==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.z0i"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.z0i"
-end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\
-net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.co_msb"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.co_msb==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ci"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ci"
-end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
 net \Neck:PWMUDB:sP16:pwmdp:u0.z0__sig\
 	term   ":udb@[UDB=(1,1)]:dp_wrapper:datapath.z0"
 	switch ":udb@[UDB=(1,1)]:dp_wrapper:datapath.z0==>:udb@[UDB=(0,1)]:dp_wrapper:datapath.z0i"
@@ -360,33 +328,6 @@ net \EyelidGroup:PWMUDB:runmode_enable\
 	switch ":udb@[UDB=(0,2)]:pld0:input_permute.mc3_main_0==>:udb@[UDB=(0,2)]:pld0:mc3.main_0"
 	term   ":udb@[UDB=(0,2)]:pld0:mc3.main_0"
 end \EyelidGroup:PWMUDB:runmode_enable\
-net \LeftEyebrow:PWMUDB:runmode_enable\
-	term   ":udb@[UDB=(2,2)]:pld0:mc0.q"
-	switch ":udb@[UDB=(2,2)]:pld0:mc0.q==>:udb@[UDB=(2,2)]:pld0:output_permute2.q_0"
-	switch ":udb@[UDB=(2,2)]:pld0:output_permute2.output_2==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v28"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v28"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:28,86"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:75,86_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v75"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v75==>:udb@[UDB=(3,2)]:dp_wrapper:input_permute.ina_5"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:input_permute.cs_addr_1==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.cs_addr_1"
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cs_addr_1"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:28,54"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:12,54_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v12"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v12==>:udb@[UDB=(2,2)]:pld0:input_permute.input_6"
-	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc1_main_0==>:udb@[UDB=(2,2)]:pld0:mc1.main_0"
-	term   ":udb@[UDB=(2,2)]:pld0:mc1.main_0"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:66,54_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v66"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v66==>:udb@[UDB=(2,2)]:dp_wrapper:input_permute.ina_1"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:input_permute.cs_addr_1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cs_addr_1"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cs_addr_1"
-	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc2_main_0==>:udb@[UDB=(2,2)]:pld0:mc2.main_0"
-	term   ":udb@[UDB=(2,2)]:pld0:mc2.main_0"
-	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc3_main_0==>:udb@[UDB=(2,2)]:pld0:mc3.main_0"
-	term   ":udb@[UDB=(2,2)]:pld0:mc3.main_0"
-end \LeftEyebrow:PWMUDB:runmode_enable\
 net \Neck:PWMUDB:runmode_enable\
 	term   ":udb@[UDB=(0,1)]:pld0:mc0.q"
 	switch ":udb@[UDB=(0,1)]:pld0:mc0.q==>:udb@[UDB=(0,1)]:pld0:output_permute2.q_0"
@@ -458,17 +399,6 @@ net \EyelidGroup:PWMUDB:status_2\
 	switch "Stub-:udbswitch@[UDB=(0,2)][side=top]:v92==>:udb@[UDB=(0,2)]:statusicell.status_2"
 	term   ":udb@[UDB=(0,2)]:statusicell.status_2"
 end \EyelidGroup:PWMUDB:status_2\
-net \LeftEyebrow:PWMUDB:status_2\
-	term   ":udb@[UDB=(2,2)]:pld0:mc1.q"
-	switch ":udb@[UDB=(2,2)]:pld0:mc1.q==>:udb@[UDB=(2,2)]:pld0:output_permute1.q_1"
-	switch ":udb@[UDB=(2,2)]:pld0:output_permute1.output_1==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v26"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v26"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:26,31"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:92,31_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v92"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v92==>:udb@[UDB=(2,2)]:statusicell.status_2"
-	term   ":udb@[UDB=(2,2)]:statusicell.status_2"
-end \LeftEyebrow:PWMUDB:status_2\
 net \Neck:PWMUDB:status_2\
 	term   ":udb@[UDB=(0,1)]:pld0:mc1.q"
 	switch ":udb@[UDB=(0,1)]:pld0:mc1.q==>:udb@[UDB=(0,1)]:pld0:output_permute1.q_1"
@@ -577,25 +507,6 @@ net \EyelidGroup:PWMUDB:cmp2_less\
 	switch ":udb@[UDB=(0,2)]:pld1:input_permute.mc3_main_1==>:udb@[UDB=(0,2)]:pld1:mc3.main_1"
 	term   ":udb@[UDB=(0,2)]:pld1:mc3.main_1"
 end \EyelidGroup:PWMUDB:cmp2_less\
-net \LeftEyebrow:PWMUDB:cmp2_less\
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl1_comb"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl1_comb==>:udb@[UDB=(2,2)]:dp_wrapper:output_permute.cl1_comb"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:output_permute.outs_0==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v76"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v76"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:76,17"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:18,17_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v18"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v18==>:udb@[UDB=(2,2)]:pld0:input_permute.input_9"
-	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc3_main_1==>:udb@[UDB=(2,2)]:pld0:mc3.main_1"
-	term   ":udb@[UDB=(2,2)]:pld0:mc3.main_1"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:50,17_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v50"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v50==>:udb@[UDB=(2,2)]:pld1:input_permute.input_6"
-	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc2_main_0==>:udb@[UDB=(2,2)]:pld1:mc2.main_0"
-	term   ":udb@[UDB=(2,2)]:pld1:mc2.main_0"
-	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc3_main_1==>:udb@[UDB=(2,2)]:pld1:mc3.main_1"
-	term   ":udb@[UDB=(2,2)]:pld1:mc3.main_1"
-end \LeftEyebrow:PWMUDB:cmp2_less\
 net \Neck:PWMUDB:cmp2_less\
 	term   ":udb@[UDB=(0,1)]:dp_wrapper:datapath.cl1_comb"
 	switch ":udb@[UDB=(0,1)]:dp_wrapper:datapath.cl1_comb==>:udb@[UDB=(0,1)]:dp_wrapper:output_permute.cl1_comb"
@@ -625,11 +536,6 @@ net \EyeBallVertical:PWMUDB:sP16:pwmdp:u0.cl1__sig\
 	switch ":udb@[UDB=(3,1)]:dp_wrapper:datapath.cl1==>:udb@[UDB=(2,1)]:dp_wrapper:datapath.cl1i"
 	term   ":udb@[UDB=(2,1)]:dp_wrapper:datapath.cl1i"
 end \EyeBallVertical:PWMUDB:sP16:pwmdp:u0.cl1__sig\
-net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cl1"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cl1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cl1i"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl1i"
-end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\
 net \Neck:PWMUDB:sP16:pwmdp:u0.cl1__sig\
 	term   ":udb@[UDB=(1,1)]:dp_wrapper:datapath.cl1"
 	switch ":udb@[UDB=(1,1)]:dp_wrapper:datapath.cl1==>:udb@[UDB=(0,1)]:dp_wrapper:datapath.cl1i"
@@ -745,25 +651,6 @@ net \EyelidGroup:PWMUDB:cmp1_less\
 	switch ":udb@[UDB=(0,2)]:pld1:input_permute.mc1_main_1==>:udb@[UDB=(0,2)]:pld1:mc1.main_1"
 	term   ":udb@[UDB=(0,2)]:pld1:mc1.main_1"
 end \EyelidGroup:PWMUDB:cmp1_less\
-net \LeftEyebrow:PWMUDB:cmp1_less\
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl0_comb"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl0_comb==>:udb@[UDB=(2,2)]:dp_wrapper:output_permute.cl0_comb"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:output_permute.outs_4==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v84"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v84"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:84,11"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:20,11_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v20"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v20==>:udb@[UDB=(2,2)]:pld0:input_permute.input_10"
-	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc2_main_1==>:udb@[UDB=(2,2)]:pld0:mc2.main_1"
-	term   ":udb@[UDB=(2,2)]:pld0:mc2.main_1"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:52,11_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v52"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v52==>:udb@[UDB=(2,2)]:pld1:input_permute.input_5"
-	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc0_main_0==>:udb@[UDB=(2,2)]:pld1:mc0.main_0"
-	term   ":udb@[UDB=(2,2)]:pld1:mc0.main_0"
-	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc1_main_1==>:udb@[UDB=(2,2)]:pld1:mc1.main_1"
-	term   ":udb@[UDB=(2,2)]:pld1:mc1.main_1"
-end \LeftEyebrow:PWMUDB:cmp1_less\
 net \Neck:PWMUDB:cmp1_less\
 	term   ":udb@[UDB=(0,1)]:dp_wrapper:datapath.cl0_comb"
 	switch ":udb@[UDB=(0,1)]:dp_wrapper:datapath.cl0_comb==>:udb@[UDB=(0,1)]:dp_wrapper:output_permute.cl0_comb"
@@ -793,11 +680,6 @@ net \EyeBallVertical:PWMUDB:sP16:pwmdp:u0.cl0__sig\
 	switch ":udb@[UDB=(3,1)]:dp_wrapper:datapath.cl0==>:udb@[UDB=(2,1)]:dp_wrapper:datapath.cl0i"
 	term   ":udb@[UDB=(2,1)]:dp_wrapper:datapath.cl0i"
 end \EyeBallVertical:PWMUDB:sP16:pwmdp:u0.cl0__sig\
-net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cl0"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cl0==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cl0i"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl0i"
-end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\
 net \Neck:PWMUDB:sP16:pwmdp:u0.cl0__sig\
 	term   ":udb@[UDB=(1,1)]:dp_wrapper:datapath.cl0"
 	switch ":udb@[UDB=(1,1)]:dp_wrapper:datapath.cl0==>:udb@[UDB=(0,1)]:dp_wrapper:datapath.cl0i"
@@ -851,18 +733,6 @@ net \EyelidGroup:PWMUDB:control_7\
 	switch ":udb@[UDB=(0,2)]:pld0:input_permute.mc0_main_0==>:udb@[UDB=(0,2)]:pld0:mc0.main_0"
 	term   ":udb@[UDB=(0,2)]:pld0:mc0.main_0"
 end \EyelidGroup:PWMUDB:control_7\
-net \LeftEyebrow:PWMUDB:control_7\
-	term   ":udb@[UDB=(2,2)]:controlcell.control_7"
-	switch ":udb@[UDB=(2,2)]:controlcell.control_7==>:udb@[UDB=(2,2)]:controlcell_control_7_permute.in_0"
-	switch ":udb@[UDB=(2,2)]:controlcell_control_7_permute.controlcell_control_7==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v118"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v118"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:118,66"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:8,66_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v8"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v8==>:udb@[UDB=(2,2)]:pld0:input_permute.input_4"
-	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc0_main_0==>:udb@[UDB=(2,2)]:pld0:mc0.main_0"
-	term   ":udb@[UDB=(2,2)]:pld0:mc0.main_0"
-end \LeftEyebrow:PWMUDB:control_7\
 net \Neck:PWMUDB:control_7\
 	term   ":udb@[UDB=(0,1)]:controlcell.control_7"
 	switch ":udb@[UDB=(0,1)]:controlcell.control_7==>:udb@[UDB=(0,1)]:controlcell_control_7_permute.in_0"
@@ -947,18 +817,6 @@ net \EyelidGroup:PWMUDB:prevCompare2\
 	switch ":udb@[UDB=(0,2)]:pld1:input_permute.mc3_main_0==>:udb@[UDB=(0,2)]:pld1:mc3.main_0"
 	term   ":udb@[UDB=(0,2)]:pld1:mc3.main_0"
 end \EyelidGroup:PWMUDB:prevCompare2\
-net \LeftEyebrow:PWMUDB:prevCompare2\
-	term   ":udb@[UDB=(2,2)]:pld1:mc2.q"
-	switch ":udb@[UDB=(2,2)]:pld1:mc2.q==>:udb@[UDB=(2,2)]:pld1:output_permute0.q_2"
-	switch ":udb@[UDB=(2,2)]:pld1:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v38"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v38"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:38,18"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:56,18_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v56"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v56==>:udb@[UDB=(2,2)]:pld1:input_permute.input_3"
-	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc3_main_0==>:udb@[UDB=(2,2)]:pld1:mc3.main_0"
-	term   ":udb@[UDB=(2,2)]:pld1:mc3.main_0"
-end \LeftEyebrow:PWMUDB:prevCompare2\
 net \Neck:PWMUDB:prevCompare2\
 	term   ":udb@[UDB=(0,1)]:pld1:mc2.q"
 	switch ":udb@[UDB=(0,1)]:pld1:mc2.q==>:udb@[UDB=(0,1)]:pld1:output_permute0.q_2"
@@ -995,18 +853,6 @@ net \EyelidGroup:PWMUDB:prevCompare1\
 	switch ":udb@[UDB=(0,2)]:pld1:input_permute.mc1_main_0==>:udb@[UDB=(0,2)]:pld1:mc1.main_0"
 	term   ":udb@[UDB=(0,2)]:pld1:mc1.main_0"
 end \EyelidGroup:PWMUDB:prevCompare1\
-net \LeftEyebrow:PWMUDB:prevCompare1\
-	term   ":udb@[UDB=(2,2)]:pld1:mc0.q"
-	switch ":udb@[UDB=(2,2)]:pld1:mc0.q==>:udb@[UDB=(2,2)]:pld1:output_permute1.q_0"
-	switch ":udb@[UDB=(2,2)]:pld1:output_permute1.output_1==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v36"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v36"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:36,12"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:58,12_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v58"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v58==>:udb@[UDB=(2,2)]:pld1:input_permute.input_2"
-	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc1_main_0==>:udb@[UDB=(2,2)]:pld1:mc1.main_0"
-	term   ":udb@[UDB=(2,2)]:pld1:mc1.main_0"
-end \LeftEyebrow:PWMUDB:prevCompare1\
 net \Neck:PWMUDB:prevCompare1\
 	term   ":udb@[UDB=(0,1)]:pld1:mc0.q"
 	switch ":udb@[UDB=(0,1)]:pld1:mc0.q==>:udb@[UDB=(0,1)]:pld1:output_permute1.q_0"
@@ -1080,6 +926,39 @@ net \BaseJaw:PWMUDB:control_7\
 	term   ":udb@[UDB=(1,0)]:pld0:mc0.main_0"
 end \BaseJaw:PWMUDB:control_7\
 net \RightEyebrow:PWMUDB:tc_i\
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.z0_comb"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.z0_comb==>:udb@[UDB=(2,2)]:dp_wrapper:output_permute.z0_comb"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:output_permute.outs_4==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v84"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v84"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:84,55"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:67,55_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v67"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v67==>:udb@[UDB=(3,2)]:dp_wrapper:input_permute.ina_1"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:input_permute.cs_addr_2==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.cs_addr_2"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cs_addr_2"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:20,55_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v20"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v20==>:udb@[UDB=(2,2)]:pld0:input_permute.input_10"
+	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc1_main_1==>:udb@[UDB=(2,2)]:pld0:mc1.main_1"
+	term   ":udb@[UDB=(2,2)]:pld0:mc1.main_1"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:84,11"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:74,11_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v74"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v74==>:udb@[UDB=(2,2)]:dp_wrapper:input_permute.ina_5"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:input_permute.cs_addr_2==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cs_addr_2"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cs_addr_2"
+end \RightEyebrow:PWMUDB:tc_i\
+net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.z0"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.z0==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.z0i"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.z0i"
+end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\
+net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.co_msb"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.co_msb==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ci"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ci"
+end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
+net \LeftEyebrow:PWMUDB:tc_i\
 	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.z0_comb"
 	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.z0_comb==>:udb@[UDB=(3,0)]:dp_wrapper:output_permute.z0_comb"
 	switch ":udb@[UDB=(3,0)]:dp_wrapper:output_permute.outs_3==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v83"
@@ -1101,18 +980,18 @@ net \RightEyebrow:PWMUDB:tc_i\
 	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v19==>:udb@[UDB=(3,0)]:pld0:input_permute.input_9"
 	switch ":udb@[UDB=(3,0)]:pld0:input_permute.mc1_main_1==>:udb@[UDB=(3,0)]:pld0:mc1.main_1"
 	term   ":udb@[UDB=(3,0)]:pld0:mc1.main_1"
-end \RightEyebrow:PWMUDB:tc_i\
-net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\
+end \LeftEyebrow:PWMUDB:tc_i\
+net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\
 	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.z0"
 	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.z0==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.z0i"
 	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.z0i"
-end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\
-net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
+end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\
+net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
 	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.co_msb"
 	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.co_msb==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ci"
 	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ci"
-end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
-net \RightEyebrow:PWMUDB:runmode_enable\
+end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\
+net \LeftEyebrow:PWMUDB:runmode_enable\
 	term   ":udb@[UDB=(3,0)]:pld0:mc0.q"
 	switch ":udb@[UDB=(3,0)]:pld0:mc0.q==>:udb@[UDB=(3,0)]:pld0:output_permute1.q_0"
 	switch ":udb@[UDB=(3,0)]:pld0:output_permute1.output_1==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v27"
@@ -1138,8 +1017,46 @@ net \RightEyebrow:PWMUDB:runmode_enable\
 	term   ":udb@[UDB=(3,0)]:pld0:mc2.main_0"
 	switch ":udb@[UDB=(3,0)]:pld0:input_permute.mc3_main_0==>:udb@[UDB=(3,0)]:pld0:mc3.main_0"
 	term   ":udb@[UDB=(3,0)]:pld0:mc3.main_0"
+end \LeftEyebrow:PWMUDB:runmode_enable\
+net \RightEyebrow:PWMUDB:runmode_enable\
+	term   ":udb@[UDB=(2,2)]:pld0:mc0.q"
+	switch ":udb@[UDB=(2,2)]:pld0:mc0.q==>:udb@[UDB=(2,2)]:pld0:output_permute2.q_0"
+	switch ":udb@[UDB=(2,2)]:pld0:output_permute2.output_2==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v28"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v28"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:28,86"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:75,86_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v75"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v75==>:udb@[UDB=(3,2)]:dp_wrapper:input_permute.ina_5"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:input_permute.cs_addr_1==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.cs_addr_1"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cs_addr_1"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:28,54"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:12,54_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v12"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v12==>:udb@[UDB=(2,2)]:pld0:input_permute.input_6"
+	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc1_main_0==>:udb@[UDB=(2,2)]:pld0:mc1.main_0"
+	term   ":udb@[UDB=(2,2)]:pld0:mc1.main_0"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:66,54_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v66"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v66==>:udb@[UDB=(2,2)]:dp_wrapper:input_permute.ina_1"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:input_permute.cs_addr_1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cs_addr_1"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cs_addr_1"
+	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc2_main_0==>:udb@[UDB=(2,2)]:pld0:mc2.main_0"
+	term   ":udb@[UDB=(2,2)]:pld0:mc2.main_0"
+	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc3_main_0==>:udb@[UDB=(2,2)]:pld0:mc3.main_0"
+	term   ":udb@[UDB=(2,2)]:pld0:mc3.main_0"
 end \RightEyebrow:PWMUDB:runmode_enable\
 net \RightEyebrow:PWMUDB:status_2\
+	term   ":udb@[UDB=(2,2)]:pld0:mc1.q"
+	switch ":udb@[UDB=(2,2)]:pld0:mc1.q==>:udb@[UDB=(2,2)]:pld0:output_permute1.q_1"
+	switch ":udb@[UDB=(2,2)]:pld0:output_permute1.output_1==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v26"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v26"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:26,31"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:92,31_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v92"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v92==>:udb@[UDB=(2,2)]:statusicell.status_2"
+	term   ":udb@[UDB=(2,2)]:statusicell.status_2"
+end \RightEyebrow:PWMUDB:status_2\
+net \LeftEyebrow:PWMUDB:status_2\
 	term   ":udb@[UDB=(3,0)]:pld0:mc1.q"
 	switch ":udb@[UDB=(3,0)]:pld0:mc1.q==>:udb@[UDB=(3,0)]:pld0:output_permute2.q_1"
 	switch ":udb@[UDB=(3,0)]:pld0:output_permute2.output_2==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v29"
@@ -1149,7 +1066,7 @@ net \RightEyebrow:PWMUDB:status_2\
 	switch "IStub-:udbswitch@[UDB=(2,0)][side=top]:v93"
 	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v93==>:udb@[UDB=(3,0)]:statusicell.status_2"
 	term   ":udb@[UDB=(3,0)]:statusicell.status_2"
-end \RightEyebrow:PWMUDB:status_2\
+end \LeftEyebrow:PWMUDB:status_2\
 net \EyeBallHorizontal:PWMUDB:status_0\
 	term   ":udb@[UDB=(3,3)]:pld1:mc1.q"
 	switch ":udb@[UDB=(3,3)]:pld1:mc1.q==>:udb@[UDB=(3,3)]:pld1:output_permute0.q_1"
@@ -1194,17 +1111,6 @@ net \EyelidGroup:PWMUDB:status_0\
 	switch "Stub-:udbswitch@[UDB=(0,2)][side=top]:v88==>:udb@[UDB=(0,2)]:statusicell.status_0"
 	term   ":udb@[UDB=(0,2)]:statusicell.status_0"
 end \EyelidGroup:PWMUDB:status_0\
-net \LeftEyebrow:PWMUDB:status_0\
-	term   ":udb@[UDB=(2,2)]:pld1:mc1.q"
-	switch ":udb@[UDB=(2,2)]:pld1:mc1.q==>:udb@[UDB=(2,2)]:pld1:output_permute3.q_1"
-	switch ":udb@[UDB=(2,2)]:pld1:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v32"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v32"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:32,69"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:88,69_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v88"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v88==>:udb@[UDB=(2,2)]:statusicell.status_0"
-	term   ":udb@[UDB=(2,2)]:statusicell.status_0"
-end \LeftEyebrow:PWMUDB:status_0\
 net \Neck:PWMUDB:status_0\
 	term   ":udb@[UDB=(0,1)]:pld1:mc1.q"
 	switch ":udb@[UDB=(0,1)]:pld1:mc1.q==>:udb@[UDB=(0,1)]:pld1:output_permute3.q_1"
@@ -1238,17 +1144,6 @@ net \EyelidGroup:PWMUDB:status_1\
 	switch "Stub-:udbswitch@[UDB=(0,2)][side=top]:v90==>:udb@[UDB=(0,2)]:statusicell.status_1"
 	term   ":udb@[UDB=(0,2)]:statusicell.status_1"
 end \EyelidGroup:PWMUDB:status_1\
-net \LeftEyebrow:PWMUDB:status_1\
-	term   ":udb@[UDB=(2,2)]:pld1:mc3.q"
-	switch ":udb@[UDB=(2,2)]:pld1:mc3.q==>:udb@[UDB=(2,2)]:pld1:output_permute2.q_3"
-	switch ":udb@[UDB=(2,2)]:pld1:output_permute2.output_2==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v34"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v34"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:34,63"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:90,63_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v90"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v90==>:udb@[UDB=(2,2)]:statusicell.status_1"
-	term   ":udb@[UDB=(2,2)]:statusicell.status_1"
-end \LeftEyebrow:PWMUDB:status_1\
 net \Neck:PWMUDB:status_1\
 	term   ":udb@[UDB=(0,1)]:pld1:mc3.q"
 	switch ":udb@[UDB=(0,1)]:pld1:mc3.q==>:udb@[UDB=(0,1)]:pld1:output_permute2.q_3"
@@ -1305,6 +1200,30 @@ net \BaseJaw:PWMUDB:status_1\
 	term   ":udb@[UDB=(1,0)]:statusicell.status_1"
 end \BaseJaw:PWMUDB:status_1\
 net \RightEyebrow:PWMUDB:cmp2_less\
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl1_comb"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl1_comb==>:udb@[UDB=(2,2)]:dp_wrapper:output_permute.cl1_comb"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:output_permute.outs_0==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v76"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v76"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:76,17"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:18,17_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v18"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v18==>:udb@[UDB=(2,2)]:pld0:input_permute.input_9"
+	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc3_main_1==>:udb@[UDB=(2,2)]:pld0:mc3.main_1"
+	term   ":udb@[UDB=(2,2)]:pld0:mc3.main_1"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:50,17_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v50"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v50==>:udb@[UDB=(2,2)]:pld1:input_permute.input_6"
+	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc2_main_0==>:udb@[UDB=(2,2)]:pld1:mc2.main_0"
+	term   ":udb@[UDB=(2,2)]:pld1:mc2.main_0"
+	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc3_main_1==>:udb@[UDB=(2,2)]:pld1:mc3.main_1"
+	term   ":udb@[UDB=(2,2)]:pld1:mc3.main_1"
+end \RightEyebrow:PWMUDB:cmp2_less\
+net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cl1"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cl1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cl1i"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl1i"
+end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\
+net \LeftEyebrow:PWMUDB:cmp2_less\
 	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cl1_comb"
 	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cl1_comb==>:udb@[UDB=(3,0)]:dp_wrapper:output_permute.cl1_comb"
 	switch ":udb@[UDB=(3,0)]:dp_wrapper:output_permute.outs_5==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v87"
@@ -1322,13 +1241,37 @@ net \RightEyebrow:PWMUDB:cmp2_less\
 	term   ":udb@[UDB=(3,0)]:pld1:mc2.main_0"
 	switch ":udb@[UDB=(3,0)]:pld1:input_permute.mc3_main_1==>:udb@[UDB=(3,0)]:pld1:mc3.main_1"
 	term   ":udb@[UDB=(3,0)]:pld1:mc3.main_1"
-end \RightEyebrow:PWMUDB:cmp2_less\
-net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\
+end \LeftEyebrow:PWMUDB:cmp2_less\
+net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\
 	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cl1"
 	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cl1==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.cl1i"
 	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cl1i"
-end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\
+end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\
 net \RightEyebrow:PWMUDB:cmp1_less\
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl0_comb"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl0_comb==>:udb@[UDB=(2,2)]:dp_wrapper:output_permute.cl0_comb"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:output_permute.outs_2==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v80"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v80"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:80,23"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:16,23_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v16"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v16==>:udb@[UDB=(2,2)]:pld0:input_permute.input_8"
+	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc2_main_1==>:udb@[UDB=(2,2)]:pld0:mc2.main_1"
+	term   ":udb@[UDB=(2,2)]:pld0:mc2.main_1"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:48,23_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v48"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v48==>:udb@[UDB=(2,2)]:pld1:input_permute.input_7"
+	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc0_main_0==>:udb@[UDB=(2,2)]:pld1:mc0.main_0"
+	term   ":udb@[UDB=(2,2)]:pld1:mc0.main_0"
+	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc1_main_1==>:udb@[UDB=(2,2)]:pld1:mc1.main_1"
+	term   ":udb@[UDB=(2,2)]:pld1:mc1.main_1"
+end \RightEyebrow:PWMUDB:cmp1_less\
+net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cl0"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cl0==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cl0i"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cl0i"
+end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\
+net \LeftEyebrow:PWMUDB:cmp1_less\
 	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cl0_comb"
 	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cl0_comb==>:udb@[UDB=(3,0)]:dp_wrapper:output_permute.cl0_comb"
 	switch ":udb@[UDB=(3,0)]:dp_wrapper:output_permute.outs_4==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v85"
@@ -1346,13 +1289,49 @@ net \RightEyebrow:PWMUDB:cmp1_less\
 	term   ":udb@[UDB=(3,0)]:pld1:mc0.main_0"
 	switch ":udb@[UDB=(3,0)]:pld1:input_permute.mc1_main_1==>:udb@[UDB=(3,0)]:pld1:mc1.main_1"
 	term   ":udb@[UDB=(3,0)]:pld1:mc1.main_1"
-end \RightEyebrow:PWMUDB:cmp1_less\
-net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\
+end \LeftEyebrow:PWMUDB:cmp1_less\
+net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\
 	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cl0"
 	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cl0==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.cl0i"
 	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cl0i"
-end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\
+end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\
+net \RightEyebrow:PWMUDB:control_7\
+	term   ":udb@[UDB=(2,2)]:controlcell.control_7"
+	switch ":udb@[UDB=(2,2)]:controlcell.control_7==>:udb@[UDB=(2,2)]:controlcell_control_7_permute.in_0"
+	switch ":udb@[UDB=(2,2)]:controlcell_control_7_permute.controlcell_control_7==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v118"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v118"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:118,66"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:8,66_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v8"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v8==>:udb@[UDB=(2,2)]:pld0:input_permute.input_4"
+	switch ":udb@[UDB=(2,2)]:pld0:input_permute.mc0_main_0==>:udb@[UDB=(2,2)]:pld0:mc0.main_0"
+	term   ":udb@[UDB=(2,2)]:pld0:mc0.main_0"
+end \RightEyebrow:PWMUDB:control_7\
+net \RightEyebrow:PWMUDB:prevCompare1\
+	term   ":udb@[UDB=(2,2)]:pld1:mc0.q"
+	switch ":udb@[UDB=(2,2)]:pld1:mc0.q==>:udb@[UDB=(2,2)]:pld1:output_permute1.q_0"
+	switch ":udb@[UDB=(2,2)]:pld1:output_permute1.output_1==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v36"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v36"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:36,35"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:52,35_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v52"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v52==>:udb@[UDB=(2,2)]:pld1:input_permute.input_5"
+	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc1_main_0==>:udb@[UDB=(2,2)]:pld1:mc1.main_0"
+	term   ":udb@[UDB=(2,2)]:pld1:mc1.main_0"
+end \RightEyebrow:PWMUDB:prevCompare1\
 net \RightEyebrow:PWMUDB:prevCompare2\
+	term   ":udb@[UDB=(2,2)]:pld1:mc2.q"
+	switch ":udb@[UDB=(2,2)]:pld1:mc2.q==>:udb@[UDB=(2,2)]:pld1:output_permute0.q_2"
+	switch ":udb@[UDB=(2,2)]:pld1:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v38"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v38"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:38,18"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:56,18_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v56"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v56==>:udb@[UDB=(2,2)]:pld1:input_permute.input_3"
+	switch ":udb@[UDB=(2,2)]:pld1:input_permute.mc3_main_0==>:udb@[UDB=(2,2)]:pld1:mc3.main_0"
+	term   ":udb@[UDB=(2,2)]:pld1:mc3.main_0"
+end \RightEyebrow:PWMUDB:prevCompare2\
+net \LeftEyebrow:PWMUDB:prevCompare2\
 	term   ":udb@[UDB=(3,0)]:pld1:mc2.q"
 	switch ":udb@[UDB=(3,0)]:pld1:mc2.q==>:udb@[UDB=(3,0)]:pld1:output_permute2.q_2"
 	switch ":udb@[UDB=(3,0)]:pld1:output_permute2.output_2==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v35"
@@ -1363,8 +1342,8 @@ net \RightEyebrow:PWMUDB:prevCompare2\
 	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v51==>:udb@[UDB=(3,0)]:pld1:input_permute.input_6"
 	switch ":udb@[UDB=(3,0)]:pld1:input_permute.mc3_main_0==>:udb@[UDB=(3,0)]:pld1:mc3.main_0"
 	term   ":udb@[UDB=(3,0)]:pld1:mc3.main_0"
-end \RightEyebrow:PWMUDB:prevCompare2\
-net \RightEyebrow:PWMUDB:prevCompare1\
+end \LeftEyebrow:PWMUDB:prevCompare2\
+net \LeftEyebrow:PWMUDB:prevCompare1\
 	term   ":udb@[UDB=(3,0)]:pld1:mc0.q"
 	switch ":udb@[UDB=(3,0)]:pld1:mc0.q==>:udb@[UDB=(3,0)]:pld1:output_permute3.q_0"
 	switch ":udb@[UDB=(3,0)]:pld1:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v33"
@@ -1375,8 +1354,8 @@ net \RightEyebrow:PWMUDB:prevCompare1\
 	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v55==>:udb@[UDB=(3,0)]:pld1:input_permute.input_4"
 	switch ":udb@[UDB=(3,0)]:pld1:input_permute.mc1_main_0==>:udb@[UDB=(3,0)]:pld1:mc1.main_0"
 	term   ":udb@[UDB=(3,0)]:pld1:mc1.main_0"
-end \RightEyebrow:PWMUDB:prevCompare1\
-net \RightEyebrow:PWMUDB:control_7\
+end \LeftEyebrow:PWMUDB:prevCompare1\
+net \LeftEyebrow:PWMUDB:control_7\
 	term   ":udb@[UDB=(3,0)]:controlcell.control_7"
 	switch ":udb@[UDB=(3,0)]:controlcell.control_7==>:udb@[UDB=(3,0)]:controlcell_control_7_permute.in_0"
 	switch ":udb@[UDB=(3,0)]:controlcell_control_7_permute.controlcell_control_7==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v119"
@@ -1387,8 +1366,30 @@ net \RightEyebrow:PWMUDB:control_7\
 	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v23==>:udb@[UDB=(3,0)]:pld0:input_permute.input_11"
 	switch ":udb@[UDB=(3,0)]:pld0:input_permute.mc0_main_0==>:udb@[UDB=(3,0)]:pld0:mc0.main_0"
 	term   ":udb@[UDB=(3,0)]:pld0:mc0.main_0"
-end \RightEyebrow:PWMUDB:control_7\
+end \LeftEyebrow:PWMUDB:control_7\
 net \RightEyebrow:PWMUDB:status_0\
+	term   ":udb@[UDB=(2,2)]:pld1:mc1.q"
+	switch ":udb@[UDB=(2,2)]:pld1:mc1.q==>:udb@[UDB=(2,2)]:pld1:output_permute3.q_1"
+	switch ":udb@[UDB=(2,2)]:pld1:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v32"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v32"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:32,69"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:88,69_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v88"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v88==>:udb@[UDB=(2,2)]:statusicell.status_0"
+	term   ":udb@[UDB=(2,2)]:statusicell.status_0"
+end \RightEyebrow:PWMUDB:status_0\
+net \RightEyebrow:PWMUDB:status_1\
+	term   ":udb@[UDB=(2,2)]:pld1:mc3.q"
+	switch ":udb@[UDB=(2,2)]:pld1:mc3.q==>:udb@[UDB=(2,2)]:pld1:output_permute2.q_3"
+	switch ":udb@[UDB=(2,2)]:pld1:output_permute2.output_2==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v34"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v34"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:34,63"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:90,63_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v90"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v90==>:udb@[UDB=(2,2)]:statusicell.status_1"
+	term   ":udb@[UDB=(2,2)]:statusicell.status_1"
+end \RightEyebrow:PWMUDB:status_1\
+net \LeftEyebrow:PWMUDB:status_0\
 	term   ":udb@[UDB=(3,0)]:pld1:mc1.q"
 	switch ":udb@[UDB=(3,0)]:pld1:mc1.q==>:udb@[UDB=(3,0)]:pld1:output_permute0.q_1"
 	switch ":udb@[UDB=(3,0)]:pld1:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v39"
@@ -1398,8 +1399,8 @@ net \RightEyebrow:PWMUDB:status_0\
 	switch "IStub-:udbswitch@[UDB=(2,0)][side=top]:v89"
 	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v89==>:udb@[UDB=(3,0)]:statusicell.status_0"
 	term   ":udb@[UDB=(3,0)]:statusicell.status_0"
-end \RightEyebrow:PWMUDB:status_0\
-net \RightEyebrow:PWMUDB:status_1\
+end \LeftEyebrow:PWMUDB:status_0\
+net \LeftEyebrow:PWMUDB:status_1\
 	term   ":udb@[UDB=(3,0)]:pld1:mc3.q"
 	switch ":udb@[UDB=(3,0)]:pld1:mc3.q==>:udb@[UDB=(3,0)]:pld1:output_permute1.q_3"
 	switch ":udb@[UDB=(3,0)]:pld1:output_permute1.output_1==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v37"
@@ -1409,15 +1410,15 @@ net \RightEyebrow:PWMUDB:status_1\
 	switch "IStub-:udbswitch@[UDB=(2,0)][side=top]:v91"
 	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v91==>:udb@[UDB=(3,0)]:statusicell.status_1"
 	term   ":udb@[UDB=(3,0)]:statusicell.status_1"
-end \RightEyebrow:PWMUDB:status_1\
+end \LeftEyebrow:PWMUDB:status_1\
 net ClockBlock_BUS_CLK
 	term   ":clockblockcell.clk_bus_glb"
-	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(3,0)]:controlcell.busclk"
-	term   ":udb@[UDB=(3,0)]:controlcell.busclk"
-	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(2,0)]:dp_wrapper:datapath.busclk"
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.busclk"
-	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.busclk"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.busclk"
+	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(2,2)]:controlcell.busclk"
+	term   ":udb@[UDB=(2,2)]:controlcell.busclk"
+	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.busclk"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.busclk"
+	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.busclk"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.busclk"
 	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(0,2)]:controlcell.busclk"
 	term   ":udb@[UDB=(0,2)]:controlcell.busclk"
 	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(1,2)]:dp_wrapper:datapath.busclk"
@@ -1436,12 +1437,12 @@ net ClockBlock_BUS_CLK
 	term   ":udb@[UDB=(0,0)]:dp_wrapper:datapath.busclk"
 	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(1,0)]:dp_wrapper:datapath.busclk"
 	term   ":udb@[UDB=(1,0)]:dp_wrapper:datapath.busclk"
-	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(2,2)]:controlcell.busclk"
-	term   ":udb@[UDB=(2,2)]:controlcell.busclk"
-	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.busclk"
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.busclk"
-	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.busclk"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.busclk"
+	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(3,0)]:controlcell.busclk"
+	term   ":udb@[UDB=(3,0)]:controlcell.busclk"
+	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(2,0)]:dp_wrapper:datapath.busclk"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.busclk"
+	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.busclk"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.busclk"
 	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(3,3)]:controlcell.busclk"
 	term   ":udb@[UDB=(3,3)]:controlcell.busclk"
 	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(2,3)]:dp_wrapper:datapath.busclk"
@@ -1552,34 +1553,34 @@ net Net_1041
 	term   ":udb@[UDB=(1,3)]:pld0:mc3.clock_0"
 end Net_1041
 net Net_211
-	term   ":clockblockcell.dclk_glb_7"
-	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(3,0)]:clockreset:clk_sc_mux.in_7"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(3,0)]:controlcell.clock"
-	term   ":udb@[UDB=(3,0)]:controlcell.clock"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(3,0)]:statusicell.clock"
-	term   ":udb@[UDB=(3,0)]:statusicell.clock"
-	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(2,0)]:clockreset:clk_dp_mux.in_7"
-	switch ":udb@[UDB=(2,0)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(2,0)]:dp_wrapper:datapath.clock"
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.clock"
-	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(3,0)]:clockreset:clk_dp_mux.in_7"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.clock"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.clock"
-	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(3,0)]:clockreset:clk_pld0_mux.in_7"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(3,0)]:pld0:mc0.clock_0"
-	term   ":udb@[UDB=(3,0)]:pld0:mc0.clock_0"
-	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.in_7"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(3,0)]:pld1:mc0.clock_0"
-	term   ":udb@[UDB=(3,0)]:pld1:mc0.clock_0"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(3,0)]:pld1:mc2.clock_0"
-	term   ":udb@[UDB=(3,0)]:pld1:mc2.clock_0"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(3,0)]:pld1:mc1.clock_0"
-	term   ":udb@[UDB=(3,0)]:pld1:mc1.clock_0"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(3,0)]:pld1:mc3.clock_0"
-	term   ":udb@[UDB=(3,0)]:pld1:mc3.clock_0"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(3,0)]:pld0:mc2.clock_0"
-	term   ":udb@[UDB=(3,0)]:pld0:mc2.clock_0"
-	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(3,0)]:pld0:mc3.clock_0"
-	term   ":udb@[UDB=(3,0)]:pld0:mc3.clock_0"
+	term   ":clockblockcell.dclk_glb_6"
+	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(2,2)]:clockreset:clk_sc_mux.in_6"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(2,2)]:controlcell.clock"
+	term   ":udb@[UDB=(2,2)]:controlcell.clock"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(2,2)]:statusicell.clock"
+	term   ":udb@[UDB=(2,2)]:statusicell.clock"
+	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(3,2)]:clockreset:clk_dp_mux.in_6"
+	switch ":udb@[UDB=(3,2)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.clock"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.clock"
+	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(2,2)]:clockreset:clk_dp_mux.in_6"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.clock"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.clock"
+	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(2,2)]:clockreset:clk_pld0_mux.in_6"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(2,2)]:pld0:mc0.clock_0"
+	term   ":udb@[UDB=(2,2)]:pld0:mc0.clock_0"
+	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.in_6"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(2,2)]:pld1:mc0.clock_0"
+	term   ":udb@[UDB=(2,2)]:pld1:mc0.clock_0"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(2,2)]:pld1:mc2.clock_0"
+	term   ":udb@[UDB=(2,2)]:pld1:mc2.clock_0"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(2,2)]:pld1:mc1.clock_0"
+	term   ":udb@[UDB=(2,2)]:pld1:mc1.clock_0"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(2,2)]:pld1:mc3.clock_0"
+	term   ":udb@[UDB=(2,2)]:pld1:mc3.clock_0"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(2,2)]:pld0:mc2.clock_0"
+	term   ":udb@[UDB=(2,2)]:pld0:mc2.clock_0"
+	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(2,2)]:pld0:mc3.clock_0"
+	term   ":udb@[UDB=(2,2)]:pld0:mc3.clock_0"
 end Net_211
 net Net_918
 	term   ":clockblockcell.dclk_glb_1"
@@ -1672,49 +1673,47 @@ net Net_970
 	term   ":udb@[UDB=(1,0)]:pld0:mc3.clock_0"
 end Net_970
 net Net_997
-	term   ":clockblockcell.dclk_glb_6"
-	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(2,2)]:clockreset:clk_sc_mux.in_6"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(2,2)]:controlcell.clock"
-	term   ":udb@[UDB=(2,2)]:controlcell.clock"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(2,2)]:statusicell.clock"
-	term   ":udb@[UDB=(2,2)]:statusicell.clock"
-	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(3,2)]:clockreset:clk_dp_mux.in_6"
-	switch ":udb@[UDB=(3,2)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.clock"
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.clock"
-	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(2,2)]:clockreset:clk_dp_mux.in_6"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.clock"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.clock"
-	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(2,2)]:clockreset:clk_pld0_mux.in_6"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(2,2)]:pld0:mc0.clock_0"
-	term   ":udb@[UDB=(2,2)]:pld0:mc0.clock_0"
-	switch ":clockblockcell.dclk_glb_6==>:udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.in_6"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(2,2)]:pld1:mc0.clock_0"
-	term   ":udb@[UDB=(2,2)]:pld1:mc0.clock_0"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(2,2)]:pld1:mc2.clock_0"
-	term   ":udb@[UDB=(2,2)]:pld1:mc2.clock_0"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(2,2)]:pld1:mc1.clock_0"
-	term   ":udb@[UDB=(2,2)]:pld1:mc1.clock_0"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(2,2)]:pld1:mc3.clock_0"
-	term   ":udb@[UDB=(2,2)]:pld1:mc3.clock_0"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(2,2)]:pld0:mc2.clock_0"
-	term   ":udb@[UDB=(2,2)]:pld0:mc2.clock_0"
-	switch ":udb@[UDB=(2,2)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(2,2)]:pld0:mc3.clock_0"
-	term   ":udb@[UDB=(2,2)]:pld0:mc3.clock_0"
+	term   ":clockblockcell.dclk_glb_7"
+	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(3,0)]:clockreset:clk_sc_mux.in_7"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(3,0)]:controlcell.clock"
+	term   ":udb@[UDB=(3,0)]:controlcell.clock"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_sc_mux.sc_clk==>:udb@[UDB=(3,0)]:statusicell.clock"
+	term   ":udb@[UDB=(3,0)]:statusicell.clock"
+	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(2,0)]:clockreset:clk_dp_mux.in_7"
+	switch ":udb@[UDB=(2,0)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(2,0)]:dp_wrapper:datapath.clock"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.clock"
+	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(3,0)]:clockreset:clk_dp_mux.in_7"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_dp_mux.dp_clk==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.clock"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.clock"
+	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(3,0)]:clockreset:clk_pld0_mux.in_7"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(3,0)]:pld0:mc0.clock_0"
+	term   ":udb@[UDB=(3,0)]:pld0:mc0.clock_0"
+	switch ":clockblockcell.dclk_glb_7==>:udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.in_7"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(3,0)]:pld1:mc0.clock_0"
+	term   ":udb@[UDB=(3,0)]:pld1:mc0.clock_0"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(3,0)]:pld1:mc2.clock_0"
+	term   ":udb@[UDB=(3,0)]:pld1:mc2.clock_0"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(3,0)]:pld1:mc1.clock_0"
+	term   ":udb@[UDB=(3,0)]:pld1:mc1.clock_0"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld1_mux.pld1_clk==>:udb@[UDB=(3,0)]:pld1:mc3.clock_0"
+	term   ":udb@[UDB=(3,0)]:pld1:mc3.clock_0"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(3,0)]:pld0:mc2.clock_0"
+	term   ":udb@[UDB=(3,0)]:pld0:mc2.clock_0"
+	switch ":udb@[UDB=(3,0)]:clockreset:clk_pld0_mux.pld0_clk==>:udb@[UDB=(3,0)]:pld0:mc3.clock_0"
+	term   ":udb@[UDB=(3,0)]:pld0:mc3.clock_0"
 end Net_997
 net Net_1
-	term   ":udb@[UDB=(3,0)]:pld0:mc2.q"
-	switch ":udb@[UDB=(3,0)]:pld0:mc2.q==>:udb@[UDB=(3,0)]:pld0:output_permute0.q_2"
-	switch ":udb@[UDB=(3,0)]:pld0:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v25"
-	switch "OStub-:udbswitch@[UDB=(2,0)][side=top]:v25"
-	switch ":udbswitch@[UDB=(2,0)][side=top]:25,29"
-	switch ":hvswitch@[UDB=(2,0)][side=left]:0,29_f"
-	switch ":hvswitch@[UDB=(3,0)][side=left]:vseg_0_top_f"
-	switch ":hvswitch@[UDB=(3,0)][side=left]:0,60_b"
-	switch ":hvswitch@[UDB=(3,0)][side=left]:hseg_60_f"
-	switch ":hvswitch@[UDB=(3,1)][side=left]:hseg_60_f"
-	switch ":hvswitch@[UDB=(3,2)][side=left]:hseg_60_f"
-	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_60_f"
-	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:91,60_f"
+	term   ":udb@[UDB=(2,2)]:pld0:mc2.q"
+	switch ":udb@[UDB=(2,2)]:pld0:mc2.q==>:udb@[UDB=(2,2)]:pld0:output_permute0.q_2"
+	switch ":udb@[UDB=(2,2)]:pld0:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v24"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v24"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:24,74"
+	switch ":hvswitch@[UDB=(2,2)][side=left]:8,74_f"
+	switch ":hvswitch@[UDB=(2,2)][side=left]:vseg_8_bot_b"
+	switch ":hvswitch@[UDB=(3,2)][side=left]:8,2_b"
+	switch ":hvswitch@[UDB=(3,2)][side=left]:hseg_2_f"
+	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_2_f"
+	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:87,2_f"
 	switch "IStub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v87+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v89+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v91"
 	switch "Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v87+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v89+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v91==>:ioport0:inputs1_mux.in_3"
 	switch ":ioport0:inputs1_mux.pin0__pin_input==>:ioport0:pin0.pin_input"
@@ -1823,19 +1822,17 @@ net Net_1040
 	term   ":ioport1:pin7.pin_input"
 end Net_1040
 net Net_2
-	term   ":udb@[UDB=(3,0)]:pld0:mc3.q"
-	switch ":udb@[UDB=(3,0)]:pld0:mc3.q==>:udb@[UDB=(3,0)]:pld0:output_permute3.q_3"
-	switch ":udb@[UDB=(3,0)]:pld0:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v31"
-	switch "OStub-:udbswitch@[UDB=(2,0)][side=top]:v31"
-	switch ":udbswitch@[UDB=(2,0)][side=top]:31,50"
-	switch ":hvswitch@[UDB=(2,0)][side=left]:hseg_50_f"
-	switch ":hvswitch@[UDB=(2,1)][side=left]:4,50_f"
-	switch ":hvswitch@[UDB=(3,1)][side=left]:vseg_4_top_f"
-	switch ":hvswitch@[UDB=(3,1)][side=left]:4,40_b"
-	switch ":hvswitch@[UDB=(3,1)][side=left]:hseg_40_f"
-	switch ":hvswitch@[UDB=(3,2)][side=left]:hseg_40_f"
-	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_40_f"
-	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:90,40_f"
+	term   ":udb@[UDB=(2,2)]:pld0:mc3.q"
+	switch ":udb@[UDB=(2,2)]:pld0:mc3.q==>:udb@[UDB=(2,2)]:pld0:output_permute3.q_3"
+	switch ":udb@[UDB=(2,2)]:pld0:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v30"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v30"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:30,43"
+	switch ":hvswitch@[UDB=(2,2)][side=left]:hseg_43_f"
+	switch ":hvswitch@[UDB=(2,3)][side=left]:8,43_f"
+	switch ":hvswitch@[UDB=(2,3)][side=left]:vseg_8_bot_b"
+	switch ":hvswitch@[UDB=(3,3)][side=left]:8,19_b"
+	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_19_f"
+	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:88,19_f"
 	switch "IStub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v86+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v88+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v90"
 	switch "Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v86+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v88+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v90==>:ioport0:inputs1_mux.in_2"
 	switch ":ioport0:inputs1_mux.pin1__pin_input==>:ioport0:pin1.pin_input"
@@ -1846,10 +1843,10 @@ net Net_916
 	switch ":udb@[UDB=(2,1)]:pld0:mc2.q==>:udb@[UDB=(2,1)]:pld0:output_permute3.q_2"
 	switch ":udb@[UDB=(2,1)]:pld0:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,1)][side=top]:v30"
 	switch "OStub-:udbswitch@[UDB=(2,1)][side=top]:v30"
-	switch ":udbswitch@[UDB=(2,1)][side=top]:30,46"
-	switch ":hvswitch@[UDB=(2,0)][side=left]:18,46_f"
-	switch ":hvswitch@[UDB=(3,0)][side=left]:vseg_18_top_f"
-	switch ":hvswitch@[UDB=(3,0)][side=left]:18,25_b"
+	switch ":udbswitch@[UDB=(2,1)][side=top]:30,92"
+	switch ":hvswitch@[UDB=(2,1)][side=left]:13,92_f"
+	switch ":hvswitch@[UDB=(2,1)][side=left]:vseg_13_bot_b"
+	switch ":hvswitch@[UDB=(3,1)][side=left]:13,25_b"
 	switch ":hvswitch@[UDB=(3,1)][side=left]:hseg_25_f"
 	switch ":hvswitch@[UDB=(3,2)][side=left]:hseg_25_f"
 	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_25_f"
@@ -1864,14 +1861,14 @@ net Net_917
 	switch ":udb@[UDB=(2,1)]:pld0:mc3.q==>:udb@[UDB=(2,1)]:pld0:output_permute0.q_3"
 	switch ":udb@[UDB=(2,1)]:pld0:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,1)][side=top]:v24"
 	switch "OStub-:udbswitch@[UDB=(2,1)][side=top]:v24"
-	switch ":udbswitch@[UDB=(2,1)][side=top]:24,77"
-	switch ":hvswitch@[UDB=(2,1)][side=left]:hseg_77_f"
-	switch ":hvswitch@[UDB=(2,2)][side=left]:hseg_77_f"
-	switch ":hvswitch@[UDB=(2,3)][side=left]:3,77_f"
-	switch ":hvswitch@[UDB=(3,3)][side=left]:vseg_3_top_f"
-	switch ":hvswitch@[UDB=(3,3)][side=left]:3,82_b"
-	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_82_f"
-	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:92,82_f"
+	switch ":udbswitch@[UDB=(2,1)][side=top]:24,74"
+	switch ":hvswitch@[UDB=(2,1)][side=left]:7,74_f"
+	switch ":hvswitch@[UDB=(3,1)][side=left]:vseg_7_top_f"
+	switch ":hvswitch@[UDB=(3,1)][side=left]:7,34_b"
+	switch ":hvswitch@[UDB=(3,1)][side=left]:hseg_34_f"
+	switch ":hvswitch@[UDB=(3,2)][side=left]:hseg_34_f"
+	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_34_f"
+	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:92,34_f"
 	switch "IStub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v92+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v94+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v96"
 	switch "Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v92+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v94+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v96==>:ioport0:inputs2_mux.in_0"
 	switch ":ioport0:inputs2_mux.pin5__pin_input==>:ioport0:pin5.pin_input"
@@ -1945,43 +1942,47 @@ net Net_969
 	term   ":ioport2:pin2.pin_input"
 end Net_969
 net Net_994
-	term   ":udb@[UDB=(2,2)]:pld0:mc2.q"
-	switch ":udb@[UDB=(2,2)]:pld0:mc2.q==>:udb@[UDB=(2,2)]:pld0:output_permute0.q_2"
-	switch ":udb@[UDB=(2,2)]:pld0:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v24"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v24"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:24,28"
-	switch ":hvswitch@[UDB=(2,2)][side=left]:9,28_f"
+	term   ":udb@[UDB=(3,0)]:pld0:mc2.q"
+	switch ":udb@[UDB=(3,0)]:pld0:mc2.q==>:udb@[UDB=(3,0)]:pld0:output_permute0.q_2"
+	switch ":udb@[UDB=(3,0)]:pld0:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v25"
+	switch "OStub-:udbswitch@[UDB=(2,0)][side=top]:v25"
+	switch ":udbswitch@[UDB=(2,0)][side=top]:25,75"
+	switch ":hvswitch@[UDB=(2,0)][side=left]:hseg_75_f"
+	switch ":hvswitch@[UDB=(2,1)][side=left]:hseg_75_f"
+	switch ":hvswitch@[UDB=(2,2)][side=left]:9,75_f"
 	switch ":hvswitch@[UDB=(2,2)][side=left]:vseg_9_bot_b"
 	switch ":hvswitch@[UDB=(3,2)][side=left]:9,95_b"
 	switch ":hvswitch@[UDB=(3,2)][side=left]:hseg_95_f"
 	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_95_f"
-	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:81,95_f"
-	switch "IStub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v81+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v83+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v85"
-	switch "Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v81+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v83+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v85==>:ioport0:inputs1_mux.in_1"
+	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:80,95_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v80+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v82+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v84"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v80+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v82+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v84==>:ioport0:inputs1_mux.in_0"
 	switch ":ioport0:inputs1_mux.pin2__pin_input==>:ioport0:pin2.pin_input"
 	term   ":ioport0:pin2.pin_input"
 end Net_994
 net Net_995
-	term   ":udb@[UDB=(2,2)]:pld0:mc3.q"
-	switch ":udb@[UDB=(2,2)]:pld0:mc3.q==>:udb@[UDB=(2,2)]:pld0:output_permute3.q_3"
-	switch ":udb@[UDB=(2,2)]:pld0:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v30"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v30"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:30,0"
-	switch ":hvswitch@[UDB=(2,2)][side=left]:hseg_0_f"
-	switch ":hvswitch@[UDB=(2,3)][side=left]:0,0_f"
-	switch ":hvswitch@[UDB=(3,3)][side=left]:vseg_0_top_f"
-	switch ":hvswitch@[UDB=(3,3)][side=left]:0,11_b"
-	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_11_f"
-	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:84,11_f"
-	switch "IStub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v80+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v82+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v84"
-	switch "Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v80+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v82+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v84==>:ioport0:inputs1_mux.in_0"
+	term   ":udb@[UDB=(3,0)]:pld0:mc3.q"
+	switch ":udb@[UDB=(3,0)]:pld0:mc3.q==>:udb@[UDB=(3,0)]:pld0:output_permute3.q_3"
+	switch ":udb@[UDB=(3,0)]:pld0:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v31"
+	switch "OStub-:udbswitch@[UDB=(2,0)][side=top]:v31"
+	switch ":udbswitch@[UDB=(2,0)][side=top]:31,0"
+	switch ":hvswitch@[UDB=(2,0)][side=left]:hseg_0_f"
+	switch ":hvswitch@[UDB=(2,1)][side=left]:0,0_f"
+	switch ":hvswitch@[UDB=(3,1)][side=left]:vseg_0_top_f"
+	switch ":hvswitch@[UDB=(3,1)][side=left]:0,38_b"
+	switch ":hvswitch@[UDB=(3,1)][side=left]:hseg_38_f"
+	switch ":hvswitch@[UDB=(3,2)][side=left]:hseg_38_f"
+	switch ":hvswitch@[UDB=(3,3)][side=left]:hseg_38_f"
+	switch ":dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:83,38_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v81+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v83+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v85"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v81+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v83+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v85==>:ioport0:inputs1_mux.in_1"
 	switch ":ioport0:inputs1_mux.pin3__pin_input==>:ioport0:pin3.pin_input"
 	term   ":ioport0:pin3.pin_input"
 end Net_995
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ce0"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ce0==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ce0i"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ce0i"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ce0"
+	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ce0==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ce0i"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ce0i"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\
 net \BaseJaw:PWMUDB:status_3\
 	term   ":udb@[UDB=(1,0)]:dp_wrapper:datapath.f1_blk_stat_comb"
@@ -2048,15 +2049,15 @@ net \EyeBallHorizontal:PWMUDB:sP16:pwmdp:u0.ce0__sig\
 	term   ":udb@[UDB=(3,3)]:dp_wrapper:datapath.ce0i"
 end \EyeBallHorizontal:PWMUDB:sP16:pwmdp:u0.ce0__sig\
 net \LeftEyebrow:PWMUDB:status_3\
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.f1_blk_stat_comb"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.f1_blk_stat_comb==>:udb@[UDB=(2,2)]:dp_wrapper:output_permute.f1_blk_stat_comb"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:output_permute.outs_1==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v78"
-	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v78"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:78,25"
-	switch ":udbswitch@[UDB=(2,2)][side=top]:94,25_f"
-	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v94"
-	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v94==>:udb@[UDB=(2,2)]:statusicell.status_3"
-	term   ":udb@[UDB=(2,2)]:statusicell.status_3"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.f1_blk_stat_comb"
+	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.f1_blk_stat_comb==>:udb@[UDB=(3,0)]:dp_wrapper:output_permute.f1_blk_stat_comb"
+	switch ":udb@[UDB=(3,0)]:dp_wrapper:output_permute.outs_1==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v79"
+	switch "OStub-:udbswitch@[UDB=(2,0)][side=top]:v79"
+	switch ":udbswitch@[UDB=(2,0)][side=top]:79,72"
+	switch ":udbswitch@[UDB=(2,0)][side=top]:95,72_f"
+	switch "IStub-:udbswitch@[UDB=(2,0)][side=top]:v95"
+	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v95==>:udb@[UDB=(3,0)]:statusicell.status_3"
+	term   ":udb@[UDB=(3,0)]:statusicell.status_3"
 end \LeftEyebrow:PWMUDB:status_3\
 net \Lip:PWMUDB:status_3\
 	term   ":udb@[UDB=(1,3)]:dp_wrapper:datapath.f1_blk_stat_comb"
@@ -2091,60 +2092,60 @@ net \EyelidGroup:PWMUDB:sP16:pwmdp:u0.ce0__sig\
 	term   ":udb@[UDB=(0,2)]:dp_wrapper:datapath.ce0i"
 end \EyelidGroup:PWMUDB:sP16:pwmdp:u0.ce0__sig\
 net \RightEyebrow:PWMUDB:status_3\
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.f1_blk_stat_comb"
-	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.f1_blk_stat_comb==>:udb@[UDB=(3,0)]:dp_wrapper:output_permute.f1_blk_stat_comb"
-	switch ":udb@[UDB=(3,0)]:dp_wrapper:output_permute.outs_1==>Stub-:udbswitch@[UDB=(2,0)][side=top]:v79"
-	switch "OStub-:udbswitch@[UDB=(2,0)][side=top]:v79"
-	switch ":udbswitch@[UDB=(2,0)][side=top]:79,72"
-	switch ":udbswitch@[UDB=(2,0)][side=top]:95,72_f"
-	switch "IStub-:udbswitch@[UDB=(2,0)][side=top]:v95"
-	switch "Stub-:udbswitch@[UDB=(2,0)][side=top]:v95==>:udb@[UDB=(3,0)]:statusicell.status_3"
-	term   ":udb@[UDB=(3,0)]:statusicell.status_3"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.f1_blk_stat_comb"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.f1_blk_stat_comb==>:udb@[UDB=(2,2)]:dp_wrapper:output_permute.f1_blk_stat_comb"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:output_permute.outs_1==>Stub-:udbswitch@[UDB=(2,2)][side=top]:v78"
+	switch "OStub-:udbswitch@[UDB=(2,2)][side=top]:v78"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:78,25"
+	switch ":udbswitch@[UDB=(2,2)][side=top]:94,25_f"
+	switch "IStub-:udbswitch@[UDB=(2,2)][side=top]:v94"
+	switch "Stub-:udbswitch@[UDB=(2,2)][side=top]:v94==>:udb@[UDB=(2,2)]:statusicell.status_3"
+	term   ":udb@[UDB=(2,2)]:statusicell.status_3"
 end \RightEyebrow:PWMUDB:status_3\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ce0"
-	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ce0==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ce0i"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ce0i"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ce0"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ce0==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ce0i"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ce0i"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ff0"
-	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ff0==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ff0i"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ff0i"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ff0"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ff0==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ff0i"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ff0i"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ce1"
-	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ce1==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ce1i"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ce1i"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ce1"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ce1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ce1i"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ce1i"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.z1"
-	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.z1==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.z1i"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.z1i"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.z1"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.z1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.z1i"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.z1i"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ff1"
-	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ff1==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ff1i"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ff1i"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ff1"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ff1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ff1i"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ff1i"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.sol_msb"
-	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.sol_msb==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.sir"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.sir"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.sol_msb"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.sol_msb==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.sir"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.sir"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cfbo"
-	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cfbo==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.cfbi"
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cfbi"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cfbo"
+	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cfbo==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cfbi"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cfbi"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.sor"
-	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.sor==>:udb@[UDB=(2,0)]:dp_wrapper:datapath.sil"
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.sil"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.sor"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.sor==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.sil"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.sil"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\
 net \RightEyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\
-	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cmsbo"
-	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cmsbo==>:udb@[UDB=(2,0)]:dp_wrapper:datapath.cmsbi"
-	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cmsbi"
+	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cmsbo"
+	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cmsbo==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.cmsbi"
+	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cmsbi"
 end \RightEyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\
 net \EyelidGroup:PWMUDB:sP16:pwmdp:u0.ff0__sig\
 	term   ":udb@[UDB=(1,2)]:dp_wrapper:datapath.ff0"
@@ -2267,44 +2268,44 @@ net \BaseJaw:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\
 	term   ":udb@[UDB=(0,0)]:dp_wrapper:datapath.cmsbi"
 end \BaseJaw:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ff0"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ff0==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ff0i"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ff0i"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ff0"
+	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ff0==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ff0i"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ff0i"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ce1"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ce1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ce1i"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ce1i"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ce1"
+	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ce1==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ce1i"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ce1i"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.z1"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.z1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.z1i"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.z1i"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.z1"
+	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.z1==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.z1i"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.z1i"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ff1"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.ff1==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.ff1i"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.ff1i"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ff1"
+	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.ff1==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.ff1i"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.ff1i"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.sol_msb"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.sol_msb==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.sir"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.sir"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.sol_msb"
+	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.sol_msb==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.sir"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.sir"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cfbo"
-	switch ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cfbo==>:udb@[UDB=(2,2)]:dp_wrapper:datapath.cfbi"
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cfbi"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cfbo"
+	switch ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cfbo==>:udb@[UDB=(3,0)]:dp_wrapper:datapath.cfbi"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cfbi"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.sor"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.sor==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.sil"
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.sil"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.sor"
+	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.sor==>:udb@[UDB=(2,0)]:dp_wrapper:datapath.sil"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.sil"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\
 net \LeftEyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\
-	term   ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cmsbo"
-	switch ":udb@[UDB=(2,2)]:dp_wrapper:datapath.cmsbo==>:udb@[UDB=(3,2)]:dp_wrapper:datapath.cmsbi"
-	term   ":udb@[UDB=(3,2)]:dp_wrapper:datapath.cmsbi"
+	term   ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cmsbo"
+	switch ":udb@[UDB=(3,0)]:dp_wrapper:datapath.cmsbo==>:udb@[UDB=(2,0)]:dp_wrapper:datapath.cmsbi"
+	term   ":udb@[UDB=(2,0)]:dp_wrapper:datapath.cmsbi"
 end \LeftEyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\
 net \EyeBallHorizontal:PWMUDB:sP16:pwmdp:u0.ff0__sig\
 	term   ":udb@[UDB=(2,3)]:dp_wrapper:datapath.ff0"

@@ -226,7 +226,7 @@ void LeftEyebrow_RestoreConfig(void) ;
 /***************************************
 *         Initialization Values
 **************************************/
-#define LeftEyebrow_INIT_PERIOD_VALUE          (60000u)
+#define LeftEyebrow_INIT_PERIOD_VALUE          (19000u)
 #define LeftEyebrow_INIT_COMPARE_VALUE1        (0u)
 #define LeftEyebrow_INIT_COMPARE_VALUE2        (0u)
 #define LeftEyebrow_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \
