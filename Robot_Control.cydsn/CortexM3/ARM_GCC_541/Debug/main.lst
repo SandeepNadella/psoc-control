@@ -1,0 +1,786 @@
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.raiseEyebrow,"ax",%progbits
+  20              		.align	2
+  21              		.global	raiseEyebrow
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	raiseEyebrow, %function
+  25              	raiseEyebrow:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** 
+  15:main.c        **** void raiseEyebrow() {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  16:main.c        ****     
+  17:main.c        ****     RightEyebrow_WriteCompare1(500);
+  36              		.loc 1 17 0
+  37 0002 4FF4FA70 		mov	r0, #500
+  38 0006 FFF7FEFF 		bl	RightEyebrow_WriteCompare1
+  39              	.LVL0:
+  18:main.c        ****     RightEyebrow_WriteCompare2(1600);
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 2
+
+
+  40              		.loc 1 18 0
+  41 000a 4FF4C860 		mov	r0, #1600
+  42 000e FFF7FEFF 		bl	RightEyebrow_WriteCompare2
+  43              	.LVL1:
+  19:main.c        ****     CyDelay(900);
+  44              		.loc 1 19 0
+  45 0012 4FF46170 		mov	r0, #900
+  46 0016 FFF7FEFF 		bl	CyDelay
+  47              	.LVL2:
+  20:main.c        ****     RightEyebrow_WriteCompare1(500);
+  48              		.loc 1 20 0
+  49 001a 4FF4FA70 		mov	r0, #500
+  50 001e FFF7FEFF 		bl	RightEyebrow_WriteCompare1
+  51              	.LVL3:
+  21:main.c        ****     RightEyebrow_WriteCompare2(1600);
+  52              		.loc 1 21 0
+  53 0022 4FF4C860 		mov	r0, #1600
+  54 0026 FFF7FEFF 		bl	RightEyebrow_WriteCompare2
+  55              	.LVL4:
+  22:main.c        ****     CyDelay(900);
+  56              		.loc 1 22 0
+  57 002a 4FF46170 		mov	r0, #900
+  58 002e FFF7FEFF 		bl	CyDelay
+  59              	.LVL5:
+  60 0032 08BD     		pop	{r3, pc}
+  61              		.cfi_endproc
+  62              	.LFE63:
+  63              		.size	raiseEyebrow, .-raiseEyebrow
+  64              		.section	.text.main,"ax",%progbits
+  65              		.align	2
+  66              		.global	main
+  67              		.thumb
+  68              		.thumb_func
+  69              		.type	main, %function
+  70              	main:
+  71              	.LFB64:
+  23:main.c        ****     
+  24:main.c        **** }
+  25:main.c        **** 
+  26:main.c        **** int main(void)
+  27:main.c        **** {
+  72              		.loc 1 27 0
+  73              		.cfi_startproc
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76 0000 10B5     		push	{r4, lr}
+  77              		.cfi_def_cfa_offset 8
+  78              		.cfi_offset 4, -8
+  79              		.cfi_offset 14, -4
+  28:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  80              		.loc 1 28 0
+  81              		.syntax unified
+  82              	@ 28 "main.c" 1
+  83 0002 62B6     		CPSIE   i
+  84              	@ 0 "" 2
+  29:main.c        **** 
+  30:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 3
+
+
+  31:main.c        ****     RightEyebrow_Start();
+  85              		.loc 1 31 0
+  86              		.thumb
+  87              		.syntax unified
+  88 0004 FFF7FEFF 		bl	RightEyebrow_Start
+  89              	.LVL6:
+  32:main.c        ****     int c =0;
+  90              		.loc 1 32 0
+  91 0008 0024     		movs	r4, #0
+  92              	.LVL7:
+  93              	.L4:
+  33:main.c        ****     for(;;)
+  34:main.c        ****     {
+  35:main.c        ****         raiseEyebrow();
+  94              		.loc 1 35 0
+  95 000a FFF7FEFF 		bl	raiseEyebrow
+  96              	.LVL8:
+  36:main.c        ****         c++;
+  97              		.loc 1 36 0
+  98 000e 0134     		adds	r4, r4, #1
+  99              	.LVL9:
+  37:main.c        ****         if(c==5){
+ 100              		.loc 1 37 0
+ 101 0010 052C     		cmp	r4, #5
+ 102 0012 FAD1     		bne	.L4
+  38:main.c        ****             break;
+  39:main.c        ****         }
+  40:main.c        ****     }
+  41:main.c        **** }
+ 103              		.loc 1 41 0
+ 104 0014 0020     		movs	r0, #0
+ 105 0016 10BD     		pop	{r4, pc}
+ 106              		.cfi_endproc
+ 107              	.LFE64:
+ 108              		.size	main, .-main
+ 109              		.text
+ 110              	.Letext0:
+ 111              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 112              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 113              		.file 4 "Generated_Source\\PSoC5/RightEyebrow.h"
+ 114              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+ 115              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 116              		.section	.debug_info,"",%progbits
+ 117              	.Ldebug_info0:
+ 118 0000 A7010000 		.4byte	0x1a7
+ 119 0004 0400     		.2byte	0x4
+ 120 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 121 000a 04       		.byte	0x4
+ 122 000b 01       		.uleb128 0x1
+ 123 000c 47000000 		.4byte	.LASF20
+ 124 0010 0C       		.byte	0xc
+ 125 0011 3B000000 		.4byte	.LASF21
+ 126 0015 57010000 		.4byte	.LASF22
+ 127 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 128 001d 00000000 		.4byte	0
+ 129 0021 00000000 		.4byte	.Ldebug_line0
+ 130 0025 02       		.uleb128 0x2
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 4
+
+
+ 131 0026 01       		.byte	0x1
+ 132 0027 06       		.byte	0x6
+ 133 0028 B1010000 		.4byte	.LASF0
+ 134 002c 02       		.uleb128 0x2
+ 135 002d 01       		.byte	0x1
+ 136 002e 08       		.byte	0x8
+ 137 002f 06010000 		.4byte	.LASF1
+ 138 0033 02       		.uleb128 0x2
+ 139 0034 02       		.byte	0x2
+ 140 0035 05       		.byte	0x5
+ 141 0036 F4010000 		.4byte	.LASF2
+ 142 003a 02       		.uleb128 0x2
+ 143 003b 02       		.byte	0x2
+ 144 003c 07       		.byte	0x7
+ 145 003d 0E000000 		.4byte	.LASF3
+ 146 0041 03       		.uleb128 0x3
+ 147 0042 C9010000 		.4byte	.LASF9
+ 148 0046 02       		.byte	0x2
+ 149 0047 3F       		.byte	0x3f
+ 150 0048 4C000000 		.4byte	0x4c
+ 151 004c 02       		.uleb128 0x2
+ 152 004d 04       		.byte	0x4
+ 153 004e 05       		.byte	0x5
+ 154 004f 4E010000 		.4byte	.LASF4
+ 155 0053 02       		.uleb128 0x2
+ 156 0054 04       		.byte	0x4
+ 157 0055 07       		.byte	0x7
+ 158 0056 DD000000 		.4byte	.LASF5
+ 159 005a 02       		.uleb128 0x2
+ 160 005b 08       		.byte	0x8
+ 161 005c 05       		.byte	0x5
+ 162 005d 00000000 		.4byte	.LASF6
+ 163 0061 02       		.uleb128 0x2
+ 164 0062 08       		.byte	0x8
+ 165 0063 07       		.byte	0x7
+ 166 0064 EF000000 		.4byte	.LASF7
+ 167 0068 04       		.uleb128 0x4
+ 168 0069 04       		.byte	0x4
+ 169 006a 05       		.byte	0x5
+ 170 006b 696E7400 		.ascii	"int\000"
+ 171 006f 02       		.uleb128 0x2
+ 172 0070 04       		.byte	0x4
+ 173 0071 07       		.byte	0x7
+ 174 0072 2E000000 		.4byte	.LASF8
+ 175 0076 03       		.uleb128 0x3
+ 176 0077 0B020000 		.4byte	.LASF10
+ 177 007b 03       		.byte	0x3
+ 178 007c 2C       		.byte	0x2c
+ 179 007d 41000000 		.4byte	0x41
+ 180 0081 02       		.uleb128 0x2
+ 181 0082 04       		.byte	0x4
+ 182 0083 04       		.byte	0x4
+ 183 0084 EE010000 		.4byte	.LASF11
+ 184 0088 02       		.uleb128 0x2
+ 185 0089 08       		.byte	0x8
+ 186 008a 04       		.byte	0x4
+ 187 008b 47010000 		.4byte	.LASF12
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 5
+
+
+ 188 008f 02       		.uleb128 0x2
+ 189 0090 01       		.byte	0x1
+ 190 0091 08       		.byte	0x8
+ 191 0092 14010000 		.4byte	.LASF13
+ 192 0096 02       		.uleb128 0x2
+ 193 0097 08       		.byte	0x8
+ 194 0098 04       		.byte	0x4
+ 195 0099 BD010000 		.4byte	.LASF14
+ 196 009d 02       		.uleb128 0x2
+ 197 009e 04       		.byte	0x4
+ 198 009f 07       		.byte	0x7
+ 199 00a0 13020000 		.4byte	.LASF15
+ 200 00a4 05       		.uleb128 0x5
+ 201 00a5 FE010000 		.4byte	.LASF23
+ 202 00a9 01       		.byte	0x1
+ 203 00aa 0F       		.byte	0xf
+ 204 00ab 00000000 		.4byte	.LFB63
+ 205 00af 34000000 		.4byte	.LFE63-.LFB63
+ 206 00b3 01       		.uleb128 0x1
+ 207 00b4 9C       		.byte	0x9c
+ 208 00b5 34010000 		.4byte	0x134
+ 209 00b9 06       		.uleb128 0x6
+ 210 00ba 0A000000 		.4byte	.LVL0
+ 211 00be 7E010000 		.4byte	0x17e
+ 212 00c2 CE000000 		.4byte	0xce
+ 213 00c6 07       		.uleb128 0x7
+ 214 00c7 01       		.uleb128 0x1
+ 215 00c8 50       		.byte	0x50
+ 216 00c9 03       		.uleb128 0x3
+ 217 00ca 0A       		.byte	0xa
+ 218 00cb F401     		.2byte	0x1f4
+ 219 00cd 00       		.byte	0
+ 220 00ce 06       		.uleb128 0x6
+ 221 00cf 12000000 		.4byte	.LVL1
+ 222 00d3 89010000 		.4byte	0x189
+ 223 00d7 E3000000 		.4byte	0xe3
+ 224 00db 07       		.uleb128 0x7
+ 225 00dc 01       		.uleb128 0x1
+ 226 00dd 50       		.byte	0x50
+ 227 00de 03       		.uleb128 0x3
+ 228 00df 0A       		.byte	0xa
+ 229 00e0 4006     		.2byte	0x640
+ 230 00e2 00       		.byte	0
+ 231 00e3 06       		.uleb128 0x6
+ 232 00e4 1A000000 		.4byte	.LVL2
+ 233 00e8 94010000 		.4byte	0x194
+ 234 00ec F8000000 		.4byte	0xf8
+ 235 00f0 07       		.uleb128 0x7
+ 236 00f1 01       		.uleb128 0x1
+ 237 00f2 50       		.byte	0x50
+ 238 00f3 03       		.uleb128 0x3
+ 239 00f4 0A       		.byte	0xa
+ 240 00f5 8403     		.2byte	0x384
+ 241 00f7 00       		.byte	0
+ 242 00f8 06       		.uleb128 0x6
+ 243 00f9 22000000 		.4byte	.LVL3
+ 244 00fd 7E010000 		.4byte	0x17e
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 6
+
+
+ 245 0101 0D010000 		.4byte	0x10d
+ 246 0105 07       		.uleb128 0x7
+ 247 0106 01       		.uleb128 0x1
+ 248 0107 50       		.byte	0x50
+ 249 0108 03       		.uleb128 0x3
+ 250 0109 0A       		.byte	0xa
+ 251 010a F401     		.2byte	0x1f4
+ 252 010c 00       		.byte	0
+ 253 010d 06       		.uleb128 0x6
+ 254 010e 2A000000 		.4byte	.LVL4
+ 255 0112 89010000 		.4byte	0x189
+ 256 0116 22010000 		.4byte	0x122
+ 257 011a 07       		.uleb128 0x7
+ 258 011b 01       		.uleb128 0x1
+ 259 011c 50       		.byte	0x50
+ 260 011d 03       		.uleb128 0x3
+ 261 011e 0A       		.byte	0xa
+ 262 011f 4006     		.2byte	0x640
+ 263 0121 00       		.byte	0
+ 264 0122 08       		.uleb128 0x8
+ 265 0123 32000000 		.4byte	.LVL5
+ 266 0127 94010000 		.4byte	0x194
+ 267 012b 07       		.uleb128 0x7
+ 268 012c 01       		.uleb128 0x1
+ 269 012d 50       		.byte	0x50
+ 270 012e 03       		.uleb128 0x3
+ 271 012f 0A       		.byte	0xa
+ 272 0130 8403     		.2byte	0x384
+ 273 0132 00       		.byte	0
+ 274 0133 00       		.byte	0
+ 275 0134 09       		.uleb128 0x9
+ 276 0135 42000000 		.4byte	.LASF24
+ 277 0139 01       		.byte	0x1
+ 278 013a 1A       		.byte	0x1a
+ 279 013b 68000000 		.4byte	0x68
+ 280 013f 00000000 		.4byte	.LFB64
+ 281 0143 18000000 		.4byte	.LFE64-.LFB64
+ 282 0147 01       		.uleb128 0x1
+ 283 0148 9C       		.byte	0x9c
+ 284 0149 6D010000 		.4byte	0x16d
+ 285 014d 0A       		.uleb128 0xa
+ 286 014e 6300     		.ascii	"c\000"
+ 287 0150 01       		.byte	0x1
+ 288 0151 20       		.byte	0x20
+ 289 0152 68000000 		.4byte	0x68
+ 290 0156 00000000 		.4byte	.LLST0
+ 291 015a 0B       		.uleb128 0xb
+ 292 015b 08000000 		.4byte	.LVL6
+ 293 015f 9F010000 		.4byte	0x19f
+ 294 0163 0B       		.uleb128 0xb
+ 295 0164 0E000000 		.4byte	.LVL8
+ 296 0168 A4000000 		.4byte	0xa4
+ 297 016c 00       		.byte	0
+ 298 016d 0C       		.uleb128 0xc
+ 299 016e 21000000 		.4byte	.LASF25
+ 300 0172 06       		.byte	0x6
+ 301 0173 1207     		.2byte	0x712
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 7
+
+
+ 302 0175 79010000 		.4byte	0x179
+ 303 0179 0D       		.uleb128 0xd
+ 304 017a 76000000 		.4byte	0x76
+ 305 017e 0E       		.uleb128 0xe
+ 306 017f 19010000 		.4byte	.LASF16
+ 307 0183 19010000 		.4byte	.LASF16
+ 308 0187 04       		.byte	0x4
+ 309 0188 C7       		.byte	0xc7
+ 310 0189 0E       		.uleb128 0xe
+ 311 018a D3010000 		.4byte	.LASF17
+ 312 018e D3010000 		.4byte	.LASF17
+ 313 0192 04       		.byte	0x4
+ 314 0193 CA       		.byte	0xca
+ 315 0194 0E       		.uleb128 0xe
+ 316 0195 D5000000 		.4byte	.LASF18
+ 317 0199 D5000000 		.4byte	.LASF18
+ 318 019d 05       		.byte	0x5
+ 319 019e 76       		.byte	0x76
+ 320 019f 0E       		.uleb128 0xe
+ 321 01a0 34010000 		.4byte	.LASF19
+ 322 01a4 34010000 		.4byte	.LASF19
+ 323 01a8 04       		.byte	0x4
+ 324 01a9 92       		.byte	0x92
+ 325 01aa 00       		.byte	0
+ 326              		.section	.debug_abbrev,"",%progbits
+ 327              	.Ldebug_abbrev0:
+ 328 0000 01       		.uleb128 0x1
+ 329 0001 11       		.uleb128 0x11
+ 330 0002 01       		.byte	0x1
+ 331 0003 25       		.uleb128 0x25
+ 332 0004 0E       		.uleb128 0xe
+ 333 0005 13       		.uleb128 0x13
+ 334 0006 0B       		.uleb128 0xb
+ 335 0007 03       		.uleb128 0x3
+ 336 0008 0E       		.uleb128 0xe
+ 337 0009 1B       		.uleb128 0x1b
+ 338 000a 0E       		.uleb128 0xe
+ 339 000b 55       		.uleb128 0x55
+ 340 000c 17       		.uleb128 0x17
+ 341 000d 11       		.uleb128 0x11
+ 342 000e 01       		.uleb128 0x1
+ 343 000f 10       		.uleb128 0x10
+ 344 0010 17       		.uleb128 0x17
+ 345 0011 00       		.byte	0
+ 346 0012 00       		.byte	0
+ 347 0013 02       		.uleb128 0x2
+ 348 0014 24       		.uleb128 0x24
+ 349 0015 00       		.byte	0
+ 350 0016 0B       		.uleb128 0xb
+ 351 0017 0B       		.uleb128 0xb
+ 352 0018 3E       		.uleb128 0x3e
+ 353 0019 0B       		.uleb128 0xb
+ 354 001a 03       		.uleb128 0x3
+ 355 001b 0E       		.uleb128 0xe
+ 356 001c 00       		.byte	0
+ 357 001d 00       		.byte	0
+ 358 001e 03       		.uleb128 0x3
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 8
+
+
+ 359 001f 16       		.uleb128 0x16
+ 360 0020 00       		.byte	0
+ 361 0021 03       		.uleb128 0x3
+ 362 0022 0E       		.uleb128 0xe
+ 363 0023 3A       		.uleb128 0x3a
+ 364 0024 0B       		.uleb128 0xb
+ 365 0025 3B       		.uleb128 0x3b
+ 366 0026 0B       		.uleb128 0xb
+ 367 0027 49       		.uleb128 0x49
+ 368 0028 13       		.uleb128 0x13
+ 369 0029 00       		.byte	0
+ 370 002a 00       		.byte	0
+ 371 002b 04       		.uleb128 0x4
+ 372 002c 24       		.uleb128 0x24
+ 373 002d 00       		.byte	0
+ 374 002e 0B       		.uleb128 0xb
+ 375 002f 0B       		.uleb128 0xb
+ 376 0030 3E       		.uleb128 0x3e
+ 377 0031 0B       		.uleb128 0xb
+ 378 0032 03       		.uleb128 0x3
+ 379 0033 08       		.uleb128 0x8
+ 380 0034 00       		.byte	0
+ 381 0035 00       		.byte	0
+ 382 0036 05       		.uleb128 0x5
+ 383 0037 2E       		.uleb128 0x2e
+ 384 0038 01       		.byte	0x1
+ 385 0039 3F       		.uleb128 0x3f
+ 386 003a 19       		.uleb128 0x19
+ 387 003b 03       		.uleb128 0x3
+ 388 003c 0E       		.uleb128 0xe
+ 389 003d 3A       		.uleb128 0x3a
+ 390 003e 0B       		.uleb128 0xb
+ 391 003f 3B       		.uleb128 0x3b
+ 392 0040 0B       		.uleb128 0xb
+ 393 0041 11       		.uleb128 0x11
+ 394 0042 01       		.uleb128 0x1
+ 395 0043 12       		.uleb128 0x12
+ 396 0044 06       		.uleb128 0x6
+ 397 0045 40       		.uleb128 0x40
+ 398 0046 18       		.uleb128 0x18
+ 399 0047 9742     		.uleb128 0x2117
+ 400 0049 19       		.uleb128 0x19
+ 401 004a 01       		.uleb128 0x1
+ 402 004b 13       		.uleb128 0x13
+ 403 004c 00       		.byte	0
+ 404 004d 00       		.byte	0
+ 405 004e 06       		.uleb128 0x6
+ 406 004f 898201   		.uleb128 0x4109
+ 407 0052 01       		.byte	0x1
+ 408 0053 11       		.uleb128 0x11
+ 409 0054 01       		.uleb128 0x1
+ 410 0055 31       		.uleb128 0x31
+ 411 0056 13       		.uleb128 0x13
+ 412 0057 01       		.uleb128 0x1
+ 413 0058 13       		.uleb128 0x13
+ 414 0059 00       		.byte	0
+ 415 005a 00       		.byte	0
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 9
+
+
+ 416 005b 07       		.uleb128 0x7
+ 417 005c 8A8201   		.uleb128 0x410a
+ 418 005f 00       		.byte	0
+ 419 0060 02       		.uleb128 0x2
+ 420 0061 18       		.uleb128 0x18
+ 421 0062 9142     		.uleb128 0x2111
+ 422 0064 18       		.uleb128 0x18
+ 423 0065 00       		.byte	0
+ 424 0066 00       		.byte	0
+ 425 0067 08       		.uleb128 0x8
+ 426 0068 898201   		.uleb128 0x4109
+ 427 006b 01       		.byte	0x1
+ 428 006c 11       		.uleb128 0x11
+ 429 006d 01       		.uleb128 0x1
+ 430 006e 31       		.uleb128 0x31
+ 431 006f 13       		.uleb128 0x13
+ 432 0070 00       		.byte	0
+ 433 0071 00       		.byte	0
+ 434 0072 09       		.uleb128 0x9
+ 435 0073 2E       		.uleb128 0x2e
+ 436 0074 01       		.byte	0x1
+ 437 0075 3F       		.uleb128 0x3f
+ 438 0076 19       		.uleb128 0x19
+ 439 0077 03       		.uleb128 0x3
+ 440 0078 0E       		.uleb128 0xe
+ 441 0079 3A       		.uleb128 0x3a
+ 442 007a 0B       		.uleb128 0xb
+ 443 007b 3B       		.uleb128 0x3b
+ 444 007c 0B       		.uleb128 0xb
+ 445 007d 27       		.uleb128 0x27
+ 446 007e 19       		.uleb128 0x19
+ 447 007f 49       		.uleb128 0x49
+ 448 0080 13       		.uleb128 0x13
+ 449 0081 11       		.uleb128 0x11
+ 450 0082 01       		.uleb128 0x1
+ 451 0083 12       		.uleb128 0x12
+ 452 0084 06       		.uleb128 0x6
+ 453 0085 40       		.uleb128 0x40
+ 454 0086 18       		.uleb128 0x18
+ 455 0087 9742     		.uleb128 0x2117
+ 456 0089 19       		.uleb128 0x19
+ 457 008a 01       		.uleb128 0x1
+ 458 008b 13       		.uleb128 0x13
+ 459 008c 00       		.byte	0
+ 460 008d 00       		.byte	0
+ 461 008e 0A       		.uleb128 0xa
+ 462 008f 34       		.uleb128 0x34
+ 463 0090 00       		.byte	0
+ 464 0091 03       		.uleb128 0x3
+ 465 0092 08       		.uleb128 0x8
+ 466 0093 3A       		.uleb128 0x3a
+ 467 0094 0B       		.uleb128 0xb
+ 468 0095 3B       		.uleb128 0x3b
+ 469 0096 0B       		.uleb128 0xb
+ 470 0097 49       		.uleb128 0x49
+ 471 0098 13       		.uleb128 0x13
+ 472 0099 02       		.uleb128 0x2
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 10
+
+
+ 473 009a 17       		.uleb128 0x17
+ 474 009b 00       		.byte	0
+ 475 009c 00       		.byte	0
+ 476 009d 0B       		.uleb128 0xb
+ 477 009e 898201   		.uleb128 0x4109
+ 478 00a1 00       		.byte	0
+ 479 00a2 11       		.uleb128 0x11
+ 480 00a3 01       		.uleb128 0x1
+ 481 00a4 31       		.uleb128 0x31
+ 482 00a5 13       		.uleb128 0x13
+ 483 00a6 00       		.byte	0
+ 484 00a7 00       		.byte	0
+ 485 00a8 0C       		.uleb128 0xc
+ 486 00a9 34       		.uleb128 0x34
+ 487 00aa 00       		.byte	0
+ 488 00ab 03       		.uleb128 0x3
+ 489 00ac 0E       		.uleb128 0xe
+ 490 00ad 3A       		.uleb128 0x3a
+ 491 00ae 0B       		.uleb128 0xb
+ 492 00af 3B       		.uleb128 0x3b
+ 493 00b0 05       		.uleb128 0x5
+ 494 00b1 49       		.uleb128 0x49
+ 495 00b2 13       		.uleb128 0x13
+ 496 00b3 3F       		.uleb128 0x3f
+ 497 00b4 19       		.uleb128 0x19
+ 498 00b5 3C       		.uleb128 0x3c
+ 499 00b6 19       		.uleb128 0x19
+ 500 00b7 00       		.byte	0
+ 501 00b8 00       		.byte	0
+ 502 00b9 0D       		.uleb128 0xd
+ 503 00ba 35       		.uleb128 0x35
+ 504 00bb 00       		.byte	0
+ 505 00bc 49       		.uleb128 0x49
+ 506 00bd 13       		.uleb128 0x13
+ 507 00be 00       		.byte	0
+ 508 00bf 00       		.byte	0
+ 509 00c0 0E       		.uleb128 0xe
+ 510 00c1 2E       		.uleb128 0x2e
+ 511 00c2 00       		.byte	0
+ 512 00c3 3F       		.uleb128 0x3f
+ 513 00c4 19       		.uleb128 0x19
+ 514 00c5 3C       		.uleb128 0x3c
+ 515 00c6 19       		.uleb128 0x19
+ 516 00c7 6E       		.uleb128 0x6e
+ 517 00c8 0E       		.uleb128 0xe
+ 518 00c9 03       		.uleb128 0x3
+ 519 00ca 0E       		.uleb128 0xe
+ 520 00cb 3A       		.uleb128 0x3a
+ 521 00cc 0B       		.uleb128 0xb
+ 522 00cd 3B       		.uleb128 0x3b
+ 523 00ce 0B       		.uleb128 0xb
+ 524 00cf 00       		.byte	0
+ 525 00d0 00       		.byte	0
+ 526 00d1 00       		.byte	0
+ 527              		.section	.debug_loc,"",%progbits
+ 528              	.Ldebug_loc0:
+ 529              	.LLST0:
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 11
+
+
+ 530 0000 08000000 		.4byte	.LVL6
+ 531 0004 0A000000 		.4byte	.LVL7
+ 532 0008 0200     		.2byte	0x2
+ 533 000a 30       		.byte	0x30
+ 534 000b 9F       		.byte	0x9f
+ 535 000c 0A000000 		.4byte	.LVL7
+ 536 0010 18000000 		.4byte	.LFE64
+ 537 0014 0100     		.2byte	0x1
+ 538 0016 54       		.byte	0x54
+ 539 0017 00000000 		.4byte	0
+ 540 001b 00000000 		.4byte	0
+ 541              		.section	.debug_aranges,"",%progbits
+ 542 0000 24000000 		.4byte	0x24
+ 543 0004 0200     		.2byte	0x2
+ 544 0006 00000000 		.4byte	.Ldebug_info0
+ 545 000a 04       		.byte	0x4
+ 546 000b 00       		.byte	0
+ 547 000c 0000     		.2byte	0
+ 548 000e 0000     		.2byte	0
+ 549 0010 00000000 		.4byte	.LFB63
+ 550 0014 34000000 		.4byte	.LFE63-.LFB63
+ 551 0018 00000000 		.4byte	.LFB64
+ 552 001c 18000000 		.4byte	.LFE64-.LFB64
+ 553 0020 00000000 		.4byte	0
+ 554 0024 00000000 		.4byte	0
+ 555              		.section	.debug_ranges,"",%progbits
+ 556              	.Ldebug_ranges0:
+ 557 0000 00000000 		.4byte	.LFB63
+ 558 0004 34000000 		.4byte	.LFE63
+ 559 0008 00000000 		.4byte	.LFB64
+ 560 000c 18000000 		.4byte	.LFE64
+ 561 0010 00000000 		.4byte	0
+ 562 0014 00000000 		.4byte	0
+ 563              		.section	.debug_line,"",%progbits
+ 564              	.Ldebug_line0:
+ 565 0000 8D010000 		.section	.debug_str,"MS",%progbits,1
+ 565      02005C01 
+ 565      00000201 
+ 565      FB0E0D00 
+ 565      01010101 
+ 566              	.LASF6:
+ 567 0000 6C6F6E67 		.ascii	"long long int\000"
+ 567      206C6F6E 
+ 567      6720696E 
+ 567      7400
+ 568              	.LASF3:
+ 569 000e 73686F72 		.ascii	"short unsigned int\000"
+ 569      7420756E 
+ 569      7369676E 
+ 569      65642069 
+ 569      6E7400
+ 570              	.LASF25:
+ 571 0021 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 571      52784275 
+ 571      66666572 
+ 571      00
+ 572              	.LASF8:
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 12
+
+
+ 573 002e 756E7369 		.ascii	"unsigned int\000"
+ 573      676E6564 
+ 573      20696E74 
+ 573      00
+ 574              	.LASF21:
+ 575 003b 6D61696E 		.ascii	"main.c\000"
+ 575      2E6300
+ 576              	.LASF24:
+ 577 0042 6D61696E 		.ascii	"main\000"
+ 577      00
+ 578              	.LASF20:
+ 579 0047 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 579      43313120 
+ 579      352E342E 
+ 579      31203230 
+ 579      31363036 
+ 580 007a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 580      20726576 
+ 580      6973696F 
+ 580      6E203233 
+ 580      37373135 
+ 581 00ad 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 581      66756E63 
+ 581      74696F6E 
+ 581      2D736563 
+ 581      74696F6E 
+ 582              	.LASF18:
+ 583 00d5 43794465 		.ascii	"CyDelay\000"
+ 583      6C617900 
+ 584              	.LASF5:
+ 585 00dd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 585      20756E73 
+ 585      69676E65 
+ 585      6420696E 
+ 585      7400
+ 586              	.LASF7:
+ 587 00ef 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 587      206C6F6E 
+ 587      6720756E 
+ 587      7369676E 
+ 587      65642069 
+ 588              	.LASF1:
+ 589 0106 756E7369 		.ascii	"unsigned char\000"
+ 589      676E6564 
+ 589      20636861 
+ 589      7200
+ 590              	.LASF13:
+ 591 0114 63686172 		.ascii	"char\000"
+ 591      00
+ 592              	.LASF16:
+ 593 0119 52696768 		.ascii	"RightEyebrow_WriteCompare1\000"
+ 593      74457965 
+ 593      62726F77 
+ 593      5F577269 
+ 593      7465436F 
+ 594              	.LASF19:
+ 595 0134 52696768 		.ascii	"RightEyebrow_Start\000"
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 13
+
+
+ 595      74457965 
+ 595      62726F77 
+ 595      5F537461 
+ 595      727400
+ 596              	.LASF12:
+ 597 0147 646F7562 		.ascii	"double\000"
+ 597      6C6500
+ 598              	.LASF4:
+ 599 014e 6C6F6E67 		.ascii	"long int\000"
+ 599      20696E74 
+ 599      00
+ 600              	.LASF22:
+ 601 0157 433A5C55 		.ascii	"C:\\Users\\Sandeep Nadella\\OneDrive\\Documents\\PS"
+ 601      73657273 
+ 601      5C53616E 
+ 601      64656570 
+ 601      204E6164 
+ 602 0185 6F432043 		.ascii	"oC Creator\\SD_Workspace\\Robot_Control.cydsn\000"
+ 602      72656174 
+ 602      6F725C53 
+ 602      445F576F 
+ 602      726B7370 
+ 603              	.LASF0:
+ 604 01b1 7369676E 		.ascii	"signed char\000"
+ 604      65642063 
+ 604      68617200 
+ 605              	.LASF14:
+ 606 01bd 6C6F6E67 		.ascii	"long double\000"
+ 606      20646F75 
+ 606      626C6500 
+ 607              	.LASF9:
+ 608 01c9 5F5F696E 		.ascii	"__int32_t\000"
+ 608      7433325F 
+ 608      7400
+ 609              	.LASF17:
+ 610 01d3 52696768 		.ascii	"RightEyebrow_WriteCompare2\000"
+ 610      74457965 
+ 610      62726F77 
+ 610      5F577269 
+ 610      7465436F 
+ 611              	.LASF11:
+ 612 01ee 666C6F61 		.ascii	"float\000"
+ 612      7400
+ 613              	.LASF2:
+ 614 01f4 73686F72 		.ascii	"short int\000"
+ 614      7420696E 
+ 614      7400
+ 615              	.LASF23:
+ 616 01fe 72616973 		.ascii	"raiseEyebrow\000"
+ 616      65457965 
+ 616      62726F77 
+ 616      00
+ 617              	.LASF10:
+ 618 020b 696E7433 		.ascii	"int32_t\000"
+ 618      325F7400 
+ 619              	.LASF15:
+ 620 0213 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\SANDEE~1\AppData\Local\Temp\ccj6vpAm.s 			page 14
+
+
+ 620      74797065 
+ 620      00
+ 621              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
