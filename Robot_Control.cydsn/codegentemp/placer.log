@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Nov 17 2019 12:01:47
+#File Generated:     Nov 17 2019 13:55:21
 
 #Purpose:            
 
@@ -82,9 +82,9 @@ analysis after routing.
 Number of clocks: 13
 Clock: Clock_1              | Frequency:  59.7 MHz | Target:   1.0 MHz
 Clock: Clock_2              | Frequency:  59.7 MHz | Target:   3.0 MHz
-Clock: Clock_3              | Frequency:  59.7 MHz | Target:   3.0 MHz
+Clock: Clock_3              | Frequency:  59.7 MHz | Target:   1.0 MHz
 Clock: Clock_4              | Frequency:  59.7 MHz | Target:   3.0 MHz
-Clock: Clock_5              | Frequency:  59.7 MHz | Target:   3.0 MHz
+Clock: Clock_5              | Frequency:  59.7 MHz | Target:   1.0 MHz
 Clock: Clock_6              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_7              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_8              | Frequency:  59.7 MHz | Target:   1.0 MHz
@@ -107,9 +107,9 @@ Phase 7
 Number of clocks: 13
 Clock: Clock_1              | Frequency:  59.7 MHz | Target:   1.0 MHz
 Clock: Clock_2              | Frequency:  59.7 MHz | Target:   3.0 MHz
-Clock: Clock_3              | Frequency:  59.7 MHz | Target:   3.0 MHz
+Clock: Clock_3              | Frequency:  59.7 MHz | Target:   1.0 MHz
 Clock: Clock_4              | Frequency:  59.7 MHz | Target:   3.0 MHz
-Clock: Clock_5              | Frequency:  59.7 MHz | Target:   3.0 MHz
+Clock: Clock_5              | Frequency:  59.7 MHz | Target:   1.0 MHz
 Clock: Clock_6              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_7              | Frequency:  59.7 MHz | Target:   3.0 MHz
 Clock: Clock_8              | Frequency:  59.7 MHz | Target:   1.0 MHz
@@ -155,9 +155,9 @@ analysis after routing.
 Number of clocks: 13
 Clock: Clock_1              | Frequency:  59.7 MHz | Target:   1.1 MHz
 Clock: Clock_2              | Frequency:  59.7 MHz | Target:   3.3 MHz
-Clock: Clock_3              | Frequency:  59.7 MHz | Target:   3.3 MHz
+Clock: Clock_3              | Frequency:  59.7 MHz | Target:   1.1 MHz
 Clock: Clock_4              | Frequency:  59.7 MHz | Target:   3.3 MHz
-Clock: Clock_5              | Frequency:  59.7 MHz | Target:   3.3 MHz
+Clock: Clock_5              | Frequency:  59.7 MHz | Target:   1.1 MHz
 Clock: Clock_6              | Frequency:  59.7 MHz | Target:   3.3 MHz
 Clock: Clock_7              | Frequency:  59.7 MHz | Target:   3.3 MHz
 Clock: Clock_8              | Frequency:  59.7 MHz | Target:   1.1 MHz

@@ -2,7 +2,7 @@
 --	Conversion of Robot_Control.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Nov 17 12:01:46 2019
+--	Sun Nov 17 13:55:20 2019
 --
 
 USE cypress.cypress.all;
@@ -4288,7 +4288,7 @@ Clock_3:cy_clock_v1_0
 		id=>"cc63d5e1-09a2-4d2f-9f49-b7b63e3d21ab",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"333333333.333333",
+		period=>"1000000000",
 		is_direct=>'0',
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_970,
@@ -6063,7 +6063,7 @@ Clock_5:cy_clock_v1_0
 		id=>"5b38ea9a-e324-4099-b494-e1ff79df7526",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"333333333.333333",
+		period=>"1000000000",
 		is_direct=>'0',
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_1026,

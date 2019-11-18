@@ -1,5 +1,5 @@
 -- Project:   Robot_Control
--- Generated: 11/17/2019 12:01:47
+-- Generated: 11/17/2019 13:55:21
 -- PSoC Creator  4.2
 
 ENTITY Robot_Control IS
@@ -809,16 +809,16 @@ BEGIN
             dclk_0 => Net_1041_local,
             dclk_glb_1 => Net_918,
             dclk_1 => Net_918_local,
-            dclk_glb_2 => Net_1026,
-            dclk_2 => Net_1026_local,
-            dclk_glb_3 => Net_944,
-            dclk_3 => Net_944_local,
-            dclk_glb_4 => Net_970,
-            dclk_4 => Net_970_local,
-            dclk_glb_5 => Net_1011,
-            dclk_5 => Net_1011_local,
-            dclk_glb_6 => Net_211,
-            dclk_6 => Net_211_local,
+            dclk_glb_2 => Net_944,
+            dclk_2 => Net_944_local,
+            dclk_glb_3 => Net_1011,
+            dclk_3 => Net_1011_local,
+            dclk_glb_4 => Net_211,
+            dclk_4 => Net_211_local,
+            dclk_glb_5 => Net_1026,
+            dclk_5 => Net_1026_local,
+            dclk_glb_6 => Net_970,
+            dclk_6 => Net_970_local,
             dclk_glb_7 => Net_997,
             dclk_7 => Net_997_local);
 

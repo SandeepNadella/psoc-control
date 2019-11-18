@@ -226,7 +226,7 @@ void Neck_RestoreConfig(void) ;
 /***************************************
 *         Initialization Values
 **************************************/
-#define Neck_INIT_PERIOD_VALUE          (60000u)
+#define Neck_INIT_PERIOD_VALUE          (19000u)
 #define Neck_INIT_COMPARE_VALUE1        (0u)
 #define Neck_INIT_COMPARE_VALUE2        (0u)
 #define Neck_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \
