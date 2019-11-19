@@ -1,4 +1,4 @@
-# Artificial Intelligence based Social Robot
+# Design of Social Robot
 
 ## Working Screenshots and Demo Videos
 
