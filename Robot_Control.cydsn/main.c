@@ -1,5 +1,5 @@
 /* ========================================
- * Project: Artificial Intelligence based Social Robot
+ * Project: Social Robot
  * Course: CSE 564 - Software Design
  * Team: 4
  * University: Arizona State University
