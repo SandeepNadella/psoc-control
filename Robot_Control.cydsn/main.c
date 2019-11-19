@@ -1,12 +1,11 @@
 /* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+ * Project: Artificial Intelligence based Social Robot
+ * Course: CSE 564 - Software Design
+ * Team: 4
+ * University: Arizona State University
+ * Author: Sandeep Nadella
+ * Initial Version Date: 11/16/2019
+ * Version: 0.1
  * ========================================
 */
 #include "project.h"
