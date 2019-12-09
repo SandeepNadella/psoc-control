@@ -1,0 +1,5 @@
+F:\Projects\PSOCCreator\Workspace01\Design01.cydsn\Design01.cyprj|4ac19cca-8131-4cd3-98f6-68979023f6c3
+F:\Apps\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|dda84003-4c27-429b-8f45-e10c1796c4fd
+F:\Apps\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f8530f18-8762-4f6a-8273-c5f0f34161d0
+F:\Apps\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e4b96050-9133-4a00-ae93-2d54ef786d7d
+F:\Apps\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b66b747e-726a-4f1e-aec9-266249c63d98

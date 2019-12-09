@@ -1,0 +1,3807 @@
+-- Project:   Design01
+-- Generated: 12/08/2019 16:24:16
+-- PSoC Creator  3.3 DP1
+
+ENTITY Design01 IS
+    PORT(
+        Right_Eyebrow_Horizontal(0)_PAD : OUT std_ulogic;
+        Right_Eyebrow_Vertical(0)_PAD : OUT std_ulogic;
+        Left_Eyebrow_Horizontal(0)_PAD : OUT std_ulogic;
+        Left_Eyebrow_Vertical(0)_PAD : OUT std_ulogic;
+        Right_Eye_Vertical(0)_PAD : OUT std_ulogic;
+        Right_Eye_Horizontal(0)_PAD : OUT std_ulogic;
+        Left_Eye_Horizontal(0)_PAD : OUT std_ulogic;
+        Left_Eye_Vertical(0)_PAD : OUT std_ulogic;
+        Left_Lip(0)_PAD : OUT std_ulogic;
+        Left_Neck(0)_PAD : OUT std_ulogic;
+        Right_Neck(0)_PAD : OUT std_ulogic;
+        Right_Lip(0)_PAD : OUT std_ulogic;
+        Base_Rotate(0)_PAD : OUT std_ulogic;
+        Jaw_Control(0)_PAD : OUT std_ulogic);
+    ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDIO0 OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDIO1 OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDIO2 OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDIO3 OF __DEFAULT__ : ENTITY IS 5e0;
+END Design01;
+
+ARCHITECTURE __DEFAULT__ OF Design01 IS
+    SIGNAL Base_Rotate(0)__PA : bit;
+    SIGNAL ClockBlock_100k : bit;
+    SIGNAL ClockBlock_1k : bit;
+    SIGNAL ClockBlock_32k : bit;
+    SIGNAL ClockBlock_BUS_CLK : bit;
+    ATTRIBUTE global_signal OF ClockBlock_BUS_CLK : SIGNAL IS true;
+    SIGNAL ClockBlock_BUS_CLK_local : bit;
+    SIGNAL ClockBlock_ILO : bit;
+    SIGNAL ClockBlock_IMO : bit;
+    SIGNAL ClockBlock_MASTER_CLK : bit;
+    SIGNAL ClockBlock_PLL_OUT : bit;
+    SIGNAL ClockBlock_XTAL : bit;
+    SIGNAL ClockBlock_XTAL_32KHZ : bit;
+    SIGNAL Jaw_Control(0)__PA : bit;
+    SIGNAL Left_Eye_Horizontal(0)__PA : bit;
+    SIGNAL Left_Eye_Vertical(0)__PA : bit;
+    SIGNAL Left_Eyebrow_Horizontal(0)__PA : bit;
+    SIGNAL Left_Eyebrow_Vertical(0)__PA : bit;
+    SIGNAL Left_Lip(0)__PA : bit;
+    SIGNAL Left_Neck(0)__PA : bit;
+    SIGNAL Net_11487 : bit;
+    SIGNAL Net_11539 : bit;
+    SIGNAL Net_12094 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_12094 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_12094 : SIGNAL IS true;
+    SIGNAL Net_12094_local : bit;
+    SIGNAL Net_12429 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_12429 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_12429 : SIGNAL IS true;
+    SIGNAL Net_12429_local : bit;
+    SIGNAL Net_12522 : bit;
+    SIGNAL Net_12601 : bit;
+    SIGNAL Net_12613 : bit;
+    SIGNAL Net_129 : bit;
+    SIGNAL Net_13023 : bit;
+    SIGNAL Net_13045 : bit;
+    SIGNAL Net_141 : bit;
+    SIGNAL Net_6179 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_6179 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_6179 : SIGNAL IS true;
+    SIGNAL Net_6179_local : bit;
+    SIGNAL Net_6288 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_6288 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_6288 : SIGNAL IS true;
+    SIGNAL Net_6288_local : bit;
+    SIGNAL Net_6874 : bit;
+    SIGNAL Net_6916 : bit;
+    SIGNAL Net_7108 : bit;
+    SIGNAL Net_75 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_75 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_75 : SIGNAL IS true;
+    SIGNAL Net_75_local : bit;
+    SIGNAL Net_816 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_816 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_816 : SIGNAL IS true;
+    SIGNAL Net_816_local : bit;
+    SIGNAL Net_8416 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_8416 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_8416 : SIGNAL IS true;
+    SIGNAL Net_8416_local : bit;
+    SIGNAL Net_8418 : bit;
+    SIGNAL Net_9027 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_9027 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_9027 : SIGNAL IS true;
+    SIGNAL Net_9027_local : bit;
+    SIGNAL Net_960 : bit;
+    SIGNAL Right_Eye_Horizontal(0)__PA : bit;
+    SIGNAL Right_Eye_Vertical(0)__PA : bit;
+    SIGNAL Right_Eyebrow_Horizontal(0)__PA : bit;
+    SIGNAL Right_Eyebrow_Vertical(0)__PA : bit;
+    SIGNAL Right_Lip(0)__PA : bit;
+    SIGNAL Right_Neck(0)__PA : bit;
+    SIGNAL \Base_Jaw:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:cmp2_less\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:control_0\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:control_1\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:control_2\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:control_3\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:control_4\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:control_5\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:control_6\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:control_7\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:prevCompare2\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:status_0\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:status_1\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:status_2\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:status_3\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:tc_i\ : bit;
+    SIGNAL \Jaw:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \Jaw:PWMUDB:cmp2_less\ : bit;
+    SIGNAL \Jaw:PWMUDB:control_0\ : bit;
+    SIGNAL \Jaw:PWMUDB:control_1\ : bit;
+    SIGNAL \Jaw:PWMUDB:control_2\ : bit;
+    SIGNAL \Jaw:PWMUDB:control_3\ : bit;
+    SIGNAL \Jaw:PWMUDB:control_4\ : bit;
+    SIGNAL \Jaw:PWMUDB:control_5\ : bit;
+    SIGNAL \Jaw:PWMUDB:control_6\ : bit;
+    SIGNAL \Jaw:PWMUDB:control_7\ : bit;
+    SIGNAL \Jaw:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \Jaw:PWMUDB:prevCompare2\ : bit;
+    SIGNAL \Jaw:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \Jaw:PWMUDB:status_0\ : bit;
+    SIGNAL \Jaw:PWMUDB:status_1\ : bit;
+    SIGNAL \Jaw:PWMUDB:status_2\ : bit;
+    SIGNAL \Jaw:PWMUDB:status_3\ : bit;
+    SIGNAL \Jaw:PWMUDB:tc_i\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:cmp2_less\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:control_0\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:control_1\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:control_2\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:control_3\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:control_4\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:control_5\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:control_6\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:control_7\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:prevCompare2\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:status_0\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:status_1\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:status_2\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:status_3\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:tc_i\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:cmp2_less\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:control_0\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:control_1\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:control_2\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:control_3\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:control_4\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:control_5\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:control_6\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:control_7\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:prevCompare2\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:status_0\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:status_1\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:status_2\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:status_3\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:tc_i\ : bit;
+    SIGNAL \Lip:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \Lip:PWMUDB:cmp2_less\ : bit;
+    SIGNAL \Lip:PWMUDB:control_0\ : bit;
+    SIGNAL \Lip:PWMUDB:control_1\ : bit;
+    SIGNAL \Lip:PWMUDB:control_2\ : bit;
+    SIGNAL \Lip:PWMUDB:control_3\ : bit;
+    SIGNAL \Lip:PWMUDB:control_4\ : bit;
+    SIGNAL \Lip:PWMUDB:control_5\ : bit;
+    SIGNAL \Lip:PWMUDB:control_6\ : bit;
+    SIGNAL \Lip:PWMUDB:control_7\ : bit;
+    SIGNAL \Lip:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \Lip:PWMUDB:prevCompare2\ : bit;
+    SIGNAL \Lip:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:status_0\ : bit;
+    SIGNAL \Lip:PWMUDB:status_1\ : bit;
+    SIGNAL \Lip:PWMUDB:status_2\ : bit;
+    SIGNAL \Lip:PWMUDB:status_3\ : bit;
+    SIGNAL \Lip:PWMUDB:tc_i\ : bit;
+    SIGNAL \Neck:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \Neck:PWMUDB:cmp2_less\ : bit;
+    SIGNAL \Neck:PWMUDB:control_0\ : bit;
+    SIGNAL \Neck:PWMUDB:control_1\ : bit;
+    SIGNAL \Neck:PWMUDB:control_2\ : bit;
+    SIGNAL \Neck:PWMUDB:control_3\ : bit;
+    SIGNAL \Neck:PWMUDB:control_4\ : bit;
+    SIGNAL \Neck:PWMUDB:control_5\ : bit;
+    SIGNAL \Neck:PWMUDB:control_6\ : bit;
+    SIGNAL \Neck:PWMUDB:control_7\ : bit;
+    SIGNAL \Neck:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \Neck:PWMUDB:prevCompare2\ : bit;
+    SIGNAL \Neck:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:status_0\ : bit;
+    SIGNAL \Neck:PWMUDB:status_1\ : bit;
+    SIGNAL \Neck:PWMUDB:status_2\ : bit;
+    SIGNAL \Neck:PWMUDB:status_3\ : bit;
+    SIGNAL \Neck:PWMUDB:tc_i\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:cmp2_less\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:control_0\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:control_1\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:control_2\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:control_3\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:control_4\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:control_5\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:control_6\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:control_7\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:prevCompare2\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:status_0\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:status_1\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:status_2\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:status_3\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:tc_i\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:cmp2_less\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:control_0\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:control_1\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:control_2\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:control_3\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:control_4\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:control_5\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:control_6\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:control_7\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:prevCompare2\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:runmode_enable\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:status_0\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:status_1\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:status_2\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:status_3\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:tc_i\ : bit;
+    SIGNAL __ONE__ : bit;
+    ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
+    SIGNAL __ZERO__ : bit;
+    ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
+    SIGNAL one : bit;
+    ATTRIBUTE POWER OF one : SIGNAL IS true;
+    SIGNAL zero : bit;
+    ATTRIBUTE GROUND OF zero : SIGNAL IS true;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
+    SIGNAL \Right_Eyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
+    SIGNAL \Left_Eyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.ff0__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.ce1__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.cl1__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.z1__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.ff1__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
+    SIGNAL \Right_Eye:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.ff0__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.ce1__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.cl1__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.z1__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.ff1__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
+    SIGNAL \Left_Eye:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.ff0__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.ce1__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.cl1__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.z1__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.ff1__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
+    SIGNAL \Lip:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ff0__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ce1__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cl1__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.z1__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ff1__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
+    SIGNAL \Base_Jaw:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.ff0__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.ce1__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.cl1__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.z1__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.ff1__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
+    SIGNAL \Neck:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.cl0__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.z0__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.ff0__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.ce1__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.cl1__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.z1__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.ff1__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.co_msb__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
+    SIGNAL \Jaw:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
+    ATTRIBUTE lib_model OF Right_Eye_Vertical(0) : LABEL IS "iocell1";
+    ATTRIBUTE Location OF Right_Eye_Vertical(0) : LABEL IS "P0[6]";
+    ATTRIBUTE lib_model OF Right_Eye_Horizontal(0) : LABEL IS "iocell2";
+    ATTRIBUTE Location OF Right_Eye_Horizontal(0) : LABEL IS "P0[4]";
+    ATTRIBUTE lib_model OF Left_Eye_Horizontal(0) : LABEL IS "iocell3";
+    ATTRIBUTE Location OF Left_Eye_Horizontal(0) : LABEL IS "P0[5]";
+    ATTRIBUTE lib_model OF Left_Eye_Vertical(0) : LABEL IS "iocell4";
+    ATTRIBUTE Location OF Left_Eye_Vertical(0) : LABEL IS "P0[7]";
+    ATTRIBUTE lib_model OF Left_Lip(0) : LABEL IS "iocell5";
+    ATTRIBUTE Location OF Left_Lip(0) : LABEL IS "P1[7]";
+    ATTRIBUTE lib_model OF Left_Neck(0) : LABEL IS "iocell6";
+    ATTRIBUTE Location OF Left_Neck(0) : LABEL IS "P2[0]";
+    ATTRIBUTE lib_model OF Right_Neck(0) : LABEL IS "iocell7";
+    ATTRIBUTE Location OF Right_Neck(0) : LABEL IS "P2[1]";
+    ATTRIBUTE lib_model OF Right_Lip(0) : LABEL IS "iocell8";
+    ATTRIBUTE Location OF Right_Lip(0) : LABEL IS "P1[6]";
+    ATTRIBUTE lib_model OF Base_Rotate(0) : LABEL IS "iocell9";
+    ATTRIBUTE Location OF Base_Rotate(0) : LABEL IS "P2[2]";
+    ATTRIBUTE lib_model OF Jaw_Control(0) : LABEL IS "iocell10";
+    ATTRIBUTE Location OF Jaw_Control(0) : LABEL IS "P1[5]";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:status_2\ : LABEL IS "macrocell1";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:status_2\ : LABEL IS "macrocell2";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:status_2\ : LABEL IS "macrocell3";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:status_2\ : LABEL IS "macrocell4";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:status_2\ : LABEL IS "macrocell5";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:status_2\ : LABEL IS "macrocell6";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:status_2\ : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:status_2\ : LABEL IS "macrocell8";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell1";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell1";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell2";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell2";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell2";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell3";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell4";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell3";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell3";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell5";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell6";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell4";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell4";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell7";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell8";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell5";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell5";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell9";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell10";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell6";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell6";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell11";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell12";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell7";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell7";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell13";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell14";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell8";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell8";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell15";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell16";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:runmode_enable\ : LABEL IS "macrocell9";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:prevCompare1\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:prevCompare2\ : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:status_0\ : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \Right_Eyebrow:PWMUDB:status_1\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF Net_129 : LABEL IS "macrocell14";
+    ATTRIBUTE lib_model OF Net_141 : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:runmode_enable\ : LABEL IS "macrocell16";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:prevCompare1\ : LABEL IS "macrocell17";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:prevCompare2\ : LABEL IS "macrocell18";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:status_0\ : LABEL IS "macrocell19";
+    ATTRIBUTE lib_model OF \Left_Eyebrow:PWMUDB:status_1\ : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF Net_7108 : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF Net_960 : LABEL IS "macrocell22";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:runmode_enable\ : LABEL IS "macrocell23";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:prevCompare1\ : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:prevCompare2\ : LABEL IS "macrocell25";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:status_0\ : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF \Right_Eye:PWMUDB:status_1\ : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF Net_12601 : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF Net_12613 : LABEL IS "macrocell29";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:runmode_enable\ : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:prevCompare1\ : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:prevCompare2\ : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:status_0\ : LABEL IS "macrocell33";
+    ATTRIBUTE lib_model OF \Left_Eye:PWMUDB:status_1\ : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF Net_6874 : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF Net_6916 : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:runmode_enable\ : LABEL IS "macrocell37";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:prevCompare1\ : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:prevCompare2\ : LABEL IS "macrocell39";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:status_0\ : LABEL IS "macrocell40";
+    ATTRIBUTE lib_model OF \Lip:PWMUDB:status_1\ : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF Net_13023 : LABEL IS "macrocell42";
+    ATTRIBUTE lib_model OF Net_13045 : LABEL IS "macrocell43";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:runmode_enable\ : LABEL IS "macrocell44";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:prevCompare1\ : LABEL IS "macrocell45";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:prevCompare2\ : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:status_0\ : LABEL IS "macrocell47";
+    ATTRIBUTE lib_model OF \Base_Jaw:PWMUDB:status_1\ : LABEL IS "macrocell48";
+    ATTRIBUTE lib_model OF Net_8418 : LABEL IS "macrocell49";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:runmode_enable\ : LABEL IS "macrocell50";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:prevCompare1\ : LABEL IS "macrocell51";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:prevCompare2\ : LABEL IS "macrocell52";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:status_0\ : LABEL IS "macrocell53";
+    ATTRIBUTE lib_model OF \Neck:PWMUDB:status_1\ : LABEL IS "macrocell54";
+    ATTRIBUTE lib_model OF Net_11539 : LABEL IS "macrocell55";
+    ATTRIBUTE lib_model OF Net_11487 : LABEL IS "macrocell56";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:runmode_enable\ : LABEL IS "macrocell57";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:prevCompare1\ : LABEL IS "macrocell58";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:prevCompare2\ : LABEL IS "macrocell59";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:status_0\ : LABEL IS "macrocell60";
+    ATTRIBUTE lib_model OF \Jaw:PWMUDB:status_1\ : LABEL IS "macrocell61";
+    ATTRIBUTE lib_model OF Net_12522 : LABEL IS "macrocell62";
+    COMPONENT clockblockcell
+        PORT (
+            dclk_0 : OUT std_ulogic;
+            dclk_1 : OUT std_ulogic;
+            dclk_2 : OUT std_ulogic;
+            dclk_3 : OUT std_ulogic;
+            dclk_4 : OUT std_ulogic;
+            dclk_5 : OUT std_ulogic;
+            dclk_6 : OUT std_ulogic;
+            dclk_7 : OUT std_ulogic;
+            dclk_glb_0 : OUT std_ulogic;
+            dclk_glb_1 : OUT std_ulogic;
+            dclk_glb_2 : OUT std_ulogic;
+            dclk_glb_3 : OUT std_ulogic;
+            dclk_glb_4 : OUT std_ulogic;
+            dclk_glb_5 : OUT std_ulogic;
+            dclk_glb_6 : OUT std_ulogic;
+            dclk_glb_7 : OUT std_ulogic;
+            aclk_0 : OUT std_ulogic;
+            aclk_1 : OUT std_ulogic;
+            aclk_2 : OUT std_ulogic;
+            aclk_3 : OUT std_ulogic;
+            aclk_glb_0 : OUT std_ulogic;
+            aclk_glb_1 : OUT std_ulogic;
+            aclk_glb_2 : OUT std_ulogic;
+            aclk_glb_3 : OUT std_ulogic;
+            clk_a_dig_0 : OUT std_ulogic;
+            clk_a_dig_1 : OUT std_ulogic;
+            clk_a_dig_2 : OUT std_ulogic;
+            clk_a_dig_3 : OUT std_ulogic;
+            clk_a_dig_glb_0 : OUT std_ulogic;
+            clk_a_dig_glb_1 : OUT std_ulogic;
+            clk_a_dig_glb_2 : OUT std_ulogic;
+            clk_a_dig_glb_3 : OUT std_ulogic;
+            clk_bus : OUT std_ulogic;
+            clk_bus_glb : OUT std_ulogic;
+            clk_sync : OUT std_ulogic;
+            clk_32k_xtal : OUT std_ulogic;
+            clk_100k : OUT std_ulogic;
+            clk_32k : OUT std_ulogic;
+            clk_1k : OUT std_ulogic;
+            clk_usb : OUT std_ulogic;
+            xmhz_xerr : OUT std_ulogic;
+            pll_lock_out : OUT std_ulogic;
+            dsi_dig_div_0 : IN std_ulogic;
+            dsi_dig_div_1 : IN std_ulogic;
+            dsi_dig_div_2 : IN std_ulogic;
+            dsi_dig_div_3 : IN std_ulogic;
+            dsi_dig_div_4 : IN std_ulogic;
+            dsi_dig_div_5 : IN std_ulogic;
+            dsi_dig_div_6 : IN std_ulogic;
+            dsi_dig_div_7 : IN std_ulogic;
+            dsi_ana_div_0 : IN std_ulogic;
+            dsi_ana_div_1 : IN std_ulogic;
+            dsi_ana_div_2 : IN std_ulogic;
+            dsi_ana_div_3 : IN std_ulogic;
+            dsi_glb_div : IN std_ulogic;
+            dsi_clkin_div : IN std_ulogic;
+            imo : OUT std_ulogic;
+            ilo : OUT std_ulogic;
+            xtal : OUT std_ulogic;
+            pllout : OUT std_ulogic;
+            clk_bus_glb_ff : OUT std_ulogic;
+            aclk_glb_ff_0 : OUT std_ulogic;
+            clk_a_dig_glb_ff_0 : OUT std_ulogic;
+            aclk_glb_ff_1 : OUT std_ulogic;
+            clk_a_dig_glb_ff_1 : OUT std_ulogic;
+            aclk_glb_ff_2 : OUT std_ulogic;
+            clk_a_dig_glb_ff_2 : OUT std_ulogic;
+            aclk_glb_ff_3 : OUT std_ulogic;
+            clk_a_dig_glb_ff_3 : OUT std_ulogic;
+            dclk_glb_ff_0 : OUT std_ulogic;
+            dclk_glb_ff_1 : OUT std_ulogic;
+            dclk_glb_ff_2 : OUT std_ulogic;
+            dclk_glb_ff_3 : OUT std_ulogic;
+            dclk_glb_ff_4 : OUT std_ulogic;
+            dclk_glb_ff_5 : OUT std_ulogic;
+            dclk_glb_ff_6 : OUT std_ulogic;
+            dclk_glb_ff_7 : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT controlcell
+        PORT (
+            control_0 : OUT std_ulogic;
+            control_1 : OUT std_ulogic;
+            control_2 : OUT std_ulogic;
+            control_3 : OUT std_ulogic;
+            control_4 : OUT std_ulogic;
+            control_5 : OUT std_ulogic;
+            control_6 : OUT std_ulogic;
+            control_7 : OUT std_ulogic;
+            clock : IN std_ulogic;
+            reset : IN std_ulogic;
+            clk_en : IN std_ulogic;
+            busclk : IN std_ulogic);
+    END COMPONENT;
+    ATTRIBUTE udb_clk OF controlcell : COMPONENT IS "clock";
+    ATTRIBUTE udb_clken OF controlcell : COMPONENT IS "clk_en";
+    ATTRIBUTE udb_reset OF controlcell : COMPONENT IS "reset";
+    COMPONENT datapathcell
+        PORT (
+            clock : IN std_ulogic;
+            clk_en : IN std_ulogic;
+            reset : IN std_ulogic;
+            cs_addr_0 : IN std_ulogic;
+            cs_addr_1 : IN std_ulogic;
+            cs_addr_2 : IN std_ulogic;
+            route_si : IN std_ulogic;
+            route_ci : IN std_ulogic;
+            f0_load : IN std_ulogic;
+            f1_load : IN std_ulogic;
+            d0_load : IN std_ulogic;
+            d1_load : IN std_ulogic;
+            ce0_reg : OUT std_ulogic;
+            cl0_reg : OUT std_ulogic;
+            z0_reg : OUT std_ulogic;
+            f0_reg : OUT std_ulogic;
+            ce1_reg : OUT std_ulogic;
+            cl1_reg : OUT std_ulogic;
+            z1_reg : OUT std_ulogic;
+            f1_reg : OUT std_ulogic;
+            ov_msb_reg : OUT std_ulogic;
+            co_msb_reg : OUT std_ulogic;
+            cmsb_reg : OUT std_ulogic;
+            so_reg : OUT std_ulogic;
+            f0_bus_stat_reg : OUT std_ulogic;
+            f0_blk_stat_reg : OUT std_ulogic;
+            f1_bus_stat_reg : OUT std_ulogic;
+            f1_blk_stat_reg : OUT std_ulogic;
+            ce0_comb : OUT std_ulogic;
+            cl0_comb : OUT std_ulogic;
+            z0_comb : OUT std_ulogic;
+            f0_comb : OUT std_ulogic;
+            ce1_comb : OUT std_ulogic;
+            cl1_comb : OUT std_ulogic;
+            z1_comb : OUT std_ulogic;
+            f1_comb : OUT std_ulogic;
+            ov_msb_comb : OUT std_ulogic;
+            co_msb_comb : OUT std_ulogic;
+            cmsb_comb : OUT std_ulogic;
+            so_comb : OUT std_ulogic;
+            f0_bus_stat_comb : OUT std_ulogic;
+            f0_blk_stat_comb : OUT std_ulogic;
+            f1_bus_stat_comb : OUT std_ulogic;
+            f1_blk_stat_comb : OUT std_ulogic;
+            ce0 : OUT std_ulogic;
+            ce0i : IN std_ulogic;
+            p_in_0 : IN std_ulogic;
+            p_in_1 : IN std_ulogic;
+            p_in_2 : IN std_ulogic;
+            p_in_3 : IN std_ulogic;
+            p_in_4 : IN std_ulogic;
+            p_in_5 : IN std_ulogic;
+            p_in_6 : IN std_ulogic;
+            p_in_7 : IN std_ulogic;
+            p_out_0 : OUT std_ulogic;
+            p_out_1 : OUT std_ulogic;
+            p_out_2 : OUT std_ulogic;
+            p_out_3 : OUT std_ulogic;
+            p_out_4 : OUT std_ulogic;
+            p_out_5 : OUT std_ulogic;
+            p_out_6 : OUT std_ulogic;
+            p_out_7 : OUT std_ulogic;
+            cl0i : IN std_ulogic;
+            cl0 : OUT std_ulogic;
+            z0i : IN std_ulogic;
+            z0 : OUT std_ulogic;
+            ff0i : IN std_ulogic;
+            ff0 : OUT std_ulogic;
+            ce1i : IN std_ulogic;
+            ce1 : OUT std_ulogic;
+            cl1i : IN std_ulogic;
+            cl1 : OUT std_ulogic;
+            z1i : IN std_ulogic;
+            z1 : OUT std_ulogic;
+            ff1i : IN std_ulogic;
+            ff1 : OUT std_ulogic;
+            cap0i : IN std_ulogic;
+            cap0 : OUT std_ulogic;
+            cap1i : IN std_ulogic;
+            cap1 : OUT std_ulogic;
+            ci : IN std_ulogic;
+            co_msb : OUT std_ulogic;
+            sir : IN std_ulogic;
+            sol_msb : OUT std_ulogic;
+            cfbi : IN std_ulogic;
+            cfbo : OUT std_ulogic;
+            sil : IN std_ulogic;
+            sor : OUT std_ulogic;
+            cmsbi : IN std_ulogic;
+            cmsbo : OUT std_ulogic;
+            busclk : IN std_ulogic);
+    END COMPONENT;
+    ATTRIBUTE udb_clk OF datapathcell : COMPONENT IS "clock";
+    ATTRIBUTE udb_clken OF datapathcell : COMPONENT IS "clk_en";
+    ATTRIBUTE udb_reset OF datapathcell : COMPONENT IS "reset";
+    ATTRIBUTE udb_chain OF datapathcell : COMPONENT IS "ce0i,ce0,cl0i,cl0,z0i,z0,ff0i,ff0,ce1i,ce1,cl1i,cl1,z1i,z1,ff1i,ff1,cap0i,cap0,cap1i,cap1,ci,co_msb,sir,sol_msb,cfbi,cfbo,sil,sor,cmsbi,cmsbo";
+    ATTRIBUTE chain_lsb OF datapathcell : COMPONENT IS "ce0i,cl0i,z0i,ff0i,ce1i,cl1i,z1i,ff1i,cap0i,cap1i,ci,sir,cfbi,sor,cmsbo";
+    ATTRIBUTE chain_msb OF datapathcell : COMPONENT IS "ce0,cl0,z0,ff0,ce1,cl1,z1,ff1,cap0,cap1,co_msb,sol_msb,cfbo,sil,cmsbi";
+    COMPONENT iocell
+        PORT (
+            pin_input : IN std_ulogic;
+            oe : IN std_ulogic;
+            fb : OUT std_ulogic;
+            pad_in : IN std_ulogic;
+            pa_out : OUT std_ulogic;
+            pad_out : OUT std_ulogic;
+            oe_reg : OUT std_ulogic;
+            oe_internal : IN std_ulogic;
+            in_clock : IN std_ulogic;
+            in_clock_en : IN std_ulogic;
+            in_reset : IN std_ulogic;
+            out_clock : IN std_ulogic;
+            out_clock_en : IN std_ulogic;
+            out_reset : IN std_ulogic);
+    END COMPONENT;
+    COMPONENT logicalport
+        PORT (
+            interrupt : OUT std_ulogic;
+            precharge : IN std_ulogic;
+            in_clock : IN std_ulogic;
+            in_clock_en : IN std_ulogic;
+            in_reset : IN std_ulogic;
+            out_clock : IN std_ulogic;
+            out_clock_en : IN std_ulogic;
+            out_reset : IN std_ulogic);
+    END COMPONENT;
+    COMPONENT macrocell
+        PORT (
+            main_0 : IN std_ulogic;
+            main_1 : IN std_ulogic;
+            main_2 : IN std_ulogic;
+            main_3 : IN std_ulogic;
+            main_4 : IN std_ulogic;
+            main_5 : IN std_ulogic;
+            main_6 : IN std_ulogic;
+            main_7 : IN std_ulogic;
+            main_8 : IN std_ulogic;
+            main_9 : IN std_ulogic;
+            main_10 : IN std_ulogic;
+            main_11 : IN std_ulogic;
+            ar_0 : IN std_ulogic;
+            ap_0 : IN std_ulogic;
+            clock_0 : IN std_ulogic;
+            clk_en : IN std_ulogic;
+            cin : IN std_ulogic;
+            cpt0_0 : IN std_ulogic;
+            cpt0_1 : IN std_ulogic;
+            cpt0_2 : IN std_ulogic;
+            cpt0_3 : IN std_ulogic;
+            cpt0_4 : IN std_ulogic;
+            cpt0_5 : IN std_ulogic;
+            cpt0_6 : IN std_ulogic;
+            cpt0_7 : IN std_ulogic;
+            cpt0_8 : IN std_ulogic;
+            cpt0_9 : IN std_ulogic;
+            cpt0_10 : IN std_ulogic;
+            cpt0_11 : IN std_ulogic;
+            cpt1_0 : IN std_ulogic;
+            cpt1_1 : IN std_ulogic;
+            cpt1_2 : IN std_ulogic;
+            cpt1_3 : IN std_ulogic;
+            cpt1_4 : IN std_ulogic;
+            cpt1_5 : IN std_ulogic;
+            cpt1_6 : IN std_ulogic;
+            cpt1_7 : IN std_ulogic;
+            cpt1_8 : IN std_ulogic;
+            cpt1_9 : IN std_ulogic;
+            cpt1_10 : IN std_ulogic;
+            cpt1_11 : IN std_ulogic;
+            cout : OUT std_ulogic;
+            q : OUT std_ulogic;
+            q_fixed : OUT std_ulogic);
+    END COMPONENT;
+    ATTRIBUTE udb_clk OF macrocell : COMPONENT IS "clock_0";
+    ATTRIBUTE udb_clken OF macrocell : COMPONENT IS "clk_en";
+    ATTRIBUTE udb_reset OF macrocell : COMPONENT IS "ar_0";
+    ATTRIBUTE udb_preset OF macrocell : COMPONENT IS "ap_0";
+    ATTRIBUTE udb_chain OF macrocell : COMPONENT IS "cin,cout";
+    ATTRIBUTE chain_lsb OF macrocell : COMPONENT IS "cin";
+    ATTRIBUTE chain_msb OF macrocell : COMPONENT IS "cout";
+    COMPONENT statusicell
+        PORT (
+            status_0 : IN std_ulogic;
+            status_1 : IN std_ulogic;
+            status_2 : IN std_ulogic;
+            status_3 : IN std_ulogic;
+            status_4 : IN std_ulogic;
+            status_5 : IN std_ulogic;
+            status_6 : IN std_ulogic;
+            clock : IN std_ulogic;
+            reset : IN std_ulogic;
+            interrupt : OUT std_ulogic;
+            clk_en : IN std_ulogic);
+    END COMPONENT;
+    ATTRIBUTE udb_clk OF statusicell : COMPONENT IS "clock";
+    ATTRIBUTE udb_clken OF statusicell : COMPONENT IS "clk_en";
+    ATTRIBUTE udb_reset OF statusicell : COMPONENT IS "reset";
+BEGIN
+
+    ClockBlock:clockblockcell
+        PORT MAP(
+            imo => ClockBlock_IMO,
+            pllout => ClockBlock_PLL_OUT,
+            ilo => ClockBlock_ILO,
+            clk_100k => ClockBlock_100k,
+            clk_1k => ClockBlock_1k,
+            clk_32k => ClockBlock_32k,
+            xtal => ClockBlock_XTAL,
+            clk_32k_xtal => ClockBlock_XTAL_32KHZ,
+            clk_sync => ClockBlock_MASTER_CLK,
+            clk_bus_glb => ClockBlock_BUS_CLK,
+            clk_bus => ClockBlock_BUS_CLK_local,
+            dsi_clkin_div => open,
+            dsi_glb_div => open,
+            dclk_glb_0 => Net_816,
+            dclk_0 => Net_816_local,
+            dclk_glb_1 => Net_9027,
+            dclk_1 => Net_9027_local,
+            dclk_glb_2 => Net_75,
+            dclk_2 => Net_75_local,
+            dclk_glb_3 => Net_6179,
+            dclk_3 => Net_6179_local,
+            dclk_glb_4 => Net_6288,
+            dclk_4 => Net_6288_local,
+            dclk_glb_5 => Net_12429,
+            dclk_5 => Net_12429_local,
+            dclk_glb_6 => Net_12094,
+            dclk_6 => Net_12094_local,
+            dclk_glb_7 => Net_8416,
+            dclk_7 => Net_8416_local);
+
+    Right_Eyebrow_Horizontal:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "ddd5031a-843a-458c-b5a8-f51f4844f1b8",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Right_Eyebrow_Horizontal(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Right_Eyebrow_Horizontal",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Right_Eyebrow_Horizontal(0)__PA,
+            oe => open,
+            pin_input => Net_129,
+            pad_out => Right_Eyebrow_Horizontal(0)_PAD,
+            pad_in => Right_Eyebrow_Horizontal(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Right_Eyebrow_Vertical:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "2a73602f-1d39-4153-b637-e4bcfd28834b",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Right_Eyebrow_Vertical(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Right_Eyebrow_Vertical",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Right_Eyebrow_Vertical(0)__PA,
+            oe => open,
+            pin_input => Net_141,
+            pad_out => Right_Eyebrow_Vertical(0)_PAD,
+            pad_in => Right_Eyebrow_Vertical(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Left_Eyebrow_Horizontal:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "7e9b8e24-61fc-4033-944d-a21715aab846",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Left_Eyebrow_Horizontal(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Left_Eyebrow_Horizontal",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Left_Eyebrow_Horizontal(0)__PA,
+            oe => open,
+            pin_input => Net_7108,
+            pad_out => Left_Eyebrow_Horizontal(0)_PAD,
+            pad_in => Left_Eyebrow_Horizontal(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Left_Eyebrow_Vertical:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "c4908faf-1fcd-4ea4-9dc7-3b478db96c16",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Left_Eyebrow_Vertical(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Left_Eyebrow_Vertical",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Left_Eyebrow_Vertical(0)__PA,
+            oe => open,
+            pin_input => Net_960,
+            pad_out => Left_Eyebrow_Vertical(0)_PAD,
+            pad_in => Left_Eyebrow_Vertical(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Right_Eye_Vertical:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "b64f4edb-ae85-48d5-b375-30530e9eeef8",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Right_Eye_Vertical(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Right_Eye_Vertical",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Right_Eye_Vertical(0)__PA,
+            oe => open,
+            pin_input => Net_12613,
+            pad_out => Right_Eye_Vertical(0)_PAD,
+            pad_in => Right_Eye_Vertical(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Right_Eye_Horizontal:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "70727bf3-8b1d-4859-b7f5-5d4a2410b813",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Right_Eye_Horizontal(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Right_Eye_Horizontal",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Right_Eye_Horizontal(0)__PA,
+            oe => open,
+            pin_input => Net_12601,
+            pad_out => Right_Eye_Horizontal(0)_PAD,
+            pad_in => Right_Eye_Horizontal(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Left_Eye_Horizontal:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "bde79166-337b-423f-98de-84df2bed8b51",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Left_Eye_Horizontal(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Left_Eye_Horizontal",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Left_Eye_Horizontal(0)__PA,
+            oe => open,
+            pin_input => Net_6874,
+            pad_out => Left_Eye_Horizontal(0)_PAD,
+            pad_in => Left_Eye_Horizontal(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Left_Eye_Vertical:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "2bc6da8b-6f3d-4ad9-9512-1ef1208b8bb4",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Left_Eye_Vertical(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Left_Eye_Vertical",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Left_Eye_Vertical(0)__PA,
+            oe => open,
+            pin_input => Net_6916,
+            pad_out => Left_Eye_Vertical(0)_PAD,
+            pad_in => Left_Eye_Vertical(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Left_Lip:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "ce1d9a8c-7443-4bef-95a5-828f3e7bb4ed",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Left_Lip(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Left_Lip",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Left_Lip(0)__PA,
+            oe => open,
+            pin_input => Net_13045,
+            pad_out => Left_Lip(0)_PAD,
+            pad_in => Left_Lip(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Left_Neck:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "cd8ea118-1dac-4de0-a6d0-e202a895d704",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Left_Neck(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Left_Neck",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Left_Neck(0)__PA,
+            oe => open,
+            pin_input => Net_11487,
+            pad_out => Left_Neck(0)_PAD,
+            pad_in => Left_Neck(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Right_Neck:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "1d7c92ad-f8c8-475a-904a-6d2b1af806a3",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Right_Neck(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Right_Neck",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Right_Neck(0)__PA,
+            oe => open,
+            pin_input => Net_11539,
+            pad_out => Right_Neck(0)_PAD,
+            pad_in => Right_Neck(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Right_Lip:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "1d73824d-7e90-49f5-bc19-78d5e0a00ebf",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Right_Lip(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Right_Lip",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Right_Lip(0)__PA,
+            oe => open,
+            pin_input => Net_13023,
+            pad_out => Right_Lip(0)_PAD,
+            pad_in => Right_Lip(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Base_Rotate:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "d2e3cba7-a6f4-418f-b543-933cd673a13b",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Base_Rotate(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Base_Rotate",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Base_Rotate(0)__PA,
+            oe => open,
+            pin_input => Net_8418,
+            pad_out => Base_Rotate(0)_PAD,
+            pad_in => Base_Rotate(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Jaw_Control:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "f49894ad-b4ee-4408-ad83-5f4669cd7fe6",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Jaw_Control(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Jaw_Control",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Jaw_Control(0)__PA,
+            oe => open,
+            pin_input => Net_12522,
+            pad_out => Jaw_Control(0)_PAD,
+            pad_in => Jaw_Control(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    \Right_Eyebrow:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eyebrow:PWMUDB:status_2\,
+            main_0 => \Right_Eyebrow:PWMUDB:runmode_enable\,
+            main_1 => \Right_Eyebrow:PWMUDB:tc_i\);
+
+    \Left_Eyebrow:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eyebrow:PWMUDB:status_2\,
+            main_0 => \Left_Eyebrow:PWMUDB:runmode_enable\,
+            main_1 => \Left_Eyebrow:PWMUDB:tc_i\);
+
+    \Right_Eye:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eye:PWMUDB:status_2\,
+            main_0 => \Right_Eye:PWMUDB:runmode_enable\,
+            main_1 => \Right_Eye:PWMUDB:tc_i\);
+
+    \Left_Eye:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eye:PWMUDB:status_2\,
+            main_0 => \Left_Eye:PWMUDB:runmode_enable\,
+            main_1 => \Left_Eye:PWMUDB:tc_i\);
+
+    \Lip:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Lip:PWMUDB:status_2\,
+            main_0 => \Lip:PWMUDB:runmode_enable\,
+            main_1 => \Lip:PWMUDB:tc_i\);
+
+    \Base_Jaw:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Base_Jaw:PWMUDB:status_2\,
+            main_0 => \Base_Jaw:PWMUDB:runmode_enable\,
+            main_1 => \Base_Jaw:PWMUDB:tc_i\);
+
+    \Neck:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Neck:PWMUDB:status_2\,
+            main_0 => \Neck:PWMUDB:runmode_enable\,
+            main_1 => \Neck:PWMUDB:tc_i\);
+
+    \Jaw:PWMUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clken_mode => 1)
+        PORT MAP(
+            q => \Jaw:PWMUDB:status_2\,
+            main_0 => \Jaw:PWMUDB:runmode_enable\,
+            main_1 => \Jaw:PWMUDB:tc_i\);
+
+    \Right_Eyebrow:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_75,
+            control_7 => \Right_Eyebrow:PWMUDB:control_7\,
+            control_6 => \Right_Eyebrow:PWMUDB:control_6\,
+            control_5 => \Right_Eyebrow:PWMUDB:control_5\,
+            control_4 => \Right_Eyebrow:PWMUDB:control_4\,
+            control_3 => \Right_Eyebrow:PWMUDB:control_3\,
+            control_2 => \Right_Eyebrow:PWMUDB:control_2\,
+            control_1 => \Right_Eyebrow:PWMUDB:control_1\,
+            control_0 => \Right_Eyebrow:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Right_Eyebrow:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_75,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Right_Eyebrow:PWMUDB:status_3\,
+            status_2 => \Right_Eyebrow:PWMUDB:status_2\,
+            status_1 => \Right_Eyebrow:PWMUDB:status_1\,
+            status_0 => \Right_Eyebrow:PWMUDB:status_0\);
+
+    \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_75,
+            cs_addr_2 => \Right_Eyebrow:PWMUDB:tc_i\,
+            cs_addr_1 => \Right_Eyebrow:PWMUDB:runmode_enable\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0 => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0 => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0 => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1 => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1 => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1 => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1 => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            co_msb => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sol_msb => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbo => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sil => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbi => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Right_Eyebrow:PWMUDB:sP16:pwmdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_75,
+            cs_addr_2 => \Right_Eyebrow:PWMUDB:tc_i\,
+            cs_addr_1 => \Right_Eyebrow:PWMUDB:runmode_enable\,
+            cl0_comb => \Right_Eyebrow:PWMUDB:cmp1_less\,
+            z0_comb => \Right_Eyebrow:PWMUDB:tc_i\,
+            cl1_comb => \Right_Eyebrow:PWMUDB:cmp2_less\,
+            f1_blk_stat_comb => \Right_Eyebrow:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0i => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0i => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0i => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1i => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1i => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1i => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1i => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            ci => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sir => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbi => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sor => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbo => \Right_Eyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Left_Eyebrow:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_816,
+            control_7 => \Left_Eyebrow:PWMUDB:control_7\,
+            control_6 => \Left_Eyebrow:PWMUDB:control_6\,
+            control_5 => \Left_Eyebrow:PWMUDB:control_5\,
+            control_4 => \Left_Eyebrow:PWMUDB:control_4\,
+            control_3 => \Left_Eyebrow:PWMUDB:control_3\,
+            control_2 => \Left_Eyebrow:PWMUDB:control_2\,
+            control_1 => \Left_Eyebrow:PWMUDB:control_1\,
+            control_0 => \Left_Eyebrow:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Left_Eyebrow:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_816,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Left_Eyebrow:PWMUDB:status_3\,
+            status_2 => \Left_Eyebrow:PWMUDB:status_2\,
+            status_1 => \Left_Eyebrow:PWMUDB:status_1\,
+            status_0 => \Left_Eyebrow:PWMUDB:status_0\);
+
+    \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_816,
+            cs_addr_2 => \Left_Eyebrow:PWMUDB:tc_i\,
+            cs_addr_1 => \Left_Eyebrow:PWMUDB:runmode_enable\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0 => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0 => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0 => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1 => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1 => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1 => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1 => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            co_msb => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sol_msb => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbo => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sil => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbi => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Left_Eyebrow:PWMUDB:sP16:pwmdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_816,
+            cs_addr_2 => \Left_Eyebrow:PWMUDB:tc_i\,
+            cs_addr_1 => \Left_Eyebrow:PWMUDB:runmode_enable\,
+            cl0_comb => \Left_Eyebrow:PWMUDB:cmp1_less\,
+            z0_comb => \Left_Eyebrow:PWMUDB:tc_i\,
+            cl1_comb => \Left_Eyebrow:PWMUDB:cmp2_less\,
+            f1_blk_stat_comb => \Left_Eyebrow:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0i => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0i => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0i => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1i => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1i => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1i => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1i => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            ci => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sir => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbi => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sor => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbo => \Left_Eyebrow:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Right_Eye:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_6179,
+            control_7 => \Right_Eye:PWMUDB:control_7\,
+            control_6 => \Right_Eye:PWMUDB:control_6\,
+            control_5 => \Right_Eye:PWMUDB:control_5\,
+            control_4 => \Right_Eye:PWMUDB:control_4\,
+            control_3 => \Right_Eye:PWMUDB:control_3\,
+            control_2 => \Right_Eye:PWMUDB:control_2\,
+            control_1 => \Right_Eye:PWMUDB:control_1\,
+            control_0 => \Right_Eye:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Right_Eye:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_6179,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Right_Eye:PWMUDB:status_3\,
+            status_2 => \Right_Eye:PWMUDB:status_2\,
+            status_1 => \Right_Eye:PWMUDB:status_1\,
+            status_0 => \Right_Eye:PWMUDB:status_0\);
+
+    \Right_Eye:PWMUDB:sP16:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_6179,
+            cs_addr_2 => \Right_Eye:PWMUDB:tc_i\,
+            cs_addr_1 => \Right_Eye:PWMUDB:runmode_enable\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Right_Eye:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0 => \Right_Eye:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0 => \Right_Eye:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0 => \Right_Eye:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1 => \Right_Eye:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1 => \Right_Eye:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1 => \Right_Eye:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1 => \Right_Eye:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            co_msb => \Right_Eye:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sol_msb => \Right_Eye:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbo => \Right_Eye:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sil => \Right_Eye:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbi => \Right_Eye:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Right_Eye:PWMUDB:sP16:pwmdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_6179,
+            cs_addr_2 => \Right_Eye:PWMUDB:tc_i\,
+            cs_addr_1 => \Right_Eye:PWMUDB:runmode_enable\,
+            cl0_comb => \Right_Eye:PWMUDB:cmp1_less\,
+            z0_comb => \Right_Eye:PWMUDB:tc_i\,
+            cl1_comb => \Right_Eye:PWMUDB:cmp2_less\,
+            f1_blk_stat_comb => \Right_Eye:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Right_Eye:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0i => \Right_Eye:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0i => \Right_Eye:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0i => \Right_Eye:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1i => \Right_Eye:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1i => \Right_Eye:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1i => \Right_Eye:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1i => \Right_Eye:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            ci => \Right_Eye:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sir => \Right_Eye:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbi => \Right_Eye:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sor => \Right_Eye:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbo => \Right_Eye:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Left_Eye:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_6288,
+            control_7 => \Left_Eye:PWMUDB:control_7\,
+            control_6 => \Left_Eye:PWMUDB:control_6\,
+            control_5 => \Left_Eye:PWMUDB:control_5\,
+            control_4 => \Left_Eye:PWMUDB:control_4\,
+            control_3 => \Left_Eye:PWMUDB:control_3\,
+            control_2 => \Left_Eye:PWMUDB:control_2\,
+            control_1 => \Left_Eye:PWMUDB:control_1\,
+            control_0 => \Left_Eye:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Left_Eye:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_6288,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Left_Eye:PWMUDB:status_3\,
+            status_2 => \Left_Eye:PWMUDB:status_2\,
+            status_1 => \Left_Eye:PWMUDB:status_1\,
+            status_0 => \Left_Eye:PWMUDB:status_0\);
+
+    \Left_Eye:PWMUDB:sP16:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_6288,
+            cs_addr_2 => \Left_Eye:PWMUDB:tc_i\,
+            cs_addr_1 => \Left_Eye:PWMUDB:runmode_enable\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Left_Eye:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0 => \Left_Eye:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0 => \Left_Eye:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0 => \Left_Eye:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1 => \Left_Eye:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1 => \Left_Eye:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1 => \Left_Eye:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1 => \Left_Eye:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            co_msb => \Left_Eye:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sol_msb => \Left_Eye:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbo => \Left_Eye:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sil => \Left_Eye:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbi => \Left_Eye:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Left_Eye:PWMUDB:sP16:pwmdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_6288,
+            cs_addr_2 => \Left_Eye:PWMUDB:tc_i\,
+            cs_addr_1 => \Left_Eye:PWMUDB:runmode_enable\,
+            cl0_comb => \Left_Eye:PWMUDB:cmp1_less\,
+            z0_comb => \Left_Eye:PWMUDB:tc_i\,
+            cl1_comb => \Left_Eye:PWMUDB:cmp2_less\,
+            f1_blk_stat_comb => \Left_Eye:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Left_Eye:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0i => \Left_Eye:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0i => \Left_Eye:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0i => \Left_Eye:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1i => \Left_Eye:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1i => \Left_Eye:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1i => \Left_Eye:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1i => \Left_Eye:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            ci => \Left_Eye:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sir => \Left_Eye:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbi => \Left_Eye:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sor => \Left_Eye:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbo => \Left_Eye:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Lip:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_12094,
+            control_7 => \Lip:PWMUDB:control_7\,
+            control_6 => \Lip:PWMUDB:control_6\,
+            control_5 => \Lip:PWMUDB:control_5\,
+            control_4 => \Lip:PWMUDB:control_4\,
+            control_3 => \Lip:PWMUDB:control_3\,
+            control_2 => \Lip:PWMUDB:control_2\,
+            control_1 => \Lip:PWMUDB:control_1\,
+            control_0 => \Lip:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Lip:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_12094,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Lip:PWMUDB:status_3\,
+            status_2 => \Lip:PWMUDB:status_2\,
+            status_1 => \Lip:PWMUDB:status_1\,
+            status_0 => \Lip:PWMUDB:status_0\);
+
+    \Lip:PWMUDB:sP16:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_12094,
+            cs_addr_2 => \Lip:PWMUDB:tc_i\,
+            cs_addr_1 => \Lip:PWMUDB:runmode_enable\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Lip:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0 => \Lip:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0 => \Lip:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0 => \Lip:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1 => \Lip:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1 => \Lip:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1 => \Lip:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1 => \Lip:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            co_msb => \Lip:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sol_msb => \Lip:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbo => \Lip:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sil => \Lip:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbi => \Lip:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Lip:PWMUDB:sP16:pwmdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_12094,
+            cs_addr_2 => \Lip:PWMUDB:tc_i\,
+            cs_addr_1 => \Lip:PWMUDB:runmode_enable\,
+            cl0_comb => \Lip:PWMUDB:cmp1_less\,
+            z0_comb => \Lip:PWMUDB:tc_i\,
+            cl1_comb => \Lip:PWMUDB:cmp2_less\,
+            f1_blk_stat_comb => \Lip:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Lip:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0i => \Lip:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0i => \Lip:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0i => \Lip:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1i => \Lip:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1i => \Lip:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1i => \Lip:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1i => \Lip:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            ci => \Lip:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sir => \Lip:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbi => \Lip:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sor => \Lip:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbo => \Lip:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Base_Jaw:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_8416,
+            control_7 => \Base_Jaw:PWMUDB:control_7\,
+            control_6 => \Base_Jaw:PWMUDB:control_6\,
+            control_5 => \Base_Jaw:PWMUDB:control_5\,
+            control_4 => \Base_Jaw:PWMUDB:control_4\,
+            control_3 => \Base_Jaw:PWMUDB:control_3\,
+            control_2 => \Base_Jaw:PWMUDB:control_2\,
+            control_1 => \Base_Jaw:PWMUDB:control_1\,
+            control_0 => \Base_Jaw:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Base_Jaw:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_8416,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Base_Jaw:PWMUDB:status_3\,
+            status_2 => \Base_Jaw:PWMUDB:status_2\,
+            status_1 => \Base_Jaw:PWMUDB:status_1\,
+            status_0 => \Base_Jaw:PWMUDB:status_0\);
+
+    \Base_Jaw:PWMUDB:sP16:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_8416,
+            cs_addr_2 => \Base_Jaw:PWMUDB:tc_i\,
+            cs_addr_1 => \Base_Jaw:PWMUDB:runmode_enable\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0 => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0 => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0 => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1 => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1 => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1 => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1 => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            co_msb => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sol_msb => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbo => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sil => \Base_Jaw:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbi => \Base_Jaw:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Base_Jaw:PWMUDB:sP16:pwmdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_8416,
+            cs_addr_2 => \Base_Jaw:PWMUDB:tc_i\,
+            cs_addr_1 => \Base_Jaw:PWMUDB:runmode_enable\,
+            cl0_comb => \Base_Jaw:PWMUDB:cmp1_less\,
+            z0_comb => \Base_Jaw:PWMUDB:tc_i\,
+            cl1_comb => \Base_Jaw:PWMUDB:cmp2_less\,
+            f1_blk_stat_comb => \Base_Jaw:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0i => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0i => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0i => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1i => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1i => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1i => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1i => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            ci => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sir => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbi => \Base_Jaw:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sor => \Base_Jaw:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbo => \Base_Jaw:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Neck:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_9027,
+            control_7 => \Neck:PWMUDB:control_7\,
+            control_6 => \Neck:PWMUDB:control_6\,
+            control_5 => \Neck:PWMUDB:control_5\,
+            control_4 => \Neck:PWMUDB:control_4\,
+            control_3 => \Neck:PWMUDB:control_3\,
+            control_2 => \Neck:PWMUDB:control_2\,
+            control_1 => \Neck:PWMUDB:control_1\,
+            control_0 => \Neck:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Neck:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_9027,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Neck:PWMUDB:status_3\,
+            status_2 => \Neck:PWMUDB:status_2\,
+            status_1 => \Neck:PWMUDB:status_1\,
+            status_0 => \Neck:PWMUDB:status_0\);
+
+    \Neck:PWMUDB:sP16:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_9027,
+            cs_addr_2 => \Neck:PWMUDB:tc_i\,
+            cs_addr_1 => \Neck:PWMUDB:runmode_enable\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Neck:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0 => \Neck:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0 => \Neck:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0 => \Neck:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1 => \Neck:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1 => \Neck:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1 => \Neck:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1 => \Neck:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            co_msb => \Neck:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sol_msb => \Neck:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbo => \Neck:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sil => \Neck:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbi => \Neck:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Neck:PWMUDB:sP16:pwmdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_9027,
+            cs_addr_2 => \Neck:PWMUDB:tc_i\,
+            cs_addr_1 => \Neck:PWMUDB:runmode_enable\,
+            cl0_comb => \Neck:PWMUDB:cmp1_less\,
+            z0_comb => \Neck:PWMUDB:tc_i\,
+            cl1_comb => \Neck:PWMUDB:cmp2_less\,
+            f1_blk_stat_comb => \Neck:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Neck:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0i => \Neck:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0i => \Neck:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0i => \Neck:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1i => \Neck:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1i => \Neck:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1i => \Neck:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1i => \Neck:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            ci => \Neck:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sir => \Neck:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbi => \Neck:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sor => \Neck:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbo => \Neck:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Jaw:PWMUDB:genblk1:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_12429,
+            control_7 => \Jaw:PWMUDB:control_7\,
+            control_6 => \Jaw:PWMUDB:control_6\,
+            control_5 => \Jaw:PWMUDB:control_5\,
+            control_4 => \Jaw:PWMUDB:control_4\,
+            control_3 => \Jaw:PWMUDB:control_3\,
+            control_2 => \Jaw:PWMUDB:control_2\,
+            control_1 => \Jaw:PWMUDB:control_1\,
+            control_0 => \Jaw:PWMUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \Jaw:PWMUDB:genblk8:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0100111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_12429,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \Jaw:PWMUDB:status_3\,
+            status_2 => \Jaw:PWMUDB:status_2\,
+            status_1 => \Jaw:PWMUDB:status_1\,
+            status_0 => \Jaw:PWMUDB:status_0\);
+
+    \Jaw:PWMUDB:sP16:pwmdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_12429,
+            cs_addr_2 => \Jaw:PWMUDB:tc_i\,
+            cs_addr_1 => \Jaw:PWMUDB:runmode_enable\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \Jaw:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0 => \Jaw:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0 => \Jaw:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0 => \Jaw:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1 => \Jaw:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1 => \Jaw:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1 => \Jaw:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1 => \Jaw:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            co_msb => \Jaw:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sol_msb => \Jaw:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbo => \Jaw:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sil => \Jaw:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbi => \Jaw:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Jaw:PWMUDB:sP16:pwmdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_12429,
+            cs_addr_2 => \Jaw:PWMUDB:tc_i\,
+            cs_addr_1 => \Jaw:PWMUDB:runmode_enable\,
+            cl0_comb => \Jaw:PWMUDB:cmp1_less\,
+            z0_comb => \Jaw:PWMUDB:tc_i\,
+            cl1_comb => \Jaw:PWMUDB:cmp2_less\,
+            f1_blk_stat_comb => \Jaw:PWMUDB:status_3\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \Jaw:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
+            cl0i => \Jaw:PWMUDB:sP16:pwmdp:u0.cl0__sig\,
+            z0i => \Jaw:PWMUDB:sP16:pwmdp:u0.z0__sig\,
+            ff0i => \Jaw:PWMUDB:sP16:pwmdp:u0.ff0__sig\,
+            ce1i => \Jaw:PWMUDB:sP16:pwmdp:u0.ce1__sig\,
+            cl1i => \Jaw:PWMUDB:sP16:pwmdp:u0.cl1__sig\,
+            z1i => \Jaw:PWMUDB:sP16:pwmdp:u0.z1__sig\,
+            ff1i => \Jaw:PWMUDB:sP16:pwmdp:u0.ff1__sig\,
+            ci => \Jaw:PWMUDB:sP16:pwmdp:u0.co_msb__sig\,
+            sir => \Jaw:PWMUDB:sP16:pwmdp:u0.sol_msb__sig\,
+            cfbi => \Jaw:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
+            sor => \Jaw:PWMUDB:sP16:pwmdp:u1.sor__sig\,
+            cmsbo => \Jaw:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    \Right_Eyebrow:PWMUDB:runmode_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eyebrow:PWMUDB:runmode_enable\,
+            clock_0 => Net_75,
+            main_0 => \Right_Eyebrow:PWMUDB:control_7\);
+
+    \Right_Eyebrow:PWMUDB:prevCompare1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eyebrow:PWMUDB:prevCompare1\,
+            clock_0 => Net_75,
+            main_0 => \Right_Eyebrow:PWMUDB:cmp1_less\);
+
+    \Right_Eyebrow:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eyebrow:PWMUDB:prevCompare2\,
+            clock_0 => Net_75,
+            main_0 => \Right_Eyebrow:PWMUDB:cmp2_less\);
+
+    \Right_Eyebrow:PWMUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eyebrow:PWMUDB:status_0\,
+            clock_0 => Net_75,
+            main_0 => \Right_Eyebrow:PWMUDB:prevCompare1\,
+            main_1 => \Right_Eyebrow:PWMUDB:cmp1_less\);
+
+    \Right_Eyebrow:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eyebrow:PWMUDB:status_1\,
+            clock_0 => Net_75,
+            main_0 => \Right_Eyebrow:PWMUDB:prevCompare2\,
+            main_1 => \Right_Eyebrow:PWMUDB:cmp2_less\);
+
+    Net_129:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_129,
+            clock_0 => Net_75,
+            main_0 => \Right_Eyebrow:PWMUDB:runmode_enable\,
+            main_1 => \Right_Eyebrow:PWMUDB:cmp1_less\);
+
+    Net_141:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_141,
+            clock_0 => Net_75,
+            main_0 => \Right_Eyebrow:PWMUDB:runmode_enable\,
+            main_1 => \Right_Eyebrow:PWMUDB:cmp2_less\);
+
+    \Left_Eyebrow:PWMUDB:runmode_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eyebrow:PWMUDB:runmode_enable\,
+            clock_0 => Net_816,
+            main_0 => \Left_Eyebrow:PWMUDB:control_7\);
+
+    \Left_Eyebrow:PWMUDB:prevCompare1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eyebrow:PWMUDB:prevCompare1\,
+            clock_0 => Net_816,
+            main_0 => \Left_Eyebrow:PWMUDB:cmp1_less\);
+
+    \Left_Eyebrow:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eyebrow:PWMUDB:prevCompare2\,
+            clock_0 => Net_816,
+            main_0 => \Left_Eyebrow:PWMUDB:cmp2_less\);
+
+    \Left_Eyebrow:PWMUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eyebrow:PWMUDB:status_0\,
+            clock_0 => Net_816,
+            main_0 => \Left_Eyebrow:PWMUDB:prevCompare1\,
+            main_1 => \Left_Eyebrow:PWMUDB:cmp1_less\);
+
+    \Left_Eyebrow:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eyebrow:PWMUDB:status_1\,
+            clock_0 => Net_816,
+            main_0 => \Left_Eyebrow:PWMUDB:prevCompare2\,
+            main_1 => \Left_Eyebrow:PWMUDB:cmp2_less\);
+
+    Net_7108:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_7108,
+            clock_0 => Net_816,
+            main_0 => \Left_Eyebrow:PWMUDB:runmode_enable\,
+            main_1 => \Left_Eyebrow:PWMUDB:cmp1_less\);
+
+    Net_960:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_960,
+            clock_0 => Net_816,
+            main_0 => \Left_Eyebrow:PWMUDB:runmode_enable\,
+            main_1 => \Left_Eyebrow:PWMUDB:cmp2_less\);
+
+    \Right_Eye:PWMUDB:runmode_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eye:PWMUDB:runmode_enable\,
+            clock_0 => Net_6179,
+            main_0 => \Right_Eye:PWMUDB:control_7\);
+
+    \Right_Eye:PWMUDB:prevCompare1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eye:PWMUDB:prevCompare1\,
+            clock_0 => Net_6179,
+            main_0 => \Right_Eye:PWMUDB:cmp1_less\);
+
+    \Right_Eye:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eye:PWMUDB:prevCompare2\,
+            clock_0 => Net_6179,
+            main_0 => \Right_Eye:PWMUDB:cmp2_less\);
+
+    \Right_Eye:PWMUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eye:PWMUDB:status_0\,
+            clock_0 => Net_6179,
+            main_0 => \Right_Eye:PWMUDB:prevCompare1\,
+            main_1 => \Right_Eye:PWMUDB:cmp1_less\);
+
+    \Right_Eye:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Right_Eye:PWMUDB:status_1\,
+            clock_0 => Net_6179,
+            main_0 => \Right_Eye:PWMUDB:prevCompare2\,
+            main_1 => \Right_Eye:PWMUDB:cmp2_less\);
+
+    Net_12601:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_12601,
+            clock_0 => Net_6179,
+            main_0 => \Right_Eye:PWMUDB:runmode_enable\,
+            main_1 => \Right_Eye:PWMUDB:cmp1_less\);
+
+    Net_12613:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_12613,
+            clock_0 => Net_6179,
+            main_0 => \Right_Eye:PWMUDB:runmode_enable\,
+            main_1 => \Right_Eye:PWMUDB:cmp2_less\);
+
+    \Left_Eye:PWMUDB:runmode_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eye:PWMUDB:runmode_enable\,
+            clock_0 => Net_6288,
+            main_0 => \Left_Eye:PWMUDB:control_7\);
+
+    \Left_Eye:PWMUDB:prevCompare1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eye:PWMUDB:prevCompare1\,
+            clock_0 => Net_6288,
+            main_0 => \Left_Eye:PWMUDB:cmp1_less\);
+
+    \Left_Eye:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eye:PWMUDB:prevCompare2\,
+            clock_0 => Net_6288,
+            main_0 => \Left_Eye:PWMUDB:cmp2_less\);
+
+    \Left_Eye:PWMUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eye:PWMUDB:status_0\,
+            clock_0 => Net_6288,
+            main_0 => \Left_Eye:PWMUDB:prevCompare1\,
+            main_1 => \Left_Eye:PWMUDB:cmp1_less\);
+
+    \Left_Eye:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Left_Eye:PWMUDB:status_1\,
+            clock_0 => Net_6288,
+            main_0 => \Left_Eye:PWMUDB:prevCompare2\,
+            main_1 => \Left_Eye:PWMUDB:cmp2_less\);
+
+    Net_6874:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_6874,
+            clock_0 => Net_6288,
+            main_0 => \Left_Eye:PWMUDB:runmode_enable\,
+            main_1 => \Left_Eye:PWMUDB:cmp1_less\);
+
+    Net_6916:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_6916,
+            clock_0 => Net_6288,
+            main_0 => \Left_Eye:PWMUDB:runmode_enable\,
+            main_1 => \Left_Eye:PWMUDB:cmp2_less\);
+
+    \Lip:PWMUDB:runmode_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Lip:PWMUDB:runmode_enable\,
+            clock_0 => Net_12094,
+            main_0 => \Lip:PWMUDB:control_7\);
+
+    \Lip:PWMUDB:prevCompare1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Lip:PWMUDB:prevCompare1\,
+            clock_0 => Net_12094,
+            main_0 => \Lip:PWMUDB:cmp1_less\);
+
+    \Lip:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Lip:PWMUDB:prevCompare2\,
+            clock_0 => Net_12094,
+            main_0 => \Lip:PWMUDB:cmp2_less\);
+
+    \Lip:PWMUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Lip:PWMUDB:status_0\,
+            clock_0 => Net_12094,
+            main_0 => \Lip:PWMUDB:prevCompare1\,
+            main_1 => \Lip:PWMUDB:cmp1_less\);
+
+    \Lip:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Lip:PWMUDB:status_1\,
+            clock_0 => Net_12094,
+            main_0 => \Lip:PWMUDB:prevCompare2\,
+            main_1 => \Lip:PWMUDB:cmp2_less\);
+
+    Net_13023:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_13023,
+            clock_0 => Net_12094,
+            main_0 => \Lip:PWMUDB:runmode_enable\,
+            main_1 => \Lip:PWMUDB:cmp1_less\);
+
+    Net_13045:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_13045,
+            clock_0 => Net_12094,
+            main_0 => \Lip:PWMUDB:runmode_enable\,
+            main_1 => \Lip:PWMUDB:cmp2_less\);
+
+    \Base_Jaw:PWMUDB:runmode_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Base_Jaw:PWMUDB:runmode_enable\,
+            clock_0 => Net_8416,
+            main_0 => \Base_Jaw:PWMUDB:control_7\);
+
+    \Base_Jaw:PWMUDB:prevCompare1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Base_Jaw:PWMUDB:prevCompare1\,
+            clock_0 => Net_8416,
+            main_0 => \Base_Jaw:PWMUDB:cmp1_less\);
+
+    \Base_Jaw:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Base_Jaw:PWMUDB:prevCompare2\,
+            clock_0 => Net_8416,
+            main_0 => \Base_Jaw:PWMUDB:cmp2_less\);
+
+    \Base_Jaw:PWMUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Base_Jaw:PWMUDB:status_0\,
+            clock_0 => Net_8416,
+            main_0 => \Base_Jaw:PWMUDB:prevCompare1\,
+            main_1 => \Base_Jaw:PWMUDB:cmp1_less\);
+
+    \Base_Jaw:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Base_Jaw:PWMUDB:status_1\,
+            clock_0 => Net_8416,
+            main_0 => \Base_Jaw:PWMUDB:prevCompare2\,
+            main_1 => \Base_Jaw:PWMUDB:cmp2_less\);
+
+    Net_8418:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_8418,
+            clock_0 => Net_8416,
+            main_0 => \Base_Jaw:PWMUDB:runmode_enable\,
+            main_1 => \Base_Jaw:PWMUDB:cmp1_less\);
+
+    \Neck:PWMUDB:runmode_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Neck:PWMUDB:runmode_enable\,
+            clock_0 => Net_9027,
+            main_0 => \Neck:PWMUDB:control_7\);
+
+    \Neck:PWMUDB:prevCompare1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Neck:PWMUDB:prevCompare1\,
+            clock_0 => Net_9027,
+            main_0 => \Neck:PWMUDB:cmp1_less\);
+
+    \Neck:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Neck:PWMUDB:prevCompare2\,
+            clock_0 => Net_9027,
+            main_0 => \Neck:PWMUDB:cmp2_less\);
+
+    \Neck:PWMUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Neck:PWMUDB:status_0\,
+            clock_0 => Net_9027,
+            main_0 => \Neck:PWMUDB:prevCompare1\,
+            main_1 => \Neck:PWMUDB:cmp1_less\);
+
+    \Neck:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Neck:PWMUDB:status_1\,
+            clock_0 => Net_9027,
+            main_0 => \Neck:PWMUDB:prevCompare2\,
+            main_1 => \Neck:PWMUDB:cmp2_less\);
+
+    Net_11539:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_11539,
+            clock_0 => Net_9027,
+            main_0 => \Neck:PWMUDB:runmode_enable\,
+            main_1 => \Neck:PWMUDB:cmp1_less\);
+
+    Net_11487:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_11487,
+            clock_0 => Net_9027,
+            main_0 => \Neck:PWMUDB:runmode_enable\,
+            main_1 => \Neck:PWMUDB:cmp2_less\);
+
+    \Jaw:PWMUDB:runmode_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Jaw:PWMUDB:runmode_enable\,
+            clock_0 => Net_12429,
+            main_0 => \Jaw:PWMUDB:control_7\);
+
+    \Jaw:PWMUDB:prevCompare1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Jaw:PWMUDB:prevCompare1\,
+            clock_0 => Net_12429,
+            main_0 => \Jaw:PWMUDB:cmp1_less\);
+
+    \Jaw:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Jaw:PWMUDB:prevCompare2\,
+            clock_0 => Net_12429,
+            main_0 => \Jaw:PWMUDB:cmp2_less\);
+
+    \Jaw:PWMUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Jaw:PWMUDB:status_0\,
+            clock_0 => Net_12429,
+            main_0 => \Jaw:PWMUDB:prevCompare1\,
+            main_1 => \Jaw:PWMUDB:cmp1_less\);
+
+    \Jaw:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \Jaw:PWMUDB:status_1\,
+            clock_0 => Net_12429,
+            main_0 => \Jaw:PWMUDB:prevCompare2\,
+            main_1 => \Jaw:PWMUDB:cmp2_less\);
+
+    Net_12522:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_12522,
+            clock_0 => Net_12429,
+            main_0 => \Jaw:PWMUDB:runmode_enable\,
+            main_1 => \Jaw:PWMUDB:cmp1_less\);
+
+END __DEFAULT__;
