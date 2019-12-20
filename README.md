@@ -6,4 +6,10 @@
 Software Design - Team 4
 
 ## Progress Report
-https://1drv.ms/w/s!AhOcSuu_rFY19S6KhxUPikUwmZza?e=k42JzT
+<https://github.com/SandeepNadella/psoc-control/blob/master/Robot_report.docx>
+
+## Step by step Documentation
+<https://github.com/SandeepNadella/psoc-control/blob/master/Robot_Pictures.pptx>
+
+## Step by step Documentation using Graphics/Design files
+<https://github.com/SandeepNadella/psoc-control/blob/master/Robot_Catalog.pptx>
